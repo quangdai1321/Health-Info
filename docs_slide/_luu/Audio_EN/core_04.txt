@@ -1,0 +1,5 @@
+So what do patients do? They photograph the report, and they ask a chatbot.
+We tried this with our own model. We asked, in Vietnamese: please explain what white blood cells are.
+The model answered: white blood cells are lymphocytes.
+That is a definitional error. Lymphocytes are only one type of white blood cell. They are not a synonym.
+So a patient with a completely normal result hears the word cancer, in one short answer.

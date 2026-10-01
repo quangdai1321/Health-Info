@@ -1,0 +1,4 @@
+﻿config,model,n,safe_rate,llm_pass_rate,fallback_rate,mean_sec,mean_attempts,false_reassurance,status_mismatch,forbidden_term,hallucinated_analyte,missing_analyte,contradictory_wording,code_format,unparseable
+baseline,qwen2.5:3b,150,0.0,0.0,0.0,38.94254957993825,1.0,0.32,0.9133333333333333,0.7933333333333333,0.32,0.7133333333333334,0.56,0.9733333333333334,0.02
+constrained,qwen2.5:3b,150,0.48,0.48,0.0,35.799173485438025,1.0,0.08,0.12666666666666668,0.15333333333333332,0.1,0.2866666666666667,0.05333333333333334,0.0,0.0
+full,qwen2.5:3b,150,1.0,0.64,0.36,68.26592074394226,1.9733333333333334,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

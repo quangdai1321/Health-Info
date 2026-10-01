@@ -1,0 +1,6 @@
+There is no learned component here. It is only arithmetic.
+If the value is inside the interval, the label is normal.
+If it is outside, but still close to the bound, the label is monitor.
+If it is far outside, the label is seek care.
+The label for the whole panel is the most severe analyte label.
+So classification accuracy is a property of the design. It is not an experimental result.

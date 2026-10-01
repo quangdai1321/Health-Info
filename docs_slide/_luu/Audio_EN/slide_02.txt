@@ -1,0 +1,6 @@
+My talk has six parts.
+First, the problem. Patients cannot read their own laboratory reports.
+Second, the risk, when a language model explains the results.
+Third, our method. Four layers, with the judgement separated from the model.
+Fourth, our evaluation. Fifth, the results.
+And last, the limitations, and the future work.

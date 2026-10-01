@@ -1,0 +1,7 @@
+No clinical judgement is delegated to the language model.
+Layer one is normalisation. It maps every name to one canonical code, and converts the unit.
+Layer two is rule-based labelling. It compares the value with the reference interval, and assigns one of three levels.
+Layer three is constrained generation. The model receives the labels, and only puts them in plain language.
+Layer four is validation. The computer checks the text against the labels from layer two.
+If the text fails, the model writes it again. After the retry limit, the system uses a fixed template.
+So the patient never sees unverified text.

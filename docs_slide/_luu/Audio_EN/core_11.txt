@@ -1,0 +1,8 @@
+We used one hundred and fifty synthetic blood count panels. Each panel has ten to eighteen analytes.
+The panels are split equally across the three severity classes.
+We need ground truth labels, to score the output. Real reports do not carry them.
+We need a balanced design. Real panels are mostly normal, so we would have too few severe cases.
+We compare three configurations.
+Baseline gives the raw values to the model. No labels, no constraints, no validation.
+Constrained uses layers one to three. Labels and constraints, but no validation.
+Full uses all four layers.

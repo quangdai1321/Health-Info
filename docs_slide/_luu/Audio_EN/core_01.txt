@@ -1,0 +1,6 @@
+Good afternoon, everyone.
+Thank you for staying with us for the last talk of the session.
+My name is Truong Quang Dai, from HUTECH University, in Ho Chi Minh City.
+This is joint work with my advisor, Vo Hoang Khang.
+Our paper is about helping patients understand their blood test results.
+The main idea is simple. The rules decide. The AI only writes the explanation.

@@ -1,0 +1,7 @@
+One analyte can have many names.
+But units are the serious problem. Here is a real example.
+The report says haemoglobin is fourteen point five six grams per decilitre.
+Our reference interval is one hundred and thirty, to one hundred and seventy-five grams per litre.
+Without conversion, the system says seek care. That is a false alarm, at the most serious level.
+With conversion, the value is one hundred and forty-five point six, and the result is normal.
+So our rule is strict. If the unit is unknown, or missing, we refuse the analyte. We never guess.

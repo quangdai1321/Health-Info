@@ -1,0 +1,7 @@
+First, false reassurance, from thirty-two percent, down to zero.
+Without constraints, one patient in three, with abnormal results, would be told that nothing needed attention.
+Second, direction mismatch, from ninety-one point three percent, down to zero.
+Third, forty-eight percent. Even with careful instructions, more than half of the outputs still failed.
+And I want to be clear about the one hundred percent.
+Sixty-four percent of panels were served by model text. Thirty-six percent used a fixed template.
+The guarantee comes from the pipeline. It is not evidence that a three billion model writes reliably.

@@ -1,0 +1,5 @@
+First, no clinical validation. All our evaluation is automated.
+Second, our severity thresholds are heuristic. They do not come from a laboratory critical value list.
+Third, the data is synthetic. Real reports have noise, missing fields, and different formats.
+Fourth, the scope is narrow. We support the complete blood count only.
+No biochemistry, no qualitative results, and no image input.

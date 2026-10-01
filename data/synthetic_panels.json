@@ -1,0 +1,9524 @@
+[
+  {
+    "panel_id": "SYN-0149",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Basophil %": [
+        1.0,
+        "%"
+      ],
+      "Neu%": [
+        45.7,
+        "%"
+      ],
+      "% Mono": [
+        4.9,
+        "%"
+      ],
+      "Baso#": [
+        0.02,
+        "K/uL"
+      ],
+      "RBC": [
+        5.24,
+        "T/L"
+      ],
+      "SLBC": [
+        7.71,
+        "10^9/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.2,
+        "fL"
+      ],
+      "# Lym": [
+        2.15,
+        "G/L"
+      ],
+      "Lym%": [
+        23.9,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        56.3,
+        "%"
+      ],
+      "Plt": [
+        0,
+        "10^9/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        341,
+        "g/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0022",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "# Neu": [
+        6.2,
+        "K/uL"
+      ],
+      "Lymphocyte %": [
+        23.8,
+        "%"
+      ],
+      "NEUT%": [
+        44.3,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        348,
+        "g/L"
+      ],
+      "Tỷ lệ bạch cầu ưa bazơ": [
+        1.0,
+        "%"
+      ],
+      "MCH": [
+        28.5,
+        "pg"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        18.0,
+        "fL"
+      ],
+      "Monocyte abs": [
+        0.67,
+        "G/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "RDW": [
+        14.5,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        17,
+        "g/dL"
+      ],
+      "BC ưa bazơ": [
+        0.05,
+        "K/uL"
+      ],
+      "Số lượng tiểu cầu": [
+        360,
+        "K/uL"
+      ],
+      "Dung tích hồng cầu": [
+        46.3,
+        "%"
+      ],
+      "Bạch cầu ưa axit %": [
+        1.7,
+        "%"
+      ],
+      "Bạch cầu": [
+        8.78,
+        "10^9/L"
+      ],
+      "Bạch cầu Monocyte %": [
+        10.3,
+        "%"
+      ],
+      "Eosinophil abs": [
+        0.56,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0087",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Mono%": [
+        9.4,
+        "%"
+      ],
+      "% Bas": [
+        0.3,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        78.5,
+        "fL"
+      ],
+      "Tỷ lệ BC lympho": [
+        43.3,
+        "%"
+      ],
+      "SLHC": [
+        5.51,
+        "T/L"
+      ],
+      "Mono#": [
+        0.37,
+        "G/L"
+      ],
+      "Huyết sắc tố": [
+        13,
+        "g/dL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        9.7,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.4,
+        "pg"
+      ],
+      "BC ưa axit": [
+        0.63,
+        "K/uL"
+      ],
+      "SLBC": [
+        7.88,
+        "10^9/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0117",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Lym%": [
+        44.4,
+        "%"
+      ],
+      "Bạch cầu ưa axit %": [
+        3.5,
+        "%"
+      ],
+      "BC ua bazo %": [
+        0.9,
+        "%"
+      ],
+      "PDW": [
+        11.1,
+        "fL"
+      ],
+      "% Mono": [
+        9.6,
+        "%"
+      ],
+      "HCT": [
+        44.0,
+        "%"
+      ],
+      "Baso#": [
+        0.04,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.5,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        5.31,
+        "M/uL"
+      ],
+      "BC mono": [
+        0.62,
+        "G/L"
+      ],
+      "WBC": [
+        0.0,
+        "K/uL"
+      ],
+      "SLTC": [
+        422,
+        "10^9/L"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        5.26,
+        "G/L"
+      ],
+      "MPV": [
+        8.5,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.3,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0060",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Eosinophil %": [
+        5.6,
+        "%"
+      ],
+      "PDW": [
+        15.8,
+        "fL"
+      ],
+      "Monocyte %": [
+        4.7,
+        "%"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        28.2,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.5,
+        "fL"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.74,
+        "K/uL"
+      ],
+      "MCH": [
+        29.4,
+        "pg"
+      ],
+      "Leukocyte": [
+        7.46,
+        "G/L"
+      ],
+      "Rbc": [
+        4.57,
+        "10^12/L"
+      ],
+      "Số lượng tiểu cầu": [
+        308,
+        "K/uL"
+      ],
+      "BC mono": [
+        0.62,
+        "K/uL"
+      ],
+      "Lym#": [
+        1.87,
+        "K/uL"
+      ],
+      "MCV": [
+        85.7,
+        "fL"
+      ],
+      "MCHC": [
+        34,
+        "g/dL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.0,
+        "%"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.07,
+        "G/L"
+      ],
+      "PCT": [
+        0.1,
+        "%"
+      ],
+      "BC ua bazo %": [
+        1.7,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0049",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.4,
+        "pg"
+      ],
+      "Tỷ lệ bạch cầu ưa bazơ": [
+        0.8,
+        "%"
+      ],
+      "SLBC": [
+        8.46,
+        "K/uL"
+      ],
+      "Hb": [
+        16,
+        "g/dL"
+      ],
+      "# Lym": [
+        1.24,
+        "G/L"
+      ],
+      "BC ưa axit": [
+        0.46,
+        "K/uL"
+      ],
+      "Bạch cầu ưa axit %": [
+        6.2,
+        "%"
+      ],
+      "LYMPH%": [
+        20.4,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        320,
+        "g/L"
+      ],
+      "Rbc": [
+        5.69,
+        "T/L"
+      ],
+      "SLTC": [
+        206,
+        "G/L"
+      ],
+      "Mono#": [
+        0.4,
+        "K/uL"
+      ],
+      "Neu#": [
+        3.59,
+        "G/L"
+      ],
+      "Basophil abs": [
+        0.08,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0133",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "MPV": [
+        10.2,
+        "fL"
+      ],
+      "% Lym": [
+        41.5,
+        "%"
+      ],
+      "BC trung tính %": [
+        18.1,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.5,
+        "fL"
+      ],
+      "# Eos": [
+        0.5,
+        "G/L"
+      ],
+      "SLHC": [
+        4.85,
+        "10^12/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "EO%": [
+        1.1,
+        "%"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.07,
+        "K/uL"
+      ],
+      "BC lympho": [
+        4.43,
+        "K/uL"
+      ],
+      "Wbc": [
+        4.85,
+        "K/uL"
+      ],
+      "% Baso": [
+        0.2,
+        "%"
+      ],
+      "Bạch cầu Monocyte %": [
+        7.6,
+        "%"
+      ],
+      "Hemoglobin": [
+        158,
+        "g/L"
+      ],
+      "MCH": [
+        33.6,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0067",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Plt": [
+        422,
+        "G/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "WBC": [
+        8.32,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.0,
+        "fL"
+      ],
+      "Hồng cầu": [
+        5.26,
+        "M/uL"
+      ],
+      "NEUT%": [
+        56.3,
+        "%"
+      ],
+      "MCV": [
+        103.4,
+        "fL"
+      ],
+      "Mono#": [
+        0.37,
+        "G/L"
+      ],
+      "Tỷ lệ bạch cầu ưa bazơ": [
+        0.4,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        6.6,
+        "%"
+      ],
+      "Hematocrit": [
+        49.0,
+        "%"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        30.1,
+        "%"
+      ],
+      "HGB": [
+        16,
+        "g/dL"
+      ],
+      "BC ưa axit": [
+        0.09,
+        "K/uL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        31.9,
+        "pg"
+      ],
+      "BC lympho": [
+        1.23,
+        "K/uL"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        6.4,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0054",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình tiểu cầu": [
+        9.3,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "BASO#": [
+        0.09,
+        "G/L"
+      ],
+      "PDW": [
+        13.5,
+        "fL"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        1.34,
+        "K/uL"
+      ],
+      "MCV": [
+        102.5,
+        "fL"
+      ],
+      "MCHC": [
+        325,
+        "g/L"
+      ],
+      "Bạch cầu Monocyte %": [
+        9.0,
+        "%"
+      ],
+      "# Neu": [
+        3.7,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.9,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0113",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Độ phân bố kích thước tiểu cầu": [
+        12.2,
+        "fL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.4,
+        "fL"
+      ],
+      "BASO#": [
+        0.2,
+        "G/L"
+      ],
+      "RBC": [
+        5.48,
+        "M/uL"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.4,
+        "%"
+      ],
+      "MCH": [
+        31.0,
+        "pg"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "PLT": [
+        770,
+        "10^9/L"
+      ],
+      "MCHC": [
+        336,
+        "g/L"
+      ],
+      "Mono%": [
+        10.5,
+        "%"
+      ],
+      "# Mono": [
+        1.09,
+        "K/uL"
+      ],
+      "# Eos": [
+        0.31,
+        "K/uL"
+      ],
+      "HGB": [
+        162,
+        "g/L"
+      ],
+      "Wbc": [
+        5.72,
+        "G/L"
+      ],
+      "LYMPH%": [
+        23.8,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0108",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Baso": [
+        0.02,
+        "G/L"
+      ],
+      "PDW": [
+        15.8,
+        "fL"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.6,
+        "%"
+      ],
+      "Bạch cầu Monocyte %": [
+        7.3,
+        "%"
+      ],
+      "# Neu": [
+        1.87,
+        "K/uL"
+      ],
+      "# Lym": [
+        1.79,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu": [
+        15.98,
+        "K/uL"
+      ],
+      "EO#": [
+        0.09,
+        "K/uL"
+      ],
+      "Hb": [
+        197,
+        "g/L"
+      ],
+      "Rbc": [
+        4.53,
+        "T/L"
+      ],
+      "Neu%": [
+        63.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0125",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        31.3,
+        "pg"
+      ],
+      "% Lym": [
+        33.9,
+        "%"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.33,
+        "G/L"
+      ],
+      "BC ưa axit": [
+        0.07,
+        "K/uL"
+      ],
+      "MPV": [
+        8.3,
+        "fL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        90.6,
+        "fL"
+      ],
+      "% Neu": [
+        46.3,
+        "%"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "RDW": [
+        9.7,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0081",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "# Baso": [
+        0.09,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố": [
+        124,
+        "g/L"
+      ],
+      "MCV": [
+        76.8,
+        "fL"
+      ],
+      "Wbc": [
+        7.78,
+        "K/uL"
+      ],
+      "% Neu": [
+        53.1,
+        "%"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        50.8,
+        "%"
+      ],
+      "PCT": [
+        0.1,
+        "%"
+      ],
+      "Eosinophil %": [
+        2.2,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.08,
+        "G/L"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        2.0,
+        "G/L"
+      ],
+      "PDW": [
+        13.2,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0068",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình tiểu cầu": [
+        8.9,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "Platelet": [
+        198,
+        "K/uL"
+      ],
+      "PDW": [
+        12.8,
+        "fL"
+      ],
+      "BASO#": [
+        0.01,
+        "K/uL"
+      ],
+      "Neutrophil abs": [
+        3.9,
+        "G/L"
+      ],
+      "Lym%": [
+        40.5,
+        "%"
+      ],
+      "EO#": [
+        0.79,
+        "G/L"
+      ],
+      "% Mono": [
+        10.3,
+        "%"
+      ],
+      "% Eos": [
+        2.7,
+        "%"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        3.49,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        15.1,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0112",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "WBC": [
+        6.91,
+        "10^9/L"
+      ],
+      "Eosinophil abs": [
+        0.42,
+        "K/uL"
+      ],
+      "Baso#": [
+        0.05,
+        "K/uL"
+      ],
+      "MCHC": [
+        336,
+        "g/L"
+      ],
+      "% Mono": [
+        6.2,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.1,
+        "%"
+      ],
+      "Bas%": [
+        0.1,
+        "%"
+      ],
+      "% Eos": [
+        4.2,
+        "%"
+      ],
+      "Neutrophil abs": [
+        5.82,
+        "K/uL"
+      ],
+      "# Lym": [
+        1.98,
+        "G/L"
+      ],
+      "Số lượng hồng cầu": [
+        4.92,
+        "T/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        3.4,
+        "fL"
+      ],
+      "Hemoglobin": [
+        17,
+        "g/dL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0026",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Số lượng tiểu cầu": [
+        303,
+        "G/L"
+      ],
+      "Lymphocyte abs": [
+        1.01,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        136,
+        "g/L"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.12,
+        "G/L"
+      ],
+      "Neutrophil abs": [
+        6.2,
+        "K/uL"
+      ],
+      "BC trung tính %": [
+        53.2,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        23.7,
+        "%"
+      ],
+      "PDW": [
+        17.2,
+        "fL"
+      ],
+      "Bạch cầu": [
+        5.48,
+        "K/uL"
+      ],
+      "Eosinophil %": [
+        7.1,
+        "%"
+      ],
+      "BC ua bazo %": [
+        1.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0001",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "# Bas": [
+        0.06,
+        "K/uL"
+      ],
+      "BC trung tính": [
+        6.2,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.6,
+        "pg"
+      ],
+      "BASO%": [
+        1.3,
+        "%"
+      ],
+      "BC mono": [
+        0.77,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.6,
+        "fL"
+      ],
+      "MCHC": [
+        34,
+        "g/dL"
+      ],
+      "Erythrocyte": [
+        4.37,
+        "T/L"
+      ],
+      "Plt": [
+        194,
+        "K/uL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Mono%": [
+        5.1,
+        "%"
+      ],
+      "EO%": [
+        4.2,
+        "%"
+      ],
+      "Lymphocyte %": [
+        40.3,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        80.2,
+        "fL"
+      ],
+      "Neutrophil %": [
+        70.5,
+        "%"
+      ],
+      "LYMPH#": [
+        2.19,
+        "G/L"
+      ],
+      "# Eos": [
+        0.25,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0110",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Số lượng bạch cầu": [
+        5.06,
+        "10^9/L"
+      ],
+      "# Neu": [
+        2.98,
+        "K/uL"
+      ],
+      "RDW-CV": [
+        9.3,
+        "%"
+      ],
+      "# Eos": [
+        0.21,
+        "K/uL"
+      ],
+      "PDW": [
+        17.4,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "BC ua axit %": [
+        3.4,
+        "%"
+      ],
+      "Hct": [
+        41.7,
+        "%"
+      ],
+      "Lym%": [
+        2.0,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.22,
+        "G/L"
+      ],
+      "Lymphocyte abs": [
+        1.77,
+        "G/L"
+      ],
+      "BC ua bazo %": [
+        0.2,
+        "%"
+      ],
+      "MCH": [
+        28.8,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0114",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "BC ua axit %": [
+        0.7,
+        "%"
+      ],
+      "Mono%": [
+        7.2,
+        "%"
+      ],
+      "MPV": [
+        6.8,
+        "fL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.2,
+        "fL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.2,
+        "%"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Lymphocyte %": [
+        31.0,
+        "%"
+      ],
+      "Rbc": [
+        4.84,
+        "M/uL"
+      ],
+      "HCT": [
+        0.5,
+        "L/L"
+      ],
+      "% Bas": [
+        0.8,
+        "%"
+      ],
+      "Mono#": [
+        0.76,
+        "K/uL"
+      ],
+      "Lym#": [
+        5.12,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        31.9,
+        "pg"
+      ],
+      "Leukocyte": [
+        6.95,
+        "K/uL"
+      ],
+      "PLT": [
+        422,
+        "K/uL"
+      ],
+      "# Eos": [
+        0.27,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0043",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "% Neu": [
+        69.3,
+        "%"
+      ],
+      "MCV": [
+        87.2,
+        "fL"
+      ],
+      "NEUT#": [
+        2.16,
+        "G/L"
+      ],
+      "RDW-CV": [
+        11.5,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.4,
+        "pg"
+      ],
+      "Tỷ lệ BC mono": [
+        7.2,
+        "%"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.04,
+        "G/L"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.8,
+        "G/L"
+      ],
+      "% Eos": [
+        1.8,
+        "%"
+      ],
+      "MPV": [
+        10.4,
+        "fL"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.19,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        166,
+        "g/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.3,
+        "fL"
+      ],
+      "MCHC": [
+        347,
+        "g/L"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        28.7,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0139",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Mono#": [
+        0.39,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.7,
+        "%"
+      ],
+      "% Neu": [
+        66.4,
+        "%"
+      ],
+      "BASO#": [
+        0.04,
+        "G/L"
+      ],
+      "Hồng cầu": [
+        5.22,
+        "T/L"
+      ],
+      "EO%": [
+        6.5,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        1.13,
+        "K/uL"
+      ],
+      "Tỷ lệ BC mono": [
+        5.4,
+        "%"
+      ],
+      "Plateletcrit": [
+        0.3,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        3.9,
+        "fL"
+      ],
+      "BASO%": [
+        0.7,
+        "%"
+      ],
+      "SLBC": [
+        7.38,
+        "K/uL"
+      ],
+      "PLT": [
+        385,
+        "G/L"
+      ],
+      "SL bạch cầu trung tính": [
+        1.76,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0080",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "MCH": [
+        32.6,
+        "pg"
+      ],
+      "PLT": [
+        223,
+        "K/uL"
+      ],
+      "NEUT%": [
+        38.4,
+        "%"
+      ],
+      "Eosinophil %": [
+        1.3,
+        "%"
+      ],
+      "MCV": [
+        94.7,
+        "fL"
+      ],
+      "Dung tich hong cau": [
+        40.2,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.24,
+        "K/uL"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Lymphocyte abs": [
+        2.1,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu": [
+        4.72,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        1.2,
+        "%"
+      ],
+      "# Mono": [
+        0.24,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0089",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "LYMPH#": [
+        1.2,
+        "G/L"
+      ],
+      "NEUT#": [
+        3.62,
+        "K/uL"
+      ],
+      "RDW": [
+        12.8,
+        "%"
+      ],
+      "MPV": [
+        9.0,
+        "fL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        77.7,
+        "fL"
+      ],
+      "MONO#": [
+        0.42,
+        "K/uL"
+      ],
+      "RBC": [
+        4.65,
+        "10^12/L"
+      ],
+      "Hemoglobin": [
+        153,
+        "g/L"
+      ],
+      "Số lượng bạch cầu": [
+        6.85,
+        "10^9/L"
+      ],
+      "MONO%": [
+        9.0,
+        "%"
+      ],
+      "EO#": [
+        0.53,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        0.9,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.3,
+        "pg"
+      ],
+      "Plt": [
+        389,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0065",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Lượng huyết sắc tố": [
+        156,
+        "g/L"
+      ],
+      "BC ưa bazơ": [
+        0.07,
+        "K/uL"
+      ],
+      "BC ưa axit": [
+        0.31,
+        "G/L"
+      ],
+      "BASO%": [
+        1.5,
+        "%"
+      ],
+      "Monocyte %": [
+        8.0,
+        "%"
+      ],
+      "Erythrocyte": [
+        4.99,
+        "M/uL"
+      ],
+      "Tiểu cầu": [
+        320,
+        "K/uL"
+      ],
+      "Lym#": [
+        1.74,
+        "K/uL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "RDW-CV": [
+        13.6,
+        "%"
+      ],
+      "Neu%": [
+        44.4,
+        "%"
+      ],
+      "Neutrophil abs": [
+        0.18,
+        "G/L"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        26.1,
+        "%"
+      ],
+      "Bạch cầu ưa axit %": [
+        4.3,
+        "%"
+      ],
+      "MCH": [
+        28.2,
+        "pg"
+      ],
+      "Dung tích hồng cầu": [
+        48.0,
+        "%"
+      ],
+      "BC mono": [
+        0.56,
+        "G/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0013",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Số lượng bạch cầu Monocyte": [
+        0.2,
+        "G/L"
+      ],
+      "% Lym": [
+        32.3,
+        "%"
+      ],
+      "RDW-CV": [
+        13.8,
+        "%"
+      ],
+      "Platelet": [
+        225,
+        "G/L"
+      ],
+      "# Neu": [
+        5.55,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.5,
+        "fL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        88.7,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.1,
+        "pg"
+      ],
+      "Hematocrit": [
+        0.4,
+        "L/L"
+      ],
+      "BC ưa bazơ": [
+        0.06,
+        "K/uL"
+      ],
+      "Wbc": [
+        6.02,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.1,
+        "fL"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0019",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Bạch cầu Lymphocyte %": [
+        28.3,
+        "%"
+      ],
+      "SLBC": [
+        6.56,
+        "K/uL"
+      ],
+      "BASO%": [
+        0.4,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.3,
+        "G/L"
+      ],
+      "MCHC": [
+        331,
+        "g/L"
+      ],
+      "Baso#": [
+        0.03,
+        "G/L"
+      ],
+      "PDW": [
+        10.1,
+        "fL"
+      ],
+      "Lymphocyte abs": [
+        2.09,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.3,
+        "fL"
+      ],
+      "MONO#": [
+        0.3,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0028",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "PDW": [
+        12.3,
+        "fL"
+      ],
+      "NEUT#": [
+        3.49,
+        "K/uL"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        1.3,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.9,
+        "pg"
+      ],
+      "# Lym": [
+        2.43,
+        "K/uL"
+      ],
+      "Bạch cầu Monocyte %": [
+        8.0,
+        "%"
+      ],
+      "HGB": [
+        164,
+        "g/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "BC ưa axit": [
+        0.19,
+        "K/uL"
+      ],
+      "BASO#": [
+        0.05,
+        "G/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.8,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.4,
+        "fL"
+      ],
+      "BC mono": [
+        0.8,
+        "K/uL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0052",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Lượng huyết sắc tố": [
+        123,
+        "g/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.5,
+        "fL"
+      ],
+      "PDW": [
+        15.6,
+        "fL"
+      ],
+      "# Eos": [
+        0.13,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.9,
+        "pg"
+      ],
+      "Rbc": [
+        5.32,
+        "10^12/L"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ],
+      "Basophil abs": [
+        0.08,
+        "G/L"
+      ],
+      "HCT": [
+        0.4,
+        "L/L"
+      ],
+      "Tiểu cầu": [
+        417,
+        "10^9/L"
+      ],
+      "Lymphocyte abs": [
+        2.88,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0050",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "SL bạch cầu ưa bazơ": [
+        0.09,
+        "K/uL"
+      ],
+      "Wbc": [
+        4.21,
+        "G/L"
+      ],
+      "MCH": [
+        31.6,
+        "pg"
+      ],
+      "Hct": [
+        46.7,
+        "%"
+      ],
+      "MONO%": [
+        8.2,
+        "%"
+      ],
+      "BC ua axit %": [
+        7.1,
+        "%"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        3.46,
+        "G/L"
+      ],
+      "SLHC": [
+        5.13,
+        "T/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        80.0,
+        "fL"
+      ],
+      "Platelet": [
+        190,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        17.6,
+        "fL"
+      ],
+      "NEUT%": [
+        47.1,
+        "%"
+      ],
+      "Huyết sắc tố": [
+        15,
+        "g/dL"
+      ],
+      "BC ua bazo %": [
+        0.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0104",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "RDW-CV": [
+        12.3,
+        "%"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.55,
+        "G/L"
+      ],
+      "Số lượng hồng cầu": [
+        4.91,
+        "M/uL"
+      ],
+      "BC mono": [
+        1.09,
+        "G/L"
+      ],
+      "Bạch cầu Monocyte %": [
+        5.0,
+        "%"
+      ],
+      "Tỷ lệ BC trung tính": [
+        61.2,
+        "%"
+      ],
+      "HGB": [
+        172,
+        "g/L"
+      ],
+      "HCT": [
+        0.4,
+        "L/L"
+      ],
+      "# Baso": [
+        0.07,
+        "G/L"
+      ],
+      "Tiểu cầu": [
+        633,
+        "G/L"
+      ],
+      "Basophil %": [
+        0.1,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        92.8,
+        "fL"
+      ],
+      "PCT": [
+        0.3,
+        "%"
+      ],
+      "MCHC": [
+        331,
+        "g/L"
+      ],
+      "Neu#": [
+        5.7,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0042",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Monocyte abs": [
+        0.48,
+        "K/uL"
+      ],
+      "Rbc": [
+        4.57,
+        "10^12/L"
+      ],
+      "% Mono": [
+        3.7,
+        "%"
+      ],
+      "Plt": [
+        394,
+        "G/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Bas%": [
+        0.7,
+        "%"
+      ],
+      "MCV": [
+        83.7,
+        "fL"
+      ],
+      "Eos#": [
+        0.35,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        175,
+        "g/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.2,
+        "pg"
+      ],
+      "Eosinophil %": [
+        4.8,
+        "%"
+      ],
+      "Lym%": [
+        19.7,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.4,
+        "%"
+      ],
+      "Bạch cầu": [
+        6.5,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        1.92,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0134",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "SLHC": [
+        5.47,
+        "M/uL"
+      ],
+      "Hematocrit": [
+        34.0,
+        "%"
+      ],
+      "EO%": [
+        6.9,
+        "%"
+      ],
+      "PDW": [
+        12.9,
+        "fL"
+      ],
+      "RDW": [
+        10.1,
+        "%"
+      ],
+      "PLT": [
+        310,
+        "10^9/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Tỷ lệ BC lympho": [
+        40.1,
+        "%"
+      ],
+      "Huyết sắc tố": [
+        135,
+        "g/L"
+      ],
+      "Mono#": [
+        0.4,
+        "K/uL"
+      ],
+      "SLBC": [
+        3.78,
+        "G/L"
+      ],
+      "MCHC": [
+        340,
+        "g/L"
+      ],
+      "# Eos": [
+        0.46,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.03,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.4,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0118",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Bạch cầu Lymphocyte %": [
+        35.1,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        6.8,
+        "fL"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.02,
+        "G/L"
+      ],
+      "% Baso": [
+        0.8,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        25.8,
+        "fL"
+      ],
+      "% Neu": [
+        56.8,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "Eosinophil %": [
+        0.9,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        0.5,
+        "L/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Eos#": [
+        0.06,
+        "G/L"
+      ],
+      "LYMPH#": [
+        2.46,
+        "G/L"
+      ],
+      "WBC": [
+        0.0,
+        "G/L"
+      ],
+      "Hemoglobin": [
+        155,
+        "g/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.6,
+        "pg"
+      ],
+      "Neutrophil abs": [
+        1.93,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0105",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Bạch cầu trung tính %": [
+        15.6,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        27.2,
+        "%"
+      ],
+      "MPV": [
+        11.1,
+        "fL"
+      ],
+      "Eos%": [
+        6.1,
+        "%"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ],
+      "Baso#": [
+        0.05,
+        "G/L"
+      ],
+      "Eosinophil abs": [
+        0.2,
+        "K/uL"
+      ],
+      "Bạch cầu Monocyte %": [
+        8.7,
+        "%"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        1.58,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.7,
+        "pg"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.7,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0101",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Plt": [
+        0,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        14,
+        "g/dL"
+      ],
+      "BC trung tính %": [
+        66.4,
+        "%"
+      ],
+      "Eosinophil abs": [
+        0.56,
+        "G/L"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.03,
+        "G/L"
+      ],
+      "MCHC": [
+        329,
+        "g/L"
+      ],
+      "MCH": [
+        32.8,
+        "pg"
+      ],
+      "Wbc": [
+        6.68,
+        "10^9/L"
+      ],
+      "Rbc": [
+        5.11,
+        "10^12/L"
+      ],
+      "Dung tích hồng cầu": [
+        45.1,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        94.4,
+        "fL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.3,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        11.8,
+        "fL"
+      ],
+      "% Baso": [
+        0.9,
+        "%"
+      ],
+      "% Mono": [
+        10.1,
+        "%"
+      ],
+      "Lymphocyte abs": [
+        2.64,
+        "K/uL"
+      ],
+      "RDW": [
+        13.9,
+        "%"
+      ],
+      "BC mono": [
+        0.3,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0077",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "SLHC": [
+        4.64,
+        "10^12/L"
+      ],
+      "LYMPH%": [
+        33.4,
+        "%"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ],
+      "Số lượng bạch cầu": [
+        6.69,
+        "K/uL"
+      ],
+      "MPV": [
+        10.9,
+        "fL"
+      ],
+      "Eos%": [
+        4.8,
+        "%"
+      ],
+      "Lymphocyte abs": [
+        3.12,
+        "K/uL"
+      ],
+      "% Baso": [
+        1.2,
+        "%"
+      ],
+      "PCT": [
+        0.1,
+        "%"
+      ],
+      "# Neu": [
+        3.71,
+        "G/L"
+      ],
+      "Mono%": [
+        4.2,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        13.9,
+        "fL"
+      ],
+      "Hct": [
+        0.5,
+        "L/L"
+      ],
+      "MCV": [
+        96.6,
+        "fL"
+      ],
+      "# Mono": [
+        0.43,
+        "G/L"
+      ],
+      "PLT": [
+        393,
+        "10^9/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0003",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        358,
+        "g/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        9.3,
+        "fL"
+      ],
+      "MCV": [
+        96.8,
+        "fL"
+      ],
+      "# Mono": [
+        0.68,
+        "K/uL"
+      ],
+      "# Neu": [
+        5.9,
+        "G/L"
+      ],
+      "EO%": [
+        4.7,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.0,
+        "pg"
+      ],
+      "Eosinophil abs": [
+        0.14,
+        "G/L"
+      ],
+      "Tỷ lệ BC mono": [
+        9.6,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        69.3,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        40.2,
+        "%"
+      ],
+      "Hematocrit": [
+        40.7,
+        "%"
+      ],
+      "SLBC": [
+        6.68,
+        "10^9/L"
+      ],
+      "Huyết sắc tố": [
+        130,
+        "g/L"
+      ],
+      "Hồng cầu": [
+        4.49,
+        "T/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0075",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "NEUT#": [
+        3.91,
+        "G/L"
+      ],
+      "Basophil %": [
+        1.0,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.34,
+        "K/uL"
+      ],
+      "LYMPH#": [
+        1.77,
+        "G/L"
+      ],
+      "PDW": [
+        15.2,
+        "fL"
+      ],
+      "Tỷ lệ BC lympho": [
+        28.3,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        7.5,
+        "%"
+      ],
+      "RDW": [
+        12.7,
+        "%"
+      ],
+      "MPV": [
+        11.5,
+        "fL"
+      ],
+      "Wbc": [
+        3.72,
+        "10^9/L"
+      ],
+      "MCH": [
+        35.2,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0126",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "RBC": [
+        5.16,
+        "T/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        81.1,
+        "fL"
+      ],
+      "MPV": [
+        11.1,
+        "fL"
+      ],
+      "PLT": [
+        247,
+        "K/uL"
+      ],
+      "Tỷ lệ BC mono": [
+        8.6,
+        "%"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        2.3,
+        "G/L"
+      ],
+      "Lymphocyte %": [
+        2.2,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        42.1,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        358,
+        "g/L"
+      ],
+      "Lymphocyte abs": [
+        1.1,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "% Neu": [
+        63.9,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        14.7,
+        "%"
+      ],
+      "BC ua bazo %": [
+        1.0,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        11.7,
+        "fL"
+      ],
+      "RDW-CV": [
+        13.6,
+        "%"
+      ],
+      "# Mono": [
+        1.5,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0102",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "EO#": [
+        0.53,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        107.2,
+        "fL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        13.9,
+        "fL"
+      ],
+      "BC ua bazo %": [
+        1.0,
+        "%"
+      ],
+      "RDW": [
+        12.9,
+        "%"
+      ],
+      "BC trung tính": [
+        5.17,
+        "G/L"
+      ],
+      "Erythrocyte": [
+        5.56,
+        "10^12/L"
+      ],
+      "MPV": [
+        15.3,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        325,
+        "g/L"
+      ],
+      "Mono%": [
+        6.5,
+        "%"
+      ],
+      "Số lượng tiểu cầu": [
+        376,
+        "K/uL"
+      ],
+      "% Eos": [
+        0.9,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        45.5,
+        "%"
+      ],
+      "# Bas": [
+        0.19,
+        "K/uL"
+      ],
+      "MCH": [
+        28.0,
+        "pg"
+      ],
+      "Lym%": [
+        41.1,
+        "%"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0066",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Tỷ lệ BC ưa bazơ": [
+        0.3,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        45.8,
+        "%"
+      ],
+      "Bạch cầu Monocyte %": [
+        5.1,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        86.4,
+        "fL"
+      ],
+      "PDW": [
+        15.3,
+        "fL"
+      ],
+      "BC mono": [
+        0.37,
+        "K/uL"
+      ],
+      "SLBC": [
+        3.76,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        5.4,
+        "fL"
+      ],
+      "# Lym": [
+        2.75,
+        "K/uL"
+      ],
+      "Hb": [
+        17,
+        "g/dL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.3,
+        "%"
+      ],
+      "% Eos": [
+        10.8,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        350,
+        "g/L"
+      ],
+      "Neutrophil %": [
+        57.9,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0036",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        31.8,
+        "pg"
+      ],
+      "RDW-CV": [
+        13.4,
+        "%"
+      ],
+      "PDW": [
+        15.4,
+        "fL"
+      ],
+      "MPV": [
+        9.8,
+        "fL"
+      ],
+      "BC trung tính %": [
+        57.2,
+        "%"
+      ],
+      "Tiểu cầu": [
+        428,
+        "10^9/L"
+      ],
+      "MCHC": [
+        328,
+        "g/L"
+      ],
+      "EO#": [
+        0.29,
+        "G/L"
+      ],
+      "Hct": [
+        38.8,
+        "%"
+      ],
+      "Bạch cầu ưa axit %": [
+        1.2,
+        "%"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        1.2,
+        "%"
+      ],
+      "# Bas": [
+        0.0,
+        "G/L"
+      ],
+      "Hồng cầu": [
+        5.69,
+        "M/uL"
+      ],
+      "Neutrophil abs": [
+        5.76,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0020",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Basophil abs": [
+        0.1,
+        "K/uL"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.2,
+        "K/uL"
+      ],
+      "BC mono": [
+        0.5,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.2,
+        "pg"
+      ],
+      "MPV": [
+        7.3,
+        "fL"
+      ],
+      "% Lym": [
+        37.5,
+        "%"
+      ],
+      "BC ua axit %": [
+        2.5,
+        "%"
+      ],
+      "# Lym": [
+        1.41,
+        "K/uL"
+      ],
+      "SL bạch cầu trung tính": [
+        1.33,
+        "K/uL"
+      ],
+      "HCT": [
+        0.4,
+        "L/L"
+      ],
+      "SLHC": [
+        5.16,
+        "10^12/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0122",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Monocyte %": [
+        6.0,
+        "%"
+      ],
+      "MCV": [
+        84.8,
+        "fL"
+      ],
+      "Bas%": [
+        1.1,
+        "%"
+      ],
+      "PCT": [
+        0.0,
+        "%"
+      ],
+      "Bạch cầu": [
+        0.0,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.22,
+        "K/uL"
+      ],
+      "LYMPH%": [
+        41.8,
+        "%"
+      ],
+      "SL bạch cầu trung tính": [
+        9.8,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "SLTC": [
+        198,
+        "G/L"
+      ],
+      "Bạch cầu ưa axit %": [
+        1.6,
+        "%"
+      ],
+      "RDW": [
+        12.9,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        8.6,
+        "fL"
+      ],
+      "MCH": [
+        28.0,
+        "pg"
+      ],
+      "Hồng cầu": [
+        4.63,
+        "10^12/L"
+      ],
+      "# Baso": [
+        0.04,
+        "G/L"
+      ],
+      "Hemoglobin": [
+        137,
+        "g/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0063",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Độ phân bố kích thước hồng cầu": [
+        12.3,
+        "%"
+      ],
+      "MCHC": [
+        336,
+        "g/L"
+      ],
+      "Tỷ lệ BC lympho": [
+        39.8,
+        "%"
+      ],
+      "MCV": [
+        103.0,
+        "fL"
+      ],
+      "NEUT%": [
+        47.6,
+        "%"
+      ],
+      "Baso#": [
+        0.02,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        26.1,
+        "pg"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        10.3,
+        "%"
+      ],
+      "BC trung tính": [
+        4.57,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.11,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        12.0,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Hồng cầu": [
+        4.97,
+        "M/uL"
+      ],
+      "% Baso": [
+        0.8,
+        "%"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        2.0,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0009",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "BC ua bazo %": [
+        1.2,
+        "%"
+      ],
+      "Neutrophil %": [
+        53.9,
+        "%"
+      ],
+      "Hb": [
+        16,
+        "g/dL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        9.3,
+        "fL"
+      ],
+      "Tỷ lệ BC lympho": [
+        40.4,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.47,
+        "K/uL"
+      ],
+      "# Neu": [
+        5.38,
+        "G/L"
+      ],
+      "Eos#": [
+        0.16,
+        "K/uL"
+      ],
+      "MCH": [
+        34.0,
+        "pg"
+      ],
+      "Eos%": [
+        0.1,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0131",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Eos": [
+        1.26,
+        "G/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.3,
+        "%"
+      ],
+      "Mono#": [
+        0.53,
+        "K/uL"
+      ],
+      "Tiểu cầu": [
+        604,
+        "G/L"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        2.8,
+        "%"
+      ],
+      "Lymphocyte abs": [
+        2.0,
+        "K/uL"
+      ],
+      "MONO%": [
+        8.8,
+        "%"
+      ],
+      "# Neu": [
+        3.01,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        14.0,
+        "fL"
+      ],
+      "SLHC": [
+        5.13,
+        "M/uL"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        59.8,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0088",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Neu%": [
+        77.4,
+        "%"
+      ],
+      "% Baso": [
+        0.5,
+        "%"
+      ],
+      "Eosinophil %": [
+        0.5,
+        "%"
+      ],
+      "RDW": [
+        14.3,
+        "%"
+      ],
+      "# Neu": [
+        0.0,
+        "K/uL"
+      ],
+      "BC lympho": [
+        1.23,
+        "G/L"
+      ],
+      "HCT": [
+        0.4,
+        "L/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        355,
+        "g/L"
+      ],
+      "Leukocyte": [
+        5.07,
+        "K/uL"
+      ],
+      "Hb": [
+        14,
+        "g/dL"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "MCV": [
+        91.4,
+        "fL"
+      ],
+      "Eosinophil abs": [
+        0.3,
+        "K/uL"
+      ],
+      "Lymphocyte %": [
+        22.1,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.31,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.0,
+        "fL"
+      ],
+      "PDW": [
+        16.7,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0061",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "PDW": [
+        15.3,
+        "fL"
+      ],
+      "BC mono": [
+        0.62,
+        "G/L"
+      ],
+      "EO#": [
+        0.48,
+        "K/uL"
+      ],
+      "MCH": [
+        25.9,
+        "pg"
+      ],
+      "Eosinophil %": [
+        6.6,
+        "%"
+      ],
+      "SLTC": [
+        207,
+        "10^9/L"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        14.2,
+        "%"
+      ],
+      "% Lym": [
+        33.3,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        5.1,
+        "T/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Basophil abs": [
+        0.01,
+        "K/uL"
+      ],
+      "MPV": [
+        10.9,
+        "fL"
+      ],
+      "Neu#": [
+        4.31,
+        "G/L"
+      ],
+      "Bạch cầu Monocyte %": [
+        7.8,
+        "%"
+      ],
+      "Hematocrit": [
+        0.5,
+        "L/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0132",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Lymphocyte %": [
+        42.8,
+        "%"
+      ],
+      "Hemoglobin": [
+        16,
+        "g/dL"
+      ],
+      "SLBC": [
+        5.65,
+        "G/L"
+      ],
+      "RDW-CV": [
+        14.1,
+        "%"
+      ],
+      "BASO%": [
+        0.3,
+        "%"
+      ],
+      "Eos%": [
+        4.8,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "BASO#": [
+        0.05,
+        "K/uL"
+      ],
+      "Eosinophil abs": [
+        1.01,
+        "G/L"
+      ],
+      "MCHC": [
+        38,
+        "g/dL"
+      ],
+      "# Neu": [
+        9.8,
+        "K/uL"
+      ],
+      "SLHC": [
+        4.74,
+        "M/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0040",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "MCH": [
+        31.3,
+        "pg"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        3.97,
+        "K/uL"
+      ],
+      "Tỷ lệ BC lympho": [
+        43.5,
+        "%"
+      ],
+      "Tỷ lệ BC mono": [
+        5.1,
+        "%"
+      ],
+      "MPV": [
+        12.0,
+        "fL"
+      ],
+      "Số lượng tiểu cầu": [
+        449,
+        "10^9/L"
+      ],
+      "Mono#": [
+        0.44,
+        "G/L"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.7,
+        "%"
+      ],
+      "Eosinophil abs": [
+        0.47,
+        "K/uL"
+      ],
+      "Wbc": [
+        5.3,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        82.5,
+        "fL"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.07,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "Rbc": [
+        4.68,
+        "10^12/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0145",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Eosinophil %": [
+        4.0,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        14.9,
+        "fL"
+      ],
+      "MCHC": [
+        372,
+        "g/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        89.2,
+        "fL"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.68,
+        "G/L"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        57.0,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        4.85,
+        "T/L"
+      ],
+      "# Baso": [
+        0.03,
+        "K/uL"
+      ],
+      "Bas%": [
+        1.0,
+        "%"
+      ],
+      "# Lym": [
+        2.82,
+        "K/uL"
+      ],
+      "Bạch cầu Monocyte %": [
+        0.6,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        26.2,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.4,
+        "fL"
+      ],
+      "Số lượng tiểu cầu": [
+        279,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0072",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "MPV": [
+        7.6,
+        "fL"
+      ],
+      "BC ưa axit": [
+        0.51,
+        "G/L"
+      ],
+      "# Neu": [
+        5.03,
+        "G/L"
+      ],
+      "BC ua axit %": [
+        4.9,
+        "%"
+      ],
+      "BC mono": [
+        0.45,
+        "K/uL"
+      ],
+      "LYMPH%": [
+        41.1,
+        "%"
+      ],
+      "PDW": [
+        20.5,
+        "fL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.3,
+        "%"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        2.74,
+        "K/uL"
+      ],
+      "Số lượng tiểu cầu": [
+        430,
+        "K/uL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        94.2,
+        "fL"
+      ],
+      "SLBC": [
+        6.57,
+        "10^9/L"
+      ],
+      "Dung tich hong cau": [
+        0.5,
+        "L/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0023",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Dung tich hong cau": [
+        48.0,
+        "%"
+      ],
+      "MCH": [
+        31.9,
+        "pg"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        3.9,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu ưa bazơ": [
+        0.0,
+        "%"
+      ],
+      "WBC": [
+        3.72,
+        "10^9/L"
+      ],
+      "MCV": [
+        80.1,
+        "fL"
+      ],
+      "HGB": [
+        14,
+        "g/dL"
+      ],
+      "SL bạch cầu trung tính": [
+        5.48,
+        "K/uL"
+      ],
+      "# Eos": [
+        0.4,
+        "G/L"
+      ],
+      "MONO%": [
+        6.3,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.6,
+        "fL"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.86,
+        "K/uL"
+      ],
+      "RBC": [
+        5.41,
+        "M/uL"
+      ],
+      "Plt": [
+        239,
+        "G/L"
+      ],
+      "BC trung tính %": [
+        73.5,
+        "%"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        17.2,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.2,
+        "%"
+      ],
+      "Mono#": [
+        0.39,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0004",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "RDW": [
+        12.9,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        351,
+        "g/L"
+      ],
+      "BC lympho": [
+        2.29,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.1,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.3,
+        "pg"
+      ],
+      "PLT": [
+        335,
+        "10^9/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Lym%": [
+        18.8,
+        "%"
+      ],
+      "Neu%": [
+        49.0,
+        "%"
+      ],
+      "EO%": [
+        7.5,
+        "%"
+      ],
+      "Hct": [
+        0.5,
+        "L/L"
+      ],
+      "EO#": [
+        0.33,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0136",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "MCV": [
+        68.4,
+        "fL"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "PDW": [
+        16.4,
+        "fL"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        1.11,
+        "G/L"
+      ],
+      "RBC": [
+        4.45,
+        "M/uL"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        6.9,
+        "%"
+      ],
+      "% Bas": [
+        0.3,
+        "%"
+      ],
+      "# Bas": [
+        0.06,
+        "G/L"
+      ],
+      "Dung tich hong cau": [
+        45.6,
+        "%"
+      ],
+      "BC trung tính": [
+        5.08,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        14.3,
+        "%"
+      ],
+      "% Neu": [
+        13.1,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.0,
+        "pg"
+      ],
+      "Mono#": [
+        0.57,
+        "K/uL"
+      ],
+      "Wbc": [
+        8.25,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.9,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0074",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Eos%": [
+        3.3,
+        "%"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        12.6,
+        "%"
+      ],
+      "# Mono": [
+        0.91,
+        "G/L"
+      ],
+      "% Baso": [
+        0.3,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.9,
+        "pg"
+      ],
+      "NEUT%": [
+        70.8,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        41.0,
+        "%"
+      ],
+      "Eos#": [
+        0.3,
+        "G/L"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.05,
+        "K/uL"
+      ],
+      "# Lym": [
+        1.85,
+        "G/L"
+      ],
+      "Hb": [
+        15,
+        "g/dL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        94.3,
+        "fL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.2,
+        "%"
+      ],
+      "Tỷ lệ BC mono": [
+        9.5,
+        "%"
+      ],
+      "Neutrophil abs": [
+        3.36,
+        "K/uL"
+      ],
+      "Wbc": [
+        6.33,
+        "10^9/L"
+      ],
+      "MPV": [
+        9.4,
+        "fL"
+      ],
+      "RBC": [
+        4.8,
+        "M/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0035",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "SL bạch cầu Monocyte": [
+        0.7,
+        "K/uL"
+      ],
+      "EO#": [
+        0.5,
+        "G/L"
+      ],
+      "BC trung tính": [
+        3.06,
+        "K/uL"
+      ],
+      "MCHC": [
+        360,
+        "g/L"
+      ],
+      "Lym#": [
+        3.0,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố": [
+        130,
+        "g/L"
+      ],
+      "Tỷ lệ BC trung tính": [
+        70.6,
+        "%"
+      ],
+      "Basophil %": [
+        0.0,
+        "%"
+      ],
+      "PLT": [
+        324,
+        "G/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "MCH": [
+        31.1,
+        "pg"
+      ],
+      "MPV": [
+        11.7,
+        "fL"
+      ],
+      "# Bas": [
+        0.02,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.6,
+        "fL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        91.6,
+        "fL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.4,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0086",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.1,
+        "pg"
+      ],
+      "Eosinophil abs": [
+        0.76,
+        "K/uL"
+      ],
+      "NEUT%": [
+        69.2,
+        "%"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.69,
+        "G/L"
+      ],
+      "PCT": [
+        0.3,
+        "%"
+      ],
+      "RBC": [
+        4.79,
+        "M/uL"
+      ],
+      "HCT": [
+        0.4,
+        "L/L"
+      ],
+      "MCHC": [
+        345,
+        "g/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.4,
+        "%"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        30.9,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        7.57,
+        "G/L"
+      ],
+      "Monocyte %": [
+        2.2,
+        "%"
+      ],
+      "Bas%": [
+        0.8,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        151,
+        "g/L"
+      ],
+      "Basophil abs": [
+        0.06,
+        "K/uL"
+      ],
+      "PLT": [
+        379,
+        "G/L"
+      ],
+      "Neutrophil abs": [
+        0.45,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0021",
+    "target_label": "binh_thuong",
+    "has_borderline": false,
+    "results": {
+      "Lymphocyte %": [
+        27.5,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        84.5,
+        "fL"
+      ],
+      "Bạch cầu ưa axit %": [
+        2.2,
+        "%"
+      ],
+      "MCH": [
+        31.7,
+        "pg"
+      ],
+      "Mono#": [
+        0.53,
+        "K/uL"
+      ],
+      "Hct": [
+        0.5,
+        "L/L"
+      ],
+      "# Baso": [
+        0.04,
+        "G/L"
+      ],
+      "% Mono": [
+        5.9,
+        "%"
+      ],
+      "Bạch cầu": [
+        6.09,
+        "10^9/L"
+      ],
+      "Bas%": [
+        0.3,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0141",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Plt": [
+        189,
+        "K/uL"
+      ],
+      "Bas%": [
+        1.0,
+        "%"
+      ],
+      "PDW": [
+        0.8,
+        "fL"
+      ],
+      "PCT": [
+        0.1,
+        "%"
+      ],
+      "% Lym": [
+        25.5,
+        "%"
+      ],
+      "Neutrophil %": [
+        50.5,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.55,
+        "G/L"
+      ],
+      "RBC": [
+        4.82,
+        "10^12/L"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.51,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        159,
+        "g/L"
+      ],
+      "Eos%": [
+        4.9,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0144",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Hematocrit": [
+        0.4,
+        "L/L"
+      ],
+      "MCHC": [
+        34,
+        "g/dL"
+      ],
+      "Tiểu cầu": [
+        344,
+        "K/uL"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Bas%": [
+        0.9,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.3,
+        "fL"
+      ],
+      "BC trung tính %": [
+        71.4,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.6,
+        "%"
+      ],
+      "Rbc": [
+        5.12,
+        "M/uL"
+      ],
+      "Lượng huyết sắc tố": [
+        147,
+        "g/L"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.76,
+        "G/L"
+      ],
+      "# Mono": [
+        0.75,
+        "K/uL"
+      ],
+      "LYMPH%": [
+        0.0,
+        "%"
+      ],
+      "MCV": [
+        97.4,
+        "fL"
+      ],
+      "SLBC": [
+        5.81,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0034",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.3,
+        "pg"
+      ],
+      "BC ưa bazơ": [
+        0.01,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "MONO#": [
+        0.49,
+        "K/uL"
+      ],
+      "# Neu": [
+        4.27,
+        "K/uL"
+      ],
+      "MCV": [
+        80.0,
+        "fL"
+      ],
+      "Hemoglobin": [
+        16,
+        "g/dL"
+      ],
+      "Dung tích hồng cầu": [
+        48.0,
+        "%"
+      ],
+      "Erythrocyte": [
+        5.69,
+        "10^12/L"
+      ],
+      "Số lượng tiểu cầu": [
+        150,
+        "10^9/L"
+      ],
+      "# Eos": [
+        0.07,
+        "K/uL"
+      ],
+      "Lym#": [
+        2.98,
+        "G/L"
+      ],
+      "MCHC": [
+        338,
+        "g/L"
+      ],
+      "RDW-CV": [
+        13.9,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        1.4,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        9.7,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0083",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Tỷ lệ BC trung tính": [
+        47.6,
+        "%"
+      ],
+      "SLHC": [
+        4.98,
+        "10^12/L"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.31,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        14.7,
+        "%"
+      ],
+      "MPV": [
+        8.6,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        316,
+        "g/L"
+      ],
+      "PDW": [
+        12.8,
+        "fL"
+      ],
+      "Monocyte abs": [
+        0.56,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        32.6,
+        "pg"
+      ],
+      "BC ưa bazơ": [
+        0.03,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        165,
+        "g/L"
+      ],
+      "Tỷ lệ BC lympho": [
+        37.3,
+        "%"
+      ],
+      "Hematocrit": [
+        45.3,
+        "%"
+      ],
+      "BC trung tính": [
+        4.04,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        3.7,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0082",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Độ phân bố kích thước hồng cầu": [
+        13.1,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.3,
+        "%"
+      ],
+      "% Neu": [
+        55.8,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        6.18,
+        "G/L"
+      ],
+      "MCV": [
+        91.0,
+        "fL"
+      ],
+      "Dung tich hong cau": [
+        0.5,
+        "L/L"
+      ],
+      "Huyết sắc tố": [
+        16,
+        "g/dL"
+      ],
+      "MPV": [
+        10.0,
+        "fL"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        51.1,
+        "%"
+      ],
+      "BC mono": [
+        0.37,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        0.8,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.2,
+        "G/L"
+      ],
+      "Neu#": [
+        6.64,
+        "G/L"
+      ],
+      "Rbc": [
+        5.35,
+        "M/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0047",
+    "target_label": "binh_thuong",
+    "has_borderline": false,
+    "results": {
+      "RDW-CV": [
+        12.8,
+        "%"
+      ],
+      "# Mono": [
+        0.44,
+        "G/L"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        32,
+        "g/dL"
+      ],
+      "BC trung tính": [
+        2.98,
+        "K/uL"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "MONO%": [
+        6.3,
+        "%"
+      ],
+      "# Baso": [
+        0.04,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.1,
+        "pg"
+      ],
+      "Lym%": [
+        36.5,
+        "%"
+      ],
+      "% Eos": [
+        6.7,
+        "%"
+      ],
+      "Neutrophil %": [
+        66.2,
+        "%"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        1.42,
+        "G/L"
+      ],
+      "Leukocyte": [
+        8.29,
+        "10^9/L"
+      ],
+      "Tiểu cầu": [
+        377,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0039",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "# Mono": [
+        0.6,
+        "G/L"
+      ],
+      "LYMPH#": [
+        2.27,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        16,
+        "g/dL"
+      ],
+      "% Lym": [
+        43.2,
+        "%"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "Số lượng hồng cầu": [
+        5.06,
+        "M/uL"
+      ],
+      "MPV": [
+        6.5,
+        "fL"
+      ],
+      "MCV": [
+        93.4,
+        "fL"
+      ],
+      "Eos#": [
+        0.05,
+        "K/uL"
+      ],
+      "NEUT#": [
+        6.2,
+        "K/uL"
+      ],
+      "Bạch cầu Monocyte %": [
+        4.4,
+        "%"
+      ],
+      "# Baso": [
+        0.08,
+        "G/L"
+      ],
+      "Tỷ lệ BC trung tính": [
+        73.5,
+        "%"
+      ],
+      "Hematocrit": [
+        0.5,
+        "L/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.1,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0091",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "% Lym": [
+        30.7,
+        "%"
+      ],
+      "Lym#": [
+        0.68,
+        "G/L"
+      ],
+      "% Baso": [
+        0.2,
+        "%"
+      ],
+      "MCV": [
+        95.2,
+        "fL"
+      ],
+      "Rbc": [
+        4.53,
+        "M/uL"
+      ],
+      "MPV": [
+        8.3,
+        "fL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        19.9,
+        "fL"
+      ],
+      "# Neu": [
+        2.36,
+        "K/uL"
+      ],
+      "Dung tích hồng cầu": [
+        0.5,
+        "L/L"
+      ],
+      "Số lượng tiểu cầu": [
+        309,
+        "K/uL"
+      ],
+      "HGB": [
+        14,
+        "g/dL"
+      ],
+      "MCH": [
+        34.8,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0029",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "MCV": [
+        95.8,
+        "fL"
+      ],
+      "BC trung tính": [
+        2.8,
+        "G/L"
+      ],
+      "Eosinophil abs": [
+        0.29,
+        "G/L"
+      ],
+      "Hb": [
+        17,
+        "g/dL"
+      ],
+      "HCT": [
+        0.4,
+        "L/L"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.2,
+        "K/uL"
+      ],
+      "SLTC": [
+        369,
+        "10^9/L"
+      ],
+      "Số lượng hồng cầu": [
+        5.69,
+        "T/L"
+      ],
+      "# Bas": [
+        0.08,
+        "G/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.3,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        18.0,
+        "fL"
+      ],
+      "Basophil %": [
+        0.1,
+        "%"
+      ],
+      "% Mono": [
+        5.4,
+        "%"
+      ],
+      "MCHC": [
+        344,
+        "g/L"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        8.6,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.0,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0119",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Bạch cầu trung tính %": [
+        69.2,
+        "%"
+      ],
+      "MCV": [
+        83.5,
+        "fL"
+      ],
+      "Lymphocyte abs": [
+        2.04,
+        "G/L"
+      ],
+      "# Eos": [
+        0.4,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.8,
+        "pg"
+      ],
+      "Mono%": [
+        6.0,
+        "%"
+      ],
+      "Erythrocyte": [
+        5.57,
+        "10^12/L"
+      ],
+      "Monocyte abs": [
+        0.35,
+        "K/uL"
+      ],
+      "Số lượng tiểu cầu": [
+        0,
+        "10^9/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        29.1,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0064",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Hồng cầu": [
+        5.1,
+        "T/L"
+      ],
+      "Eos#": [
+        0.5,
+        "G/L"
+      ],
+      "Wbc": [
+        4.97,
+        "10^9/L"
+      ],
+      "MCHC": [
+        34,
+        "g/dL"
+      ],
+      "SLTC": [
+        275,
+        "10^9/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        84.8,
+        "fL"
+      ],
+      "# Bas": [
+        0.02,
+        "K/uL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "RDW-CV": [
+        14.3,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        22.1,
+        "%"
+      ],
+      "MCH": [
+        28.3,
+        "pg"
+      ],
+      "MONO%": [
+        12.8,
+        "%"
+      ],
+      "Neu#": [
+        5.34,
+        "K/uL"
+      ],
+      "MPV": [
+        9.9,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0148",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Eosinophil abs": [
+        0.05,
+        "G/L"
+      ],
+      "Neutrophil abs": [
+        0.0,
+        "G/L"
+      ],
+      "# Baso": [
+        0.09,
+        "G/L"
+      ],
+      "RDW-CV": [
+        12.6,
+        "%"
+      ],
+      "Neutrophil %": [
+        57.7,
+        "%"
+      ],
+      "Huyết sắc tố": [
+        15,
+        "g/dL"
+      ],
+      "RBC": [
+        4.98,
+        "M/uL"
+      ],
+      "Hematocrit": [
+        0.5,
+        "L/L"
+      ],
+      "Eos%": [
+        1.0,
+        "%"
+      ],
+      "Leukocyte": [
+        8.9,
+        "10^9/L"
+      ],
+      "Plt": [
+        214,
+        "10^9/L"
+      ],
+      "Tỷ lệ BC lympho": [
+        38.8,
+        "%"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        0.2,
+        "%"
+      ],
+      "PDW": [
+        14.6,
+        "fL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        74.9,
+        "fL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.1,
+        "%"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.73,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0150",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "RDW-CV": [
+        12.3,
+        "%"
+      ],
+      "MCH": [
+        27.5,
+        "pg"
+      ],
+      "Lymphocyte %": [
+        28.8,
+        "%"
+      ],
+      "WBC": [
+        8.41,
+        "K/uL"
+      ],
+      "Huyết sắc tố": [
+        135,
+        "g/L"
+      ],
+      "Erythrocyte": [
+        5.45,
+        "10^12/L"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.03,
+        "G/L"
+      ],
+      "MCV": [
+        71.0,
+        "fL"
+      ],
+      "PDW": [
+        10.6,
+        "fL"
+      ],
+      "Lym#": [
+        1.46,
+        "G/L"
+      ],
+      "MPV": [
+        7.5,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        330,
+        "g/L"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        3.07,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.51,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0146",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "RDW": [
+        12.5,
+        "%"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.08,
+        "K/uL"
+      ],
+      "Tỷ lệ BC mono": [
+        4.7,
+        "%"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "SLHC": [
+        6.18,
+        "M/uL"
+      ],
+      "BC mono": [
+        0.24,
+        "G/L"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        43.5,
+        "%"
+      ],
+      "MCV": [
+        94.6,
+        "fL"
+      ],
+      "# Baso": [
+        0.06,
+        "G/L"
+      ],
+      "Bạch cầu trung tính %": [
+        60.9,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        47.0,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        5.88,
+        "K/uL"
+      ],
+      "Eos%": [
+        6.7,
+        "%"
+      ],
+      "Neutrophil abs": [
+        1.92,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0107",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Baso": [
+        0.08,
+        "G/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "MCHC": [
+        330,
+        "g/L"
+      ],
+      "Platelet": [
+        266,
+        "G/L"
+      ],
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "MCV": [
+        69.4,
+        "fL"
+      ],
+      "% Lym": [
+        29.5,
+        "%"
+      ],
+      "Hồng cầu": [
+        3.69,
+        "M/uL"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        5.0,
+        "%"
+      ],
+      "Tỷ lệ BC trung tính": [
+        47.1,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.6,
+        "fL"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.06,
+        "G/L"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        0.6,
+        "%"
+      ],
+      "MONO#": [
+        1.36,
+        "G/L"
+      ],
+      "LYMPH#": [
+        2.31,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0094",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Tỷ lệ bạch cầu trung tính": [
+        45.6,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        32.4,
+        "pg"
+      ],
+      "BASO%": [
+        1.0,
+        "%"
+      ],
+      "HCT": [
+        44.5,
+        "%"
+      ],
+      "Neutrophil abs": [
+        5.39,
+        "G/L"
+      ],
+      "# Mono": [
+        0.62,
+        "K/uL"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.44,
+        "G/L"
+      ],
+      "# Baso": [
+        0.02,
+        "K/uL"
+      ],
+      "PLT": [
+        541,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố": [
+        122,
+        "g/L"
+      ],
+      "MPV": [
+        13.3,
+        "fL"
+      ],
+      "Lymphocyte %": [
+        20.9,
+        "%"
+      ],
+      "Wbc": [
+        5.65,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0120",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Lymphocyte %": [
+        71.5,
+        "%"
+      ],
+      "MCH": [
+        30.7,
+        "pg"
+      ],
+      "EO%": [
+        3.0,
+        "%"
+      ],
+      "Bạch cầu": [
+        8.61,
+        "G/L"
+      ],
+      "NEUT#": [
+        5.38,
+        "K/uL"
+      ],
+      "RDW": [
+        11.7,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.23,
+        "G/L"
+      ],
+      "# Lym": [
+        1.42,
+        "K/uL"
+      ],
+      "Mono#": [
+        0.55,
+        "K/uL"
+      ],
+      "Hồng cầu": [
+        4.55,
+        "10^12/L"
+      ],
+      "MPV": [
+        9.6,
+        "fL"
+      ],
+      "Lượng huyết sắc tố": [
+        157,
+        "g/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        31,
+        "g/dL"
+      ],
+      "MCV": [
+        95.5,
+        "fL"
+      ],
+      "BC ưa bazơ": [
+        0.06,
+        "G/L"
+      ],
+      "Basophil %": [
+        0.9,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0062",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Số lượng bạch cầu trung tính": [
+        3.2,
+        "G/L"
+      ],
+      "Số lượng hồng cầu": [
+        5.91,
+        "M/uL"
+      ],
+      "Bạch cầu": [
+        11.38,
+        "K/uL"
+      ],
+      "Hct": [
+        0.5,
+        "L/L"
+      ],
+      "Basophil %": [
+        1.7,
+        "%"
+      ],
+      "BC ưa axit": [
+        0.47,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố": [
+        14,
+        "g/dL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        8.7,
+        "fL"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        26.7,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        52.4,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0135",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "PDW": [
+        26.5,
+        "fL"
+      ],
+      "Eos%": [
+        5.8,
+        "%"
+      ],
+      "MPV": [
+        8.8,
+        "fL"
+      ],
+      "Hồng cầu": [
+        5.06,
+        "T/L"
+      ],
+      "MCH": [
+        33.2,
+        "pg"
+      ],
+      "MONO%": [
+        0.0,
+        "%"
+      ],
+      "# Bas": [
+        0.04,
+        "K/uL"
+      ],
+      "NEUT%": [
+        63.3,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        95.5,
+        "fL"
+      ],
+      "Hb": [
+        109,
+        "g/L"
+      ],
+      "Hct": [
+        44.4,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0085",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Neu#": [
+        4.2,
+        "G/L"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        42.1,
+        "%"
+      ],
+      "Số lượng tiểu cầu": [
+        346,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.3,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "Tỷ lệ BC mono": [
+        12.0,
+        "%"
+      ],
+      "PDW": [
+        16.0,
+        "fL"
+      ],
+      "# Eos": [
+        0.48,
+        "K/uL"
+      ],
+      "BC ua bazo %": [
+        1.0,
+        "%"
+      ],
+      "BASO#": [
+        0.02,
+        "G/L"
+      ],
+      "RDW": [
+        12.2,
+        "%"
+      ],
+      "Huyết sắc tố": [
+        149,
+        "g/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0092",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Baso#": [
+        0.01,
+        "G/L"
+      ],
+      "LYMPH#": [
+        3.39,
+        "G/L"
+      ],
+      "SLBC": [
+        11.07,
+        "K/uL"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        19.2,
+        "%"
+      ],
+      "MCH": [
+        28.6,
+        "pg"
+      ],
+      "Số lượng tiểu cầu": [
+        255,
+        "10^9/L"
+      ],
+      "% Neu": [
+        67.6,
+        "%"
+      ],
+      "PDW": [
+        16.5,
+        "fL"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.69,
+        "G/L"
+      ],
+      "Hemoglobin": [
+        149,
+        "g/L"
+      ],
+      "MPV": [
+        8.1,
+        "fL"
+      ],
+      "BC mono": [
+        0.29,
+        "K/uL"
+      ],
+      "% Bas": [
+        0.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0038",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Tỷ lệ BC ưa bazơ": [
+        0.1,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        147,
+        "g/L"
+      ],
+      "Mono#": [
+        0.5,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        34.0,
+        "pg"
+      ],
+      "Dung tich hong cau": [
+        50.0,
+        "%"
+      ],
+      "# Eos": [
+        0.03,
+        "G/L"
+      ],
+      "MPV": [
+        8.9,
+        "fL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        11.7,
+        "fL"
+      ],
+      "MCHC": [
+        34,
+        "g/dL"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.06,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0103",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "MONO#": [
+        0.72,
+        "K/uL"
+      ],
+      "MPV": [
+        15.0,
+        "fL"
+      ],
+      "Số lượng tiểu cầu": [
+        231,
+        "G/L"
+      ],
+      "Huyết sắc tố": [
+        12,
+        "g/dL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        86.6,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        2.7,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        10.8,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        334,
+        "g/L"
+      ],
+      "RDW-CV": [
+        16.9,
+        "%"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.35,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0084",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình hồng cầu": [
+        93.7,
+        "fL"
+      ],
+      "Lym#": [
+        1.48,
+        "K/uL"
+      ],
+      "Rbc": [
+        4.75,
+        "10^12/L"
+      ],
+      "MCH": [
+        32.4,
+        "pg"
+      ],
+      "Monocyte abs": [
+        0.51,
+        "K/uL"
+      ],
+      "Eosinophil %": [
+        1.6,
+        "%"
+      ],
+      "RDW": [
+        13.9,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.3,
+        "%"
+      ],
+      "Lymphocyte %": [
+        40.6,
+        "%"
+      ],
+      "MPV": [
+        10.0,
+        "fL"
+      ],
+      "NEUT#": [
+        7.06,
+        "G/L"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.4,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.29,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu": [
+        7.19,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0140",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Số lượng bạch cầu trung tính": [
+        0.0,
+        "K/uL"
+      ],
+      "SLHC": [
+        4.77,
+        "T/L"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        69.0,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.4,
+        "%"
+      ],
+      "Hemoglobin": [
+        12,
+        "g/dL"
+      ],
+      "Monocyte %": [
+        6.1,
+        "%"
+      ],
+      "Mono#": [
+        0.27,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        1.99,
+        "K/uL"
+      ],
+      "Eos%": [
+        2.7,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        30,
+        "g/dL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0045",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Tỷ lệ bạch cầu ưa bazơ": [
+        0.9,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        158,
+        "g/L"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        7.9,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        53.5,
+        "%"
+      ],
+      "Bạch cầu ưa axit %": [
+        3.5,
+        "%"
+      ],
+      "MCV": [
+        95.8,
+        "fL"
+      ],
+      "Basophil abs": [
+        0.1,
+        "G/L"
+      ],
+      "HCT": [
+        46.0,
+        "%"
+      ],
+      "RDW": [
+        13.8,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.8,
+        "fL"
+      ],
+      "# Neu": [
+        3.97,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0041",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "MPV": [
+        9.0,
+        "fL"
+      ],
+      "Số lượng bạch cầu": [
+        5.8,
+        "10^9/L"
+      ],
+      "Lymphocyte %": [
+        17.4,
+        "%"
+      ],
+      "Platelet": [
+        350,
+        "G/L"
+      ],
+      "Hb": [
+        17,
+        "g/dL"
+      ],
+      "MONO#": [
+        0.25,
+        "G/L"
+      ],
+      "PDW": [
+        17.9,
+        "fL"
+      ],
+      "Hct": [
+        39.5,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.0,
+        "pg"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        355,
+        "g/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "RDW-CV": [
+        14.5,
+        "%"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        1.84,
+        "G/L"
+      ],
+      "Hồng cầu": [
+        5.01,
+        "M/uL"
+      ],
+      "Neu%": [
+        40.9,
+        "%"
+      ],
+      "# Eos": [
+        0.39,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0099",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình hồng cầu": [
+        96.5,
+        "fL"
+      ],
+      "SLTC": [
+        283,
+        "G/L"
+      ],
+      "Tỷ lệ BC trung tính": [
+        67.9,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.0,
+        "pg"
+      ],
+      "Monocyte %": [
+        7.6,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.7,
+        "fL"
+      ],
+      "SL bạch cầu trung tính": [
+        2.9,
+        "G/L"
+      ],
+      "# Baso": [
+        0.01,
+        "G/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        11.7,
+        "%"
+      ],
+      "Hồng cầu": [
+        4.9,
+        "T/L"
+      ],
+      "Eosinophil abs": [
+        0.25,
+        "K/uL"
+      ],
+      "Lym#": [
+        1.78,
+        "G/L"
+      ],
+      "BC ua bazo %": [
+        0.1,
+        "%"
+      ],
+      "PDW": [
+        13.9,
+        "fL"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ],
+      "Lượng huyết sắc tố": [
+        18,
+        "g/dL"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        35.1,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0037",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Mono#": [
+        0.26,
+        "G/L"
+      ],
+      "Mono%": [
+        10.9,
+        "%"
+      ],
+      "Neutrophil %": [
+        68.0,
+        "%"
+      ],
+      "# Bas": [
+        0.02,
+        "K/uL"
+      ],
+      "MCHC": [
+        360,
+        "g/L"
+      ],
+      "Hb": [
+        16,
+        "g/dL"
+      ],
+      "NEUT#": [
+        4.37,
+        "G/L"
+      ],
+      "Số lượng hồng cầu": [
+        5.68,
+        "M/uL"
+      ],
+      "Bạch cầu ưa axit %": [
+        3.0,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.33,
+        "K/uL"
+      ],
+      "% Baso": [
+        0.2,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        80.1,
+        "fL"
+      ],
+      "Số lượng bạch cầu": [
+        6.71,
+        "G/L"
+      ],
+      "PDW": [
+        17.3,
+        "fL"
+      ],
+      "Lymphocyte abs": [
+        1.92,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0024",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        1.2,
+        "%"
+      ],
+      "% Lym": [
+        31.4,
+        "%"
+      ],
+      "Tiểu cầu": [
+        363,
+        "G/L"
+      ],
+      "BC trung tính": [
+        1.33,
+        "G/L"
+      ],
+      "Rbc": [
+        4.52,
+        "T/L"
+      ],
+      "Lym#": [
+        1.84,
+        "G/L"
+      ],
+      "Wbc": [
+        9.4,
+        "K/uL"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        40.9,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        10.0,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0121",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Bas": [
+        0.03,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "Neutrophil abs": [
+        3.34,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.0,
+        "fL"
+      ],
+      "EO#": [
+        1.47,
+        "G/L"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.2,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        5.4,
+        "M/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        31.6,
+        "pg"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        71.6,
+        "fL"
+      ],
+      "WBC": [
+        3.78,
+        "10^9/L"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "% Mono": [
+        5.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0017",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Hematocrit": [
+        40.5,
+        "%"
+      ],
+      "Hb": [
+        13,
+        "g/dL"
+      ],
+      "RDW-CV": [
+        14.5,
+        "%"
+      ],
+      "Tiểu cầu": [
+        165,
+        "G/L"
+      ],
+      "Wbc": [
+        4.71,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "SL bạch cầu trung tính": [
+        1.74,
+        "K/uL"
+      ],
+      "NEUT%": [
+        43.0,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        5.22,
+        "10^12/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.4,
+        "pg"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "LYMPH#": [
+        1.96,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0095",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình hồng cầu": [
+        83.6,
+        "fL"
+      ],
+      "Hồng cầu": [
+        4.54,
+        "M/uL"
+      ],
+      "Basophil %": [
+        1.2,
+        "%"
+      ],
+      "Lym%": [
+        20.2,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.0,
+        "fL"
+      ],
+      "MCH": [
+        33.5,
+        "pg"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Hemoglobin": [
+        181,
+        "g/L"
+      ],
+      "RDW-CV": [
+        13.9,
+        "%"
+      ],
+      "SL bạch cầu trung tính": [
+        4.63,
+        "G/L"
+      ],
+      "BC mono": [
+        0.71,
+        "K/uL"
+      ],
+      "Mono%": [
+        8.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0147",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "RDW-CV": [
+        12.3,
+        "%"
+      ],
+      "Bạch cầu trung tính %": [
+        51.4,
+        "%"
+      ],
+      "LYMPH#": [
+        0.0,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        324,
+        "g/L"
+      ],
+      "HCT": [
+        44.6,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.29,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        13.2,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        24.3,
+        "pg"
+      ],
+      "# Eos": [
+        0.47,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.3,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        88.8,
+        "fL"
+      ],
+      "NEUT#": [
+        0.0,
+        "G/L"
+      ],
+      "Plt": [
+        303,
+        "10^9/L"
+      ],
+      "MPV": [
+        7.8,
+        "fL"
+      ],
+      "Số lượng bạch cầu": [
+        5.26,
+        "10^9/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0142",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Dung tich hong cau": [
+        52.7,
+        "%"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        0.6,
+        "%"
+      ],
+      "Leukocyte": [
+        8.1,
+        "10^9/L"
+      ],
+      "Neutrophil abs": [
+        0.0,
+        "K/uL"
+      ],
+      "Lym#": [
+        2.28,
+        "G/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        14.1,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.24,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        350,
+        "g/L"
+      ],
+      "RBC": [
+        4.77,
+        "10^12/L"
+      ],
+      "NEUT%": [
+        51.6,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.48,
+        "G/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Baso#": [
+        0.03,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        12.9,
+        "fL"
+      ],
+      "HGB": [
+        147,
+        "g/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0032",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "BC mono": [
+        0.45,
+        "K/uL"
+      ],
+      "Hemoglobin": [
+        14,
+        "g/dL"
+      ],
+      "NEUT#": [
+        2.07,
+        "K/uL"
+      ],
+      "Tỷ lệ bạch cầu ưa bazơ": [
+        0.9,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        5.47,
+        "10^9/L"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        3.2,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        44.4,
+        "%"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.06,
+        "G/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.8,
+        "fL"
+      ],
+      "# Lym": [
+        1.0,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        12.3,
+        "fL"
+      ],
+      "MCH": [
+        28.6,
+        "pg"
+      ],
+      "EO#": [
+        0.01,
+        "K/uL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        328,
+        "g/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0093",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "SL bạch cầu Lymphocyte": [
+        2.4,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        6.9,
+        "%"
+      ],
+      "Hct": [
+        37.1,
+        "%"
+      ],
+      "# Eos": [
+        0.18,
+        "G/L"
+      ],
+      "HGB": [
+        181,
+        "g/L"
+      ],
+      "BASO%": [
+        0.8,
+        "%"
+      ],
+      "MCV": [
+        98.0,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Monocyte abs": [
+        0.77,
+        "K/uL"
+      ],
+      "MONO%": [
+        6.4,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        32.6,
+        "pg"
+      ],
+      "Số lượng hồng cầu": [
+        4.84,
+        "10^12/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0106",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Erythrocyte": [
+        4.48,
+        "10^12/L"
+      ],
+      "Baso#": [
+        0.04,
+        "K/uL"
+      ],
+      "MCHC": [
+        34,
+        "g/dL"
+      ],
+      "Bạch cầu Monocyte %": [
+        6.1,
+        "%"
+      ],
+      "EO#": [
+        0.13,
+        "K/uL"
+      ],
+      "Neutrophil abs": [
+        4.39,
+        "G/L"
+      ],
+      "Leukocyte": [
+        5.29,
+        "10^9/L"
+      ],
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.4,
+        "fL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        22.3,
+        "fL"
+      ],
+      "Lymphocyte %": [
+        23.8,
+        "%"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.4,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        93.7,
+        "fL"
+      ],
+      "RDW": [
+        11.7,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0138",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Số lượng bạch cầu ưa bazơ": [
+        0.06,
+        "G/L"
+      ],
+      "Monocyte abs": [
+        0.51,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố": [
+        140,
+        "g/L"
+      ],
+      "Mono%": [
+        7.4,
+        "%"
+      ],
+      "MCHC": [
+        330,
+        "g/L"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        2.72,
+        "K/uL"
+      ],
+      "Số lượng tiểu cầu": [
+        202,
+        "10^9/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.5,
+        "%"
+      ],
+      "WBC": [
+        5.18,
+        "G/L"
+      ],
+      "MPV": [
+        3.5,
+        "fL"
+      ],
+      "MCV": [
+        94.4,
+        "fL"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "EO#": [
+        0.17,
+        "K/uL"
+      ],
+      "Dung tích hồng cầu": [
+        0.5,
+        "L/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        11.6,
+        "fL"
+      ],
+      "Erythrocyte": [
+        6.21,
+        "10^12/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0073",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Wbc": [
+        8.33,
+        "10^9/L"
+      ],
+      "MCH": [
+        27.5,
+        "pg"
+      ],
+      "SLTC": [
+        63,
+        "G/L"
+      ],
+      "Hồng cầu": [
+        5.37,
+        "10^12/L"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        10.3,
+        "%"
+      ],
+      "% Lym": [
+        28.7,
+        "%"
+      ],
+      "Eosinophil abs": [
+        0.32,
+        "K/uL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        77.0,
+        "fL"
+      ],
+      "Tỷ lệ BC trung tính": [
+        60.9,
+        "%"
+      ],
+      "# Mono": [
+        0.51,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.8,
+        "fL"
+      ],
+      "RDW-CV": [
+        12.6,
+        "%"
+      ],
+      "Basophil %": [
+        0.5,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0069",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Hct": [
+        0.5,
+        "L/L"
+      ],
+      "Basophil abs": [
+        0.14,
+        "G/L"
+      ],
+      "Số lượng bạch cầu": [
+        8.69,
+        "10^9/L"
+      ],
+      "MCH": [
+        26.5,
+        "pg"
+      ],
+      "# Lym": [
+        1.54,
+        "G/L"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        17,
+        "g/dL"
+      ],
+      "Platelet": [
+        330,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        95.7,
+        "fL"
+      ],
+      "Mono%": [
+        7.3,
+        "%"
+      ],
+      "RBC": [
+        4.51,
+        "M/uL"
+      ],
+      "MPV": [
+        8.4,
+        "fL"
+      ],
+      "# Eos": [
+        0.1,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0129",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Hồng cầu": [
+        4.54,
+        "T/L"
+      ],
+      "Dung tích hồng cầu": [
+        0.4,
+        "L/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Monocyte abs": [
+        0.26,
+        "K/uL"
+      ],
+      "Lym%": [
+        40.7,
+        "%"
+      ],
+      "Basophil %": [
+        0.4,
+        "%"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.03,
+        "G/L"
+      ],
+      "EO%": [
+        17.4,
+        "%"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        3.21,
+        "K/uL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        87.7,
+        "fL"
+      ],
+      "RDW-CV": [
+        12.9,
+        "%"
+      ],
+      "Eosinophil abs": [
+        0.98,
+        "G/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.2,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        307,
+        "g/L"
+      ],
+      "Neutrophil %": [
+        56.4,
+        "%"
+      ],
+      "# Lym": [
+        1.95,
+        "K/uL"
+      ],
+      "Plt": [
+        285,
+        "10^9/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0096",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "LYMPH#": [
+        2.46,
+        "G/L"
+      ],
+      "Leukocyte": [
+        3.85,
+        "10^9/L"
+      ],
+      "PDW": [
+        12.3,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.6,
+        "pg"
+      ],
+      "BC mono": [
+        0.99,
+        "K/uL"
+      ],
+      "BASO#": [
+        0.11,
+        "K/uL"
+      ],
+      "% Lym": [
+        26.4,
+        "%"
+      ],
+      "NEUT#": [
+        3.54,
+        "G/L"
+      ],
+      "Huyết sắc tố": [
+        179,
+        "g/L"
+      ],
+      "Hct": [
+        46.6,
+        "%"
+      ],
+      "BC trung tính %": [
+        45.6,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.9,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        5.42,
+        "T/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0053",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình tiểu cầu": [
+        6.9,
+        "fL"
+      ],
+      "RBC": [
+        4.3,
+        "M/uL"
+      ],
+      "Mono#": [
+        0.24,
+        "K/uL"
+      ],
+      "Bas%": [
+        1.1,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        34.4,
+        "pg"
+      ],
+      "BC ua axit %": [
+        2.5,
+        "%"
+      ],
+      "BC ưa bazơ": [
+        0.03,
+        "G/L"
+      ],
+      "Hct": [
+        45.1,
+        "%"
+      ],
+      "# Neu": [
+        4.78,
+        "K/uL"
+      ],
+      "EO#": [
+        0.82,
+        "K/uL"
+      ],
+      "% Lym": [
+        40.1,
+        "%"
+      ],
+      "Monocyte %": [
+        7.9,
+        "%"
+      ],
+      "MCHC": [
+        348,
+        "g/L"
+      ],
+      "Lym#": [
+        2.5,
+        "K/uL"
+      ],
+      "MCV": [
+        87.3,
+        "fL"
+      ],
+      "Số lượng tiểu cầu": [
+        416,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0109",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Neu": [
+        4.7,
+        "G/L"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        6.9,
+        "%"
+      ],
+      "MPV": [
+        8.7,
+        "fL"
+      ],
+      "Số lượng tiểu cầu": [
+        179,
+        "G/L"
+      ],
+      "BC trung tính %": [
+        65.3,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        16.2,
+        "%"
+      ],
+      "Lymphocyte abs": [
+        0.0,
+        "G/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.3,
+        "fL"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.3,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.42,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        4.4,
+        "%"
+      ],
+      "WBC": [
+        6.74,
+        "10^9/L"
+      ],
+      "Huyết sắc tố": [
+        14,
+        "g/dL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        356,
+        "g/L"
+      ],
+      "Lymphocyte %": [
+        24.2,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.4,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0002",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "MCV": [
+        80.0,
+        "fL"
+      ],
+      "Huyết sắc tố": [
+        16,
+        "g/dL"
+      ],
+      "% Neu": [
+        56.5,
+        "%"
+      ],
+      "BASO%": [
+        0.0,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        334,
+        "g/L"
+      ],
+      "WBC": [
+        6.6,
+        "K/uL"
+      ],
+      "Mono#": [
+        0.48,
+        "G/L"
+      ],
+      "Platelet": [
+        398,
+        "G/L"
+      ],
+      "LYMPH#": [
+        2.98,
+        "K/uL"
+      ],
+      "SL bạch cầu trung tính": [
+        2.49,
+        "G/L"
+      ],
+      "RDW": [
+        11.7,
+        "%"
+      ],
+      "Hồng cầu": [
+        5.37,
+        "M/uL"
+      ],
+      "Eos#": [
+        0.42,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        8.2,
+        "fL"
+      ],
+      "PDW": [
+        10.8,
+        "fL"
+      ],
+      "Bạch cầu Monocyte %": [
+        10.8,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu ưa axit": [
+        4.8,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0076",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "Lymphocyte %": [
+        27.9,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Hemoglobin": [
+        164,
+        "g/L"
+      ],
+      "BC mono": [
+        0.24,
+        "K/uL"
+      ],
+      "NEUT%": [
+        62.5,
+        "%"
+      ],
+      "Hct": [
+        50.8,
+        "%"
+      ],
+      "RDW": [
+        14.1,
+        "%"
+      ],
+      "SLTC": [
+        205,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu": [
+        5.79,
+        "K/uL"
+      ],
+      "MCH": [
+        29.5,
+        "pg"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        5.4,
+        "G/L"
+      ],
+      "PDW": [
+        15.6,
+        "fL"
+      ],
+      "MPV": [
+        10.8,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0012",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Bạch cầu trung tính %": [
+        64.7,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        170,
+        "g/L"
+      ],
+      "Leukocyte": [
+        7.05,
+        "K/uL"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        24.4,
+        "%"
+      ],
+      "% Bas": [
+        0.4,
+        "%"
+      ],
+      "# Bas": [
+        0.1,
+        "K/uL"
+      ],
+      "# Eos": [
+        0.54,
+        "K/uL"
+      ],
+      "PDW": [
+        15.6,
+        "fL"
+      ],
+      "MCV": [
+        92.1,
+        "fL"
+      ],
+      "Eos%": [
+        2.1,
+        "%"
+      ],
+      "Plt": [
+        192,
+        "K/uL"
+      ],
+      "MCHC": [
+        357,
+        "g/L"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        2.38,
+        "K/uL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        6.5,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.6,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0030",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "# Lym": [
+        1.53,
+        "G/L"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        8.0,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        100.0,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        322,
+        "g/L"
+      ],
+      "RDW": [
+        14.2,
+        "%"
+      ],
+      "# Bas": [
+        0.05,
+        "K/uL"
+      ],
+      "Tỷ lệ BC lympho": [
+        20.8,
+        "%"
+      ],
+      "BC mono": [
+        0.4,
+        "G/L"
+      ],
+      "Tiểu cầu": [
+        207,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0031",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Nồng độ huyết sắc tố trung bình": [
+        36,
+        "g/dL"
+      ],
+      "Eosinophil abs": [
+        0.33,
+        "G/L"
+      ],
+      "Neu%": [
+        60.0,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        90.8,
+        "fL"
+      ],
+      "PDW": [
+        10.0,
+        "fL"
+      ],
+      "% Mono": [
+        6.5,
+        "%"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        1.3,
+        "%"
+      ],
+      "BASO#": [
+        0.1,
+        "G/L"
+      ],
+      "SL bạch cầu trung tính": [
+        4.36,
+        "G/L"
+      ],
+      "Plt": [
+        182,
+        "G/L"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        2.5,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0008",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Lym#": [
+        2.74,
+        "G/L"
+      ],
+      "PDW": [
+        10.0,
+        "fL"
+      ],
+      "% Bas": [
+        0.4,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "MCHC": [
+        348,
+        "g/L"
+      ],
+      "Huyết sắc tố": [
+        130,
+        "g/L"
+      ],
+      "Leukocyte": [
+        4.65,
+        "10^9/L"
+      ],
+      "BC mono": [
+        0.38,
+        "K/uL"
+      ],
+      "NEUT%": [
+        57.1,
+        "%"
+      ],
+      "% Lym": [
+        27.3,
+        "%"
+      ],
+      "MCV": [
+        86.9,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.9,
+        "pg"
+      ],
+      "Rbc": [
+        4.37,
+        "10^12/L"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        0.8,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.5,
+        "fL"
+      ],
+      "Baso#": [
+        0.09,
+        "K/uL"
+      ],
+      "RDW-CV": [
+        11.5,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0127",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "% Baso": [
+        0.3,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.58,
+        "K/uL"
+      ],
+      "NEUT#": [
+        2.26,
+        "K/uL"
+      ],
+      "BC ua axit %": [
+        5.8,
+        "%"
+      ],
+      "# Bas": [
+        0.02,
+        "G/L"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        0.0,
+        "%"
+      ],
+      "HGB": [
+        162,
+        "g/L"
+      ],
+      "% Neu": [
+        60.3,
+        "%"
+      ],
+      "Eos#": [
+        0.04,
+        "G/L"
+      ],
+      "Rbc": [
+        5.34,
+        "T/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        33,
+        "g/dL"
+      ],
+      "% Mono": [
+        5.0,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        7.98,
+        "G/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "PDW": [
+        11.9,
+        "fL"
+      ],
+      "Hematocrit": [
+        0.5,
+        "L/L"
+      ],
+      "RDW-CV": [
+        16.4,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0044",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Thể tích trung bình hồng cầu": [
+        82.7,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        4.88,
+        "10^12/L"
+      ],
+      "Lym%": [
+        24.6,
+        "%"
+      ],
+      "NEUT%": [
+        53.8,
+        "%"
+      ],
+      "Monocyte %": [
+        10.9,
+        "%"
+      ],
+      "HCT": [
+        0.5,
+        "L/L"
+      ],
+      "Hb": [
+        14,
+        "g/dL"
+      ],
+      "BC lympho": [
+        2.06,
+        "K/uL"
+      ],
+      "RDW": [
+        14.3,
+        "%"
+      ],
+      "SLTC": [
+        377,
+        "G/L"
+      ],
+      "Neutrophil abs": [
+        3.99,
+        "K/uL"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.65,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0025",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Lym%": [
+        41.0,
+        "%"
+      ],
+      "BASO%": [
+        1.3,
+        "%"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        5.4,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        97.5,
+        "fL"
+      ],
+      "BC trung tính": [
+        4.6,
+        "K/uL"
+      ],
+      "# Eos": [
+        0.53,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.9,
+        "pg"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.03,
+        "G/L"
+      ],
+      "RDW": [
+        13.6,
+        "%"
+      ],
+      "PDW": [
+        14.5,
+        "fL"
+      ],
+      "Mono%": [
+        8.9,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        5.59,
+        "T/L"
+      ],
+      "MPV": [
+        10.9,
+        "fL"
+      ],
+      "Bạch cầu trung tính %": [
+        52.2,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "SLBC": [
+        6.86,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        333,
+        "g/L"
+      ],
+      "Tiểu cầu": [
+        150,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0046",
+    "target_label": "binh_thuong",
+    "has_borderline": false,
+    "results": {
+      "BC trung tính": [
+        2.06,
+        "K/uL"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        1.0,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.2,
+        "%"
+      ],
+      "Eos%": [
+        4.0,
+        "%"
+      ],
+      "Hb": [
+        143,
+        "g/L"
+      ],
+      "# Baso": [
+        0.03,
+        "K/uL"
+      ],
+      "Số lượng tiểu cầu": [
+        304,
+        "10^9/L"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        25.1,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        8.13,
+        "10^9/L"
+      ],
+      "MCHC": [
+        339,
+        "g/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        11.8,
+        "fL"
+      ],
+      "EO#": [
+        0.14,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.29,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        32.2,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0048",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "MCHC": [
+        351,
+        "g/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        12.9,
+        "fL"
+      ],
+      "# Baso": [
+        0.03,
+        "K/uL"
+      ],
+      "NEUT%": [
+        55.7,
+        "%"
+      ],
+      "MONO%": [
+        7.1,
+        "%"
+      ],
+      "MPV": [
+        11.4,
+        "fL"
+      ],
+      "Eosinophil %": [
+        1.0,
+        "%"
+      ],
+      "Hồng cầu": [
+        4.81,
+        "10^12/L"
+      ],
+      "Lymphocyte %": [
+        35.4,
+        "%"
+      ],
+      "Bas%": [
+        1.2,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.33,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        92.9,
+        "fL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        11.9,
+        "%"
+      ],
+      "MCH": [
+        27.5,
+        "pg"
+      ],
+      "HGB": [
+        17,
+        "g/dL"
+      ],
+      "Leukocyte": [
+        4.38,
+        "G/L"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "BC lympho": [
+        3.0,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0116",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "BC trung tính": [
+        5.75,
+        "G/L"
+      ],
+      "BC trung tính %": [
+        51.7,
+        "%"
+      ],
+      "Lymphocyte abs": [
+        5.37,
+        "G/L"
+      ],
+      "Leukocyte": [
+        6.51,
+        "10^9/L"
+      ],
+      "MPV": [
+        7.9,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        37,
+        "g/dL"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.68,
+        "K/uL"
+      ],
+      "Eosinophil abs": [
+        0.11,
+        "G/L"
+      ],
+      "RDW-CV": [
+        13.7,
+        "%"
+      ],
+      "MCH": [
+        31.1,
+        "pg"
+      ],
+      "Huyết sắc tố": [
+        14,
+        "g/dL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        14.9,
+        "fL"
+      ],
+      "SLHC": [
+        4.78,
+        "T/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0079",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "RDW": [
+        12.1,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        94.4,
+        "fL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        28.2,
+        "pg"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "% Neu": [
+        71.5,
+        "%"
+      ],
+      "SLHC": [
+        4.53,
+        "M/uL"
+      ],
+      "Lượng huyết sắc tố": [
+        134,
+        "g/L"
+      ],
+      "Hct": [
+        47.4,
+        "%"
+      ],
+      "PDW": [
+        13.8,
+        "fL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.1,
+        "fL"
+      ],
+      "WBC": [
+        1.64,
+        "10^9/L"
+      ],
+      "PLT": [
+        408,
+        "10^9/L"
+      ],
+      "BASO%": [
+        0.5,
+        "%"
+      ],
+      "Monocyte %": [
+        9.5,
+        "%"
+      ],
+      "Lym%": [
+        27.8,
+        "%"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        3.77,
+        "G/L"
+      ],
+      "Eos#": [
+        0.83,
+        "G/L"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.05,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0115",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Rbc": [
+        5.61,
+        "T/L"
+      ],
+      "Bạch cầu ưa axit %": [
+        6.1,
+        "%"
+      ],
+      "Platelet": [
+        357,
+        "10^9/L"
+      ],
+      "# Mono": [
+        0.65,
+        "G/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.0,
+        "%"
+      ],
+      "BC ưa axit": [
+        0.48,
+        "K/uL"
+      ],
+      "PDW": [
+        11.6,
+        "fL"
+      ],
+      "SL bạch cầu ưa bazơ": [
+        0.05,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        84.8,
+        "fL"
+      ],
+      "% Mono": [
+        6.9,
+        "%"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ],
+      "BC ua bazo %": [
+        1.0,
+        "%"
+      ],
+      "NEUT%": [
+        62.2,
+        "%"
+      ],
+      "PCT": [
+        0.0,
+        "%"
+      ],
+      "MPV": [
+        10.7,
+        "fL"
+      ],
+      "Huyết sắc tố": [
+        104,
+        "g/L"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        35.4,
+        "%"
+      ],
+      "MCH": [
+        31.5,
+        "pg"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0016",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "RDW-CV": [
+        13.3,
+        "%"
+      ],
+      "Baso#": [
+        0.03,
+        "G/L"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        43.3,
+        "%"
+      ],
+      "Tỷ lệ BC mono": [
+        9.1,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        35,
+        "g/dL"
+      ],
+      "MCH": [
+        27.0,
+        "pg"
+      ],
+      "Huyết sắc tố": [
+        143,
+        "g/L"
+      ],
+      "PLT": [
+        190,
+        "K/uL"
+      ],
+      "% Eos": [
+        7.6,
+        "%"
+      ],
+      "MCV": [
+        87.7,
+        "fL"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.25,
+        "K/uL"
+      ],
+      "Bạch cầu trung tính %": [
+        46.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0057",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Bas%": [
+        0.9,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        337,
+        "g/L"
+      ],
+      "Tỷ lệ BC lympho": [
+        26.9,
+        "%"
+      ],
+      "RBC": [
+        4.65,
+        "10^12/L"
+      ],
+      "Lymphocyte abs": [
+        1.15,
+        "K/uL"
+      ],
+      "Monocyte abs": [
+        0.75,
+        "K/uL"
+      ],
+      "Hemoglobin": [
+        162,
+        "g/L"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        4.98,
+        "G/L"
+      ],
+      "Leukocyte": [
+        4.7,
+        "10^9/L"
+      ],
+      "BC trung tính %": [
+        37.3,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        85.2,
+        "fL"
+      ],
+      "MPV": [
+        7.2,
+        "fL"
+      ],
+      "MCH": [
+        30.5,
+        "pg"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "Basophil abs": [
+        0.05,
+        "G/L"
+      ],
+      "% Eos": [
+        2.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0137",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "SLBC": [
+        7.66,
+        "10^9/L"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "PLT": [
+        230,
+        "K/uL"
+      ],
+      "RBC": [
+        4.67,
+        "10^12/L"
+      ],
+      "RDW": [
+        13.8,
+        "%"
+      ],
+      "Lymphocyte %": [
+        35.8,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.2,
+        "pg"
+      ],
+      "BC lympho": [
+        1.3,
+        "G/L"
+      ],
+      "Eosinophil abs": [
+        0.09,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        5.49,
+        "G/L"
+      ],
+      "PDW": [
+        14.0,
+        "fL"
+      ],
+      "Lượng huyết sắc tố": [
+        19,
+        "g/dL"
+      ],
+      "EO%": [
+        1.0,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0018",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Hemoglobin": [
+        154,
+        "g/L"
+      ],
+      "PDW": [
+        11.8,
+        "fL"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        1.7,
+        "K/uL"
+      ],
+      "Eos%": [
+        3.5,
+        "%"
+      ],
+      "MPV": [
+        7.7,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "MCH": [
+        27.0,
+        "pg"
+      ],
+      "Bạch cầu Monocyte %": [
+        8.0,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        27.8,
+        "%"
+      ],
+      "# Neu": [
+        3.46,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        80.1,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0071",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Dung tích hồng cầu": [
+        40.4,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        7.6,
+        "fL"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        7.4,
+        "%"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "PDW": [
+        9.1,
+        "fL"
+      ],
+      "MCV": [
+        95.0,
+        "fL"
+      ],
+      "# Mono": [
+        0.28,
+        "K/uL"
+      ],
+      "MCH": [
+        32.8,
+        "pg"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        15.3,
+        "%"
+      ],
+      "Neu%": [
+        46.8,
+        "%"
+      ],
+      "Eosinophil %": [
+        3.4,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0055",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Neu#": [
+        4.44,
+        "K/uL"
+      ],
+      "Hồng cầu": [
+        4.64,
+        "10^12/L"
+      ],
+      "Mono#": [
+        0.67,
+        "K/uL"
+      ],
+      "MCHC": [
+        344,
+        "g/L"
+      ],
+      "WBC": [
+        8.69,
+        "G/L"
+      ],
+      "NEUT%": [
+        80.3,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.4,
+        "fL"
+      ],
+      "Bạch cầu ưa axit %": [
+        7.2,
+        "%"
+      ],
+      "Mono%": [
+        6.3,
+        "%"
+      ],
+      "Hematocrit": [
+        51.0,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        94.3,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0143",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "MCV": [
+        86.0,
+        "fL"
+      ],
+      "Số lượng hồng cầu": [
+        4.57,
+        "10^12/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.29,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        12.1,
+        "fL"
+      ],
+      "Hb": [
+        12,
+        "g/dL"
+      ],
+      "NEUT#": [
+        3.28,
+        "K/uL"
+      ],
+      "MONO%": [
+        7.3,
+        "%"
+      ],
+      "MCH": [
+        29.5,
+        "pg"
+      ],
+      "Platelet": [
+        753,
+        "10^9/L"
+      ],
+      "MCHC": [
+        344,
+        "g/L"
+      ],
+      "EO%": [
+        1.7,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.13,
+        "G/L"
+      ],
+      "Neu%": [
+        70.9,
+        "%"
+      ],
+      "LYMPH%": [
+        27.3,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.1,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0056",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình hồng cầu": [
+        92.8,
+        "fL"
+      ],
+      "Neu#": [
+        7.04,
+        "K/uL"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        32.8,
+        "pg"
+      ],
+      "Dung tich hong cau": [
+        48.1,
+        "%"
+      ],
+      "Tỷ lệ BC lympho": [
+        44.1,
+        "%"
+      ],
+      "SLTC": [
+        409,
+        "10^9/L"
+      ],
+      "Basophil abs": [
+        0.05,
+        "G/L"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        2.0,
+        "G/L"
+      ],
+      "BC mono": [
+        0.25,
+        "K/uL"
+      ],
+      "MPV": [
+        8.4,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ],
+      "RDW": [
+        12.6,
+        "%"
+      ],
+      "Leukocyte": [
+        9.08,
+        "K/uL"
+      ],
+      "# Eos": [
+        0.47,
+        "K/uL"
+      ],
+      "Số lượng hồng cầu": [
+        4.15,
+        "10^12/L"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        17.2,
+        "fL"
+      ],
+      "Bạch cầu Monocyte %": [
+        6.3,
+        "%"
+      ],
+      "% Bas": [
+        0.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0033",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "SL bạch cầu trung tính": [
+        1.31,
+        "K/uL"
+      ],
+      "Hemoglobin": [
+        16,
+        "g/dL"
+      ],
+      "Lymphocyte %": [
+        23.3,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        10.0,
+        "fL"
+      ],
+      "BC ua bazo %": [
+        0.0,
+        "%"
+      ],
+      "Lym#": [
+        2.61,
+        "G/L"
+      ],
+      "Hematocrit": [
+        45.3,
+        "%"
+      ],
+      "Eosinophil %": [
+        3.2,
+        "%"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.6,
+        "pg"
+      ],
+      "SLTC": [
+        170,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "RDW": [
+        14.1,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        6.5,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0097",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Erythrocyte": [
+        5.47,
+        "M/uL"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        35.2,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        46.7,
+        "%"
+      ],
+      "Eosinophil %": [
+        1.5,
+        "%"
+      ],
+      "HGB": [
+        161,
+        "g/L"
+      ],
+      "SLBC": [
+        7.45,
+        "K/uL"
+      ],
+      "EO#": [
+        0.64,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.73,
+        "K/uL"
+      ],
+      "Neutrophil abs": [
+        6.61,
+        "G/L"
+      ],
+      "MCHC": [
+        36,
+        "g/dL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0100",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "MCHC": [
+        32,
+        "g/dL"
+      ],
+      "Neutrophil %": [
+        61.8,
+        "%"
+      ],
+      "% Baso": [
+        0.1,
+        "%"
+      ],
+      "MCH": [
+        31.1,
+        "pg"
+      ],
+      "LYMPH%": [
+        40.6,
+        "%"
+      ],
+      "# Lym": [
+        1.18,
+        "G/L"
+      ],
+      "SLHC": [
+        4.79,
+        "10^12/L"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.0,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.7,
+        "fL"
+      ],
+      "Monocyte abs": [
+        0.71,
+        "K/uL"
+      ],
+      "# Neu": [
+        5.87,
+        "K/uL"
+      ],
+      "MPV": [
+        8.1,
+        "fL"
+      ],
+      "Leukocyte": [
+        4.84,
+        "K/uL"
+      ],
+      "% Mono": [
+        4.2,
+        "%"
+      ],
+      "MCV": [
+        102.7,
+        "fL"
+      ],
+      "Eosinophil %": [
+        7.4,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "Plateletcrit": [
+        0.1,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0014",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "RBC": [
+        4.88,
+        "10^12/L"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        73.7,
+        "%"
+      ],
+      "BC mono": [
+        0.42,
+        "G/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "RDW": [
+        12.6,
+        "%"
+      ],
+      "Neu#": [
+        5.27,
+        "G/L"
+      ],
+      "# Eos": [
+        0.39,
+        "K/uL"
+      ],
+      "WBC": [
+        9.35,
+        "10^9/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        27.8,
+        "pg"
+      ],
+      "% Bas": [
+        0.3,
+        "%"
+      ],
+      "PDW": [
+        13.1,
+        "fL"
+      ],
+      "Hct": [
+        40.9,
+        "%"
+      ],
+      "MCHC": [
+        33,
+        "g/dL"
+      ],
+      "LYMPH#": [
+        1.85,
+        "G/L"
+      ],
+      "Eos%": [
+        1.3,
+        "%"
+      ],
+      "PLT": [
+        448,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0124",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "Lymphocyte %": [
+        29.2,
+        "%"
+      ],
+      "# Bas": [
+        0.02,
+        "K/uL"
+      ],
+      "PDW": [
+        10.8,
+        "fL"
+      ],
+      "Neutrophil abs": [
+        2.89,
+        "K/uL"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        2.6,
+        "%"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "Rbc": [
+        6.03,
+        "M/uL"
+      ],
+      "SLTC": [
+        222,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        2.74,
+        "K/uL"
+      ],
+      "Neu%": [
+        48.0,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        12.6,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0005",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Neutrophil abs": [
+        6.2,
+        "K/uL"
+      ],
+      "% Bas": [
+        0.3,
+        "%"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "MCV": [
+        94.8,
+        "fL"
+      ],
+      "Hct": [
+        50.0,
+        "%"
+      ],
+      "MPV": [
+        8.1,
+        "fL"
+      ],
+      "RDW": [
+        13.5,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        36,
+        "g/dL"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        15.2,
+        "fL"
+      ],
+      "Eosinophil abs": [
+        0.0,
+        "K/uL"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        43.4,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        56.4,
+        "%"
+      ],
+      "Số lượng bạch cầu ưa bazơ": [
+        0.01,
+        "G/L"
+      ],
+      "Tỷ lệ bạch cầu Monocyte": [
+        5.4,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        30.3,
+        "pg"
+      ],
+      "Lymphocyte abs": [
+        1.56,
+        "G/L"
+      ],
+      "Plt": [
+        425,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0098",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Lym#": [
+        1.73,
+        "G/L"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "Tiểu cầu": [
+        318,
+        "K/uL"
+      ],
+      "% Lym": [
+        31.0,
+        "%"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "RBC": [
+        5.23,
+        "10^12/L"
+      ],
+      "PDW": [
+        12.7,
+        "fL"
+      ],
+      "Hb": [
+        14,
+        "g/dL"
+      ],
+      "MCH": [
+        26.2,
+        "pg"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        92.6,
+        "fL"
+      ],
+      "Bạch cầu trung tính %": [
+        59.4,
+        "%"
+      ],
+      "Số lượng bạch cầu": [
+        7.18,
+        "G/L"
+      ],
+      "Bas%": [
+        1.2,
+        "%"
+      ],
+      "RDW-CV": [
+        14.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0051",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Eos#": [
+        0.48,
+        "G/L"
+      ],
+      "LYMPH%": [
+        20.4,
+        "%"
+      ],
+      "Neutrophil abs": [
+        2.85,
+        "K/uL"
+      ],
+      "PDW": [
+        13.7,
+        "fL"
+      ],
+      "Hematocrit": [
+        37.0,
+        "%"
+      ],
+      "Lượng huyết sắc tố": [
+        15,
+        "g/dL"
+      ],
+      "# Lym": [
+        1.44,
+        "K/uL"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.7,
+        "%"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Bas%": [
+        0.2,
+        "%"
+      ],
+      "Neutrophil %": [
+        43.8,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        32.9,
+        "pg"
+      ],
+      "Số lượng bạch cầu": [
+        6.32,
+        "G/L"
+      ],
+      "MCV": [
+        77.5,
+        "fL"
+      ],
+      "% Mono": [
+        11.3,
+        "%"
+      ],
+      "MONO#": [
+        0.24,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0007",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Eos%": [
+        4.9,
+        "%"
+      ],
+      "Bạch cầu": [
+        7.73,
+        "K/uL"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        0.4,
+        "%"
+      ],
+      "RBC": [
+        5.69,
+        "T/L"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "RDW": [
+        13.9,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.3,
+        "pg"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        0.8,
+        "G/L"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.28,
+        "K/uL"
+      ],
+      "MCV": [
+        81.9,
+        "fL"
+      ],
+      "BASO#": [
+        0.04,
+        "G/L"
+      ],
+      "Tiểu cầu": [
+        384,
+        "G/L"
+      ],
+      "PDW": [
+        11.3,
+        "fL"
+      ],
+      "Bạch cầu Lymphocyte %": [
+        28.5,
+        "%"
+      ],
+      "Bạch cầu trung tính %": [
+        71.8,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        349,
+        "g/L"
+      ],
+      "MONO%": [
+        4.6,
+        "%"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        1.38,
+        "K/uL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0015",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "BC mono": [
+        0.2,
+        "K/uL"
+      ],
+      "% Neu": [
+        63.5,
+        "%"
+      ],
+      "Số lượng tiểu cầu": [
+        150,
+        "K/uL"
+      ],
+      "Hct": [
+        0.4,
+        "L/L"
+      ],
+      "Hồng cầu": [
+        4.91,
+        "10^12/L"
+      ],
+      "MONO%": [
+        6.2,
+        "%"
+      ],
+      "Tỷ lệ BC lympho": [
+        21.6,
+        "%"
+      ],
+      "Eosinophil %": [
+        3.1,
+        "%"
+      ],
+      "NEUT#": [
+        1.31,
+        "K/uL"
+      ],
+      "BC ưa axit": [
+        0.33,
+        "K/uL"
+      ],
+      "MPV": [
+        11.1,
+        "fL"
+      ],
+      "MCH": [
+        27.8,
+        "pg"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        89.1,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0006",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Lymphocyte abs": [
+        2.35,
+        "G/L"
+      ],
+      "Tỷ lệ bạch cầu trung tính": [
+        59.2,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        35,
+        "g/dL"
+      ],
+      "Plt": [
+        450,
+        "G/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Baso#": [
+        0.09,
+        "K/uL"
+      ],
+      "MCV": [
+        94.2,
+        "fL"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.48,
+        "K/uL"
+      ],
+      "MPV": [
+        8.0,
+        "fL"
+      ],
+      "PDW": [
+        14.0,
+        "fL"
+      ],
+      "MCH": [
+        29.6,
+        "pg"
+      ],
+      "Monocyte abs": [
+        0.55,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0059",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "SL bạch cầu trung tính": [
+        3.21,
+        "G/L"
+      ],
+      "Monocyte abs": [
+        0.64,
+        "G/L"
+      ],
+      "Mono%": [
+        11.5,
+        "%"
+      ],
+      "Bạch cầu trung tính %": [
+        54.9,
+        "%"
+      ],
+      "WBC": [
+        5.26,
+        "G/L"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        354,
+        "g/L"
+      ],
+      "Hb": [
+        18,
+        "g/dL"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        11.0,
+        "fL"
+      ],
+      "RDW": [
+        11.2,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        13.4,
+        "fL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0078",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        13.9,
+        "%"
+      ],
+      "MONO#": [
+        0.64,
+        "G/L"
+      ],
+      "HGB": [
+        16,
+        "g/dL"
+      ],
+      "Plateletcrit": [
+        0.3,
+        "%"
+      ],
+      "# Eos": [
+        0.7,
+        "K/uL"
+      ],
+      "Mono%": [
+        3.2,
+        "%"
+      ],
+      "PDW": [
+        10.5,
+        "fL"
+      ],
+      "MCHC": [
+        35,
+        "g/dL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        97.6,
+        "fL"
+      ],
+      "BC ua axit %": [
+        2.1,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0123",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Bas": [
+        0.03,
+        "K/uL"
+      ],
+      "Số lượng hồng cầu": [
+        4.59,
+        "T/L"
+      ],
+      "Số lượng bạch cầu Monocyte": [
+        1.14,
+        "G/L"
+      ],
+      "PDW": [
+        10.8,
+        "fL"
+      ],
+      "% Mono": [
+        10.4,
+        "%"
+      ],
+      "Bạch cầu ưa axit %": [
+        3.8,
+        "%"
+      ],
+      "Dung tich hong cau": [
+        44.3,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        9.4,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        26.0,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        36,
+        "g/dL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        73.8,
+        "fL"
+      ],
+      "Basophil %": [
+        0.3,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0111",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "# Neu": [
+        3.92,
+        "G/L"
+      ],
+      "# Mono": [
+        0.66,
+        "G/L"
+      ],
+      "PDW": [
+        14.8,
+        "fL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        73.9,
+        "fL"
+      ],
+      "RBC": [
+        4.52,
+        "T/L"
+      ],
+      "LYMPH#": [
+        2.24,
+        "G/L"
+      ],
+      "PLT": [
+        199,
+        "10^9/L"
+      ],
+      "BC trung tính %": [
+        58.7,
+        "%"
+      ],
+      "MCH": [
+        30.5,
+        "pg"
+      ],
+      "# Eos": [
+        0.2,
+        "G/L"
+      ],
+      "MONO%": [
+        5.6,
+        "%"
+      ],
+      "Baso#": [
+        0.03,
+        "G/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0090",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Thể tích trung bình tiểu cầu": [
+        8.7,
+        "fL"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        0.0,
+        "G/L"
+      ],
+      "RDW": [
+        15.2,
+        "%"
+      ],
+      "Plt": [
+        340,
+        "G/L"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.3,
+        "K/uL"
+      ],
+      "PDW": [
+        15.7,
+        "fL"
+      ],
+      "Lượng huyết sắc tố": [
+        15,
+        "g/dL"
+      ],
+      "Bạch cầu Monocyte %": [
+        7.4,
+        "%"
+      ],
+      "SL bạch cầu ưa axit": [
+        0.51,
+        "K/uL"
+      ],
+      "SLHC": [
+        5.1,
+        "T/L"
+      ],
+      "Lym#": [
+        2.46,
+        "K/uL"
+      ],
+      "SLBC": [
+        7.01,
+        "10^9/L"
+      ],
+      "Tỷ lệ BC trung tính": [
+        78.4,
+        "%"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        35,
+        "g/dL"
+      ],
+      "% Lym": [
+        32.4,
+        "%"
+      ],
+      "MCH": [
+        29.2,
+        "pg"
+      ],
+      "PCT": [
+        0.3,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0058",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "Rbc": [
+        4.49,
+        "M/uL"
+      ],
+      "% Bas": [
+        0.9,
+        "%"
+      ],
+      "Eos%": [
+        4.5,
+        "%"
+      ],
+      "Độ phân bố kích thước hồng cầu": [
+        13.9,
+        "%"
+      ],
+      "SLBC": [
+        6.5,
+        "10^9/L"
+      ],
+      "Bạch cầu Monocyte %": [
+        4.3,
+        "%"
+      ],
+      "Hemoglobin": [
+        18,
+        "g/dL"
+      ],
+      "PCT": [
+        0.2,
+        "%"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        2.2,
+        "G/L"
+      ],
+      "MPV": [
+        9.1,
+        "fL"
+      ],
+      "Số lượng bạch cầu ưa axit": [
+        0.42,
+        "G/L"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        95.0,
+        "fL"
+      ],
+      "Baso#": [
+        0.12,
+        "G/L"
+      ],
+      "BC trung tính %": [
+        47.8,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0130",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "BC lympho": [
+        2.75,
+        "K/uL"
+      ],
+      "% Neu": [
+        63.5,
+        "%"
+      ],
+      "Tỷ lệ bạch cầu Lymphocyte": [
+        25.7,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        17.4,
+        "fL"
+      ],
+      "MCHC": [
+        372,
+        "g/L"
+      ],
+      "Tỷ lệ BC mono": [
+        9.4,
+        "%"
+      ],
+      "MCV": [
+        95.7,
+        "fL"
+      ],
+      "SLTC": [
+        0,
+        "G/L"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        13.1,
+        "%"
+      ],
+      "Số lượng hồng cầu": [
+        4.67,
+        "T/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0128",
+    "target_label": "kham_som",
+    "has_borderline": false,
+    "results": {
+      "% Neu": [
+        69.7,
+        "%"
+      ],
+      "Số lượng tiểu cầu": [
+        298,
+        "G/L"
+      ],
+      "PDW": [
+        11.1,
+        "fL"
+      ],
+      "PCT": [
+        0.1,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.6,
+        "pg"
+      ],
+      "LYMPH#": [
+        2.19,
+        "K/uL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        34,
+        "g/dL"
+      ],
+      "Neutrophil abs": [
+        0.0,
+        "K/uL"
+      ],
+      "Số lượng hồng cầu": [
+        4.85,
+        "M/uL"
+      ],
+      "Tỷ lệ BC ưa axit": [
+        18.4,
+        "%"
+      ],
+      "Wbc": [
+        8.08,
+        "G/L"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        10.7,
+        "fL"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "Mono#": [
+        0.62,
+        "K/uL"
+      ],
+      "Thể tích trung bình hồng cầu": [
+        95.7,
+        "fL"
+      ],
+      "Bạch cầu ưa bazơ %": [
+        1.2,
+        "%"
+      ],
+      "Basophil abs": [
+        0.01,
+        "G/L"
+      ],
+      "RDW": [
+        13.7,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0010",
+    "target_label": "binh_thuong",
+    "has_borderline": false,
+    "results": {
+      "Erythrocyte": [
+        5.45,
+        "M/uL"
+      ],
+      "MPV": [
+        9.9,
+        "fL"
+      ],
+      "% Lym": [
+        24.8,
+        "%"
+      ],
+      "SLBC": [
+        7.73,
+        "G/L"
+      ],
+      "Dung tích hồng cầu": [
+        0.5,
+        "L/L"
+      ],
+      "Số lượng bạch cầu trung tính": [
+        2.87,
+        "G/L"
+      ],
+      "Monocyte abs": [
+        0.26,
+        "K/uL"
+      ],
+      "SL bạch cầu Lymphocyte": [
+        1.54,
+        "G/L"
+      ],
+      "Eos#": [
+        0.07,
+        "K/uL"
+      ],
+      "Eosinophil %": [
+        2.3,
+        "%"
+      ],
+      "MCH": [
+        29.0,
+        "pg"
+      ],
+      "PDW": [
+        13.7,
+        "fL"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0027",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "% Mono": [
+        7.6,
+        "%"
+      ],
+      "BC ưa bazơ": [
+        0.02,
+        "G/L"
+      ],
+      "SL bạch cầu Monocyte": [
+        0.66,
+        "K/uL"
+      ],
+      "Số lượng bạch cầu Lymphocyte": [
+        3.0,
+        "K/uL"
+      ],
+      "Dung tich hong cau": [
+        0.4,
+        "L/L"
+      ],
+      "Tỷ lệ BC ưa bazơ": [
+        1.0,
+        "%"
+      ],
+      "RDW": [
+        14.5,
+        "%"
+      ],
+      "Eos%": [
+        8.6,
+        "%"
+      ],
+      "Tỷ lệ BC lympho": [
+        38.7,
+        "%"
+      ],
+      "Thể tích trung bình tiểu cầu": [
+        6.9,
+        "fL"
+      ],
+      "Lượng huyết sắc tố": [
+        171,
+        "g/L"
+      ],
+      "Thể tích khối tiểu cầu": [
+        0.2,
+        "%"
+      ],
+      "PDW": [
+        11.1,
+        "fL"
+      ],
+      "Neutrophil %": [
+        40.9,
+        "%"
+      ],
+      "Bạch cầu": [
+        6.68,
+        "10^9/L"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0011",
+    "target_label": "binh_thuong",
+    "has_borderline": true,
+    "results": {
+      "Hb": [
+        14,
+        "g/dL"
+      ],
+      "Eosinophil abs": [
+        0.57,
+        "G/L"
+      ],
+      "MCHC": [
+        346,
+        "g/L"
+      ],
+      "# Lym": [
+        2.33,
+        "G/L"
+      ],
+      "Hồng cầu": [
+        5.32,
+        "T/L"
+      ],
+      "# Neu": [
+        3.1,
+        "G/L"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        33.0,
+        "pg"
+      ],
+      "Lymphocyte %": [
+        19.5,
+        "%"
+      ],
+      "Bạch cầu trung tính %": [
+        40.9,
+        "%"
+      ],
+      "Eos%": [
+        6.8,
+        "%"
+      ]
+    }
+  },
+  {
+    "panel_id": "SYN-0070",
+    "target_label": "theo_doi",
+    "has_borderline": false,
+    "results": {
+      "EO%": [
+        0.7,
+        "%"
+      ],
+      "Độ phân bố kích thước tiểu cầu": [
+        16.0,
+        "fL"
+      ],
+      "Nồng độ huyết sắc tố trung bình": [
+        325,
+        "g/L"
+      ],
+      "Tỷ lệ BC mono": [
+        1.9,
+        "%"
+      ],
+      "Mono#": [
+        0.45,
+        "K/uL"
+      ],
+      "WBC": [
+        7.44,
+        "G/L"
+      ],
+      "Neu%": [
+        61.4,
+        "%"
+      ],
+      "LYMPH%": [
+        24.9,
+        "%"
+      ],
+      "MCV": [
+        91.7,
+        "fL"
+      ],
+      "BC ưa bazơ": [
+        0.13,
+        "K/uL"
+      ],
+      "Plateletcrit": [
+        0.2,
+        "%"
+      ],
+      "Erythrocyte": [
+        4.66,
+        "T/L"
+      ],
+      "RDW-CV": [
+        13.3,
+        "%"
+      ],
+      "# Neu": [
+        3.59,
+        "G/L"
+      ],
+      "Lượng huyết sắc tố trung bình hồng cầu": [
+        29.1,
+        "pg"
+      ]
+    }
+  }
+]

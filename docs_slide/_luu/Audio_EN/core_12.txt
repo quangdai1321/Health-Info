@@ -1,0 +1,7 @@
+Every error metric goes down, from baseline, to constrained, to full.
+Please look at the baseline row. Zero safe outputs, in all one hundred and fifty panels.
+The direction was wrong in ninety-one point three percent of panels.
+And false reassurance in thirty-two percent. That is one patient in three.
+The constrained row is much better. False reassurance is down to eight percent.
+But fifty-two percent of these outputs still failed validation.
+The full row. One hundred percent safe output, and zero in every error column.

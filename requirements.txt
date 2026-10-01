@@ -1,0 +1,10 @@
+# Pipeline (src/) KHÔNG dùng thư viện bên thứ ba nào — chỉ thư viện chuẩn
+# của Python (json, csv, re, urllib, unicodedata, dataclasses, pathlib...).
+# Gọi LLM qua HTTP bằng urllib, không cần requests.
+#
+# Phụ thuộc duy nhất là để chạy test:
+pytest>=7.0
+
+# Ngoài Python còn cần (cài riêng, không qua pip):
+#   - Ollama          https://ollama.com
+#   - Mô hình:        ollama pull qwen2.5:3b

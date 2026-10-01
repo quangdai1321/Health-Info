@@ -1,0 +1,7 @@
+A patient leaves the laboratory with a page of numbers.
+The page is full of strange terms. P D W. M C H C. Monocyte.
+The reference interval is printed beside each value.
+But they cannot see what the analyte measures.
+They cannot see if the deviation is serious. And they do not know what to do next.
+In a study in Da Nang, with two hundred and four older adults, sixty point three percent had inadequate health literacy.
+And in another study, forty-six percent of patients searched online, to understand their own results.

@@ -1,0 +1,9 @@
+Our paper has four contributions.
+First, a four-layer pipeline.
+All clinical judgement is completed by rules, before the model is called. The model only paraphrases.
+Second, an automatic validator.
+It checks the generated text against those labels. If they disagree, the system regenerates, or falls back to a fixed template.
+Third, the false reassurance metric.
+Earlier work on patient-facing explanations did not report this error separately.
+Fourth, a finding about units.
+Inconsistent units between laboratories caused a severe misclassification, inside our rule layer.

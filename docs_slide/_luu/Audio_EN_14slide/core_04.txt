@@ -1,0 +1,6 @@
+But the most dangerous failure runs the other way.
+False reassurance is different. It is fluent, it is comfortable, and it removes the reason to seek care.
+False reassurance means this. The panel is abnormal, but the model says everything is normal.
+This is a real output from our experiment, on a panel labelled seek care.
+The model wrote: all test results are within the normal range.
+That is why we treat false reassurance as a separate error class, and measure it separately.

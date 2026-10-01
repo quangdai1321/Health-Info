@@ -1,0 +1,9 @@
+In summary. The language model is not permitted to decide whether a value is abnormal.
+Rules decide first. The model paraphrases. Then the validator checks one against the other.
+False reassurance went from thirty-two percent, to zero. Safe output is one hundred percent. And the system needs no GPU.
+For future work, in order of importance.
+Clinical review by medical professionals. This is the most pressing.
+Then, replacing our heuristic thresholds, with a real critical value list.
+Then, biochemistry and qualitative results.
+A speech output layer, for elderly and low-literacy patients.
+And evaluation on real reports, from several laboratories.

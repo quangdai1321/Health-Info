@@ -1,0 +1,36 @@
+# Bo cai dat Ollama (1,5 GB) - tai lai tu ollama.com khi can
+OllamaSetup.exe
+
+# File am thanh sinh tu script (tong ~160 MB, tao lai duoc bang System.Speech)
+*.wav
+
+# File tam cua Office khi dang mo tai lieu
+~$*
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# LaTeX trung gian
+*.aux
+*.log
+*.blg
+*.bbl
+*.out
+*.synctex.gz
+
+# Tai lieu khong phai cua du an nay, giu o may, khong day len GitHub
+ThS. Võ Hoàng Khang, HUTECH.pdf
+Tai lieu/Nguyễn-Ngọc-Đỉnh_Chuyên-đề-thực-tế-hutech-v1.0.docx
+Tai lieu/3.*.pdf
+Tai lieu/4.*.pdf
+Tai lieu/8.*.pdf
+Tai lieu/LuanVanThacSi_*.docx
+
+# Template Springer co ban quyen, tai lai tu trang hoi nghi
+Tai lieu/Word+Template/
+Tai lieu/Word+Template.zip
+Tai lieu/Healthinfo IV conference (Latex template)/
+Tai lieu/Healthinfo IV conference (Latex template).zip
