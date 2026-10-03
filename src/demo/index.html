@@ -76,6 +76,7 @@
         <div class="hangnut">
           <button class="nut phu" id="btCauNoi">Dùng cầu nối cổng 11435</button>
           <button class="nut phu" id="btThang">Gọi thẳng cổng 11434</button>
+          <button class="nut phu" id="btDan">Dán địa chỉ đường hầm</button>
         </div>
         <p class="nho">Trang chỉ gọi mô hình chạy trên máy bạn, dữ liệu không gửi đi đâu khác.
           Trước hết bật Ollama cho phép trang gọi vào: <code>setx OLLAMA_ORIGINS "*"</code>,
@@ -128,6 +129,12 @@ MCV 88.0 fL
 MCHC 335 g/L`];
 let viTri = 0;
 $("phieu").value = VI_DU[0];
+
+// nho dia chi da nhap, de sau khi tai lai trang khong phai go lai
+try { const luu = localStorage.getItem("dia_chi_ollama"); if (luu) $("url").value = luu; } catch (e) {}
+$("url").addEventListener("change", () => {
+  try { localStorage.setItem("dia_chi_ollama", $("url").value.trim()); } catch (e) {}
+});
 
 const dat = (el, html) => { el.innerHTML = html; };
 const thoat = (s) => String(s).replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
@@ -189,6 +196,16 @@ $("btHe").onclick = async () => {
 $("btVd").onclick = () => { viTri = (viTri + 1) % VI_DU.length; $("phieu").value = VI_DU[viTri]; };
 $("btCauNoi").onclick = () => { $("url").value = "http://localhost:11435"; $("tt").textContent = "Đã chuyển sang cầu nối cổng 11435"; };
 $("btThang").onclick = () => { $("url").value = "http://localhost:11434"; $("tt").textContent = "Đã chuyển sang gọi thẳng cổng 11434"; };
+$("btDan").onclick = async () => {
+  let v = "";
+  try { v = (await navigator.clipboard.readText()).trim(); } catch (e) {}
+  v = prompt("Dán địa chỉ đường hầm (https://....trycloudflare.com)", v || "https://");
+  if (v) {
+    $("url").value = v.trim().replace(/\/+$/, "");
+    try { localStorage.setItem("dia_chi_ollama", $("url").value); } catch (e) {}
+    $("tt").textContent = "Đã đổi sang " + $("url").value;
+  }
+};
 
 // ---------------------------------------------------- hien thi
 function veBangTang12(r) {

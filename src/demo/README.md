@@ -44,6 +44,28 @@ python cau_noi.py
 Rồi trong trang, mở **Cài đặt và cách chạy** và bấm **Dùng cầu nối cổng 11435**.
 Cầu nối chỉ thêm header mà Chrome đòi rồi chuyển tiếp sang Ollama, không sửa gì nội dung.
 
+## Cách 3 — dùng bản trên Vercel với mô hình chạy ở máy (đã kiểm chứng)
+
+Chrome chặn trang `https://...vercel.app` gọi thẳng vào `localhost`. Cách vòng qua là
+đưa Ollama ra một địa chỉ https công khai bằng đường hầm Cloudflare.
+
+Bấm đúp **`chay_cho_vercel.bat`**, hoặc chạy tay:
+
+```bash
+python cau_noi.py                                   # cửa sổ 1
+cloudflared tunnel --url http://localhost:11435     # cửa sổ 2
+```
+
+Cửa sổ thứ hai in ra một dòng dạng `https://abcd-efgh.trycloudflare.com`. Mở trang demo
+trên Vercel, vào **Cài đặt và cách chạy**, bấm **Dán địa chỉ đường hầm** và dán dòng đó vào.
+Trang nhớ địa chỉ này, tải lại trang không phải nhập lại.
+
+Địa chỉ đường hầm đổi mỗi lần chạy lại, nên dán lại sau mỗi lần khởi động.
+
+**Lưu ý an toàn:** trong lúc đường hầm mở, bất kỳ ai biết địa chỉ đó đều gọi được mô hình
+trên máy bạn. Địa chỉ là chuỗi ngẫu nhiên và chỉ sống khi cửa sổ còn mở, nhưng
+**xong buổi báo cáo nhớ nhấn Ctrl+C để đóng**.
+
 ## Cách dùng khi trình bày
 
 1. Bấm **Hỏi thẳng AI**: mô hình nhận nguyên phiếu, không ràng buộc gì. Đây là thứ xảy ra
