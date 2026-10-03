@@ -1,0 +1,7 @@
+First, false reassurance deserves its own metric.
+But a falsely reassuring sentence can score high on readability, because it is simple and calming.
+The harm is that it stops the reader from seeking care.
+Second, unit standardisation is a safety precondition.
+Our unit error happened inside the rule layer. The layer we treat as exact.
+No later check can detect it, because every later layer repeats a confidently wrong label.
+So standards, like LOINC and HL7 FHIR, are needed, before we build rule-based clinical logic.

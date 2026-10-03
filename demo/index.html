@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo · Diễn giải kết quả xét nghiệm máu có ràng buộc theo luật</title>
+<style>
+  :root{
+    --navy:#1F3864; --blue:#1565C0; --red:#C62828; --green:#2E7D32; --amber:#E6A700;
+    --bg:#DCE7F5; --card:#FFFFFF; --line:#C9D4E6; --mute:#5A6B85;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#16233A;
+       font-family:Calibri,"Segoe UI",Arial,sans-serif;font-size:17px;line-height:1.45}
+  header{padding:18px 26px 12px}
+  h1{margin:0;font-size:26px;color:var(--navy)}
+  .sub{color:var(--mute);font-size:15px;margin-top:3px}
+  main{padding:0 26px 26px;max-width:1700px;margin:0 auto}
+  .hang{display:flex;gap:18px;flex-wrap:wrap}
+  .the{background:var(--card);border-radius:10px;padding:16px 18px;box-shadow:0 1px 3px rgba(20,40,80,.12)}
+  .cot{flex:1 1 440px;min-width:330px}
+  label{display:block;font-weight:700;color:var(--navy);margin-bottom:6px;font-size:15px}
+  textarea,input,select{width:100%;font-family:Consolas,"Courier New",monospace;font-size:16px;
+       padding:9px 11px;border:1px solid var(--line);border-radius:7px;background:#FBFCFE;color:#16233A}
+  textarea{min-height:190px;resize:vertical;line-height:1.5}
+  .nut{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:8px;cursor:pointer;
+       font-family:inherit;font-size:17px;font-weight:700;padding:11px 20px;color:#fff;background:var(--navy)}
+  .nut.do{background:var(--red)} .nut.xanh{background:var(--green)} .nut.phu{background:#64748B}
+  .nut:disabled{opacity:.5;cursor:not-allowed}
+  .hangnut{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+  .tt{font-size:15px;color:var(--mute)}
+  h2{font-size:19px;margin:0 0 10px;display:flex;align-items:center;gap:9px}
+  .cham{width:12px;height:12px;border-radius:50%;display:inline-block}
+  .kq{white-space:pre-wrap;font-size:17px;min-height:120px}
+  .vien-do{border-top:4px solid var(--red)} .vien-xanh{border-top:4px solid var(--green)}
+  table{border-collapse:collapse;width:100%;font-size:15px}
+  th,td{padding:6px 9px;border-bottom:1px solid var(--line);text-align:left}
+  th{color:var(--navy)}
+  .bt{color:var(--mute)} .td{color:var(--amber);font-weight:700} .ks{color:var(--red);font-weight:700}
+  .loi{background:#FDECEC;border-left:4px solid var(--red);padding:9px 12px;border-radius:6px;margin:7px 0;font-size:15px}
+  .ok{background:#EAF5EA;border-left:4px solid var(--green);padding:9px 12px;border-radius:6px;margin:7px 0;font-size:15px}
+  .canh{background:#FFF8E6;border-left:4px solid var(--amber);padding:9px 12px;border-radius:6px;margin:7px 0;font-size:15px}
+  details{margin-top:12px}
+  summary{cursor:pointer;color:var(--navy);font-weight:700}
+  .nho{font-size:14px;color:var(--mute)}
+  code{background:#EEF3FA;padding:2px 6px;border-radius:4px;font-size:14px}
+  .caidat{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:10px}
+  .caidat>div{flex:1 1 180px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Để luật quyết định, AI chỉ viết lời giải thích</h1>
+  <div class="sub">Demo hệ thống diễn giải kết quả xét nghiệm máu &middot; HEALTHINFO IV &middot; Paper ID HI26-0013
+    &middot; Trương Quang Đại, Võ Hoàng Khang (HUTECH)</div>
+</header>
+
+<main>
+  <div class="hang">
+    <div class="the cot">
+      <label for="phieu">Phiếu xét nghiệm (mỗi dòng một chỉ số: tên, giá trị, đơn vị)</label>
+      <textarea id="phieu"></textarea>
+      <div class="hangnut">
+        <button class="nut do" id="btRaw">Hỏi thẳng AI</button>
+        <button class="nut xanh" id="btHe">Chạy qua hệ thống 4 tầng</button>
+        <button class="nut phu" id="btVd">Phiếu ví dụ khác</button>
+        <span class="tt" id="tt"></span>
+      </div>
+      <details>
+        <summary>Cài đặt và cách chạy</summary>
+        <div class="caidat">
+          <div><label for="url">Địa chỉ Ollama</label><input id="url" value="http://localhost:11434"></div>
+          <div><label for="model">Mô hình</label><input id="model" value="qwen2.5:3b"></div>
+          <div><label for="solan">Số lần sinh lại tối đa</label><input id="solan" type="number" min="1" max="5" value="2"></div>
+        </div>
+        <p class="nho">Trang này chỉ gọi mô hình chạy trên máy của bạn, dữ liệu không gửi đi đâu khác.
+          Trước khi mở trang, bật Ollama với biến môi trường cho phép trang gọi vào:
+          <br><code>setx OLLAMA_ORIGINS "*"</code> rồi khởi động lại Ollama, sau đó <code>ollama run qwen2.5:3b</code>.</p>
+      </details>
+      <div id="docphieu"></div>
+    </div>
+
+    <div class="the cot vien-do">
+      <h2><span class="cham" style="background:var(--red)"></span>Hỏi thẳng AI, không ràng buộc</h2>
+      <div class="nho">Giống việc người bệnh dán phiếu vào một chatbot phổ thông.</div>
+      <div class="kq" id="raw">—</div>
+    </div>
+
+    <div class="the cot vien-xanh">
+      <h2><span class="cham" style="background:var(--green)"></span>Qua hệ thống 4 tầng</h2>
+      <div class="nho">Luật xếp mức trước, AI chỉ viết lại, rồi máy kiểm tra sáu loại lỗi.</div>
+      <div class="kq" id="he">—</div>
+      <div id="baocao"></div>
+    </div>
+  </div>
+</main>
+
+<script src="_chiso.js"></script>
+<script src="pipeline.js"></script>
+<script>
+const $ = (id) => document.getElementById(id);
+const VI_DU = [
+`WBC 11.8 G/L
+NEUT% 78.5 %
+LYMPH% 14.2 %
+RBC 4.92 T/L
+HGB 145.6 g/L
+PLT 118 G/L
+RDW 15.8 %
+MCV 89.6 fL`,
+`Số lượng bạch cầu 2.1 G/L
+Lượng huyết sắc tố 9.8 g/dL
+Số lượng tiểu cầu 94 G/L
+Số lượng hồng cầu 3.6 T/L
+MCHC 318 g/L`,
+`WBC 7.2 G/L
+HGB 14.6 g/dL
+PLT 265 G/L
+RBC 5.01 T/L
+MCV 88.0 fL
+MCHC 335 g/L`];
+let viTri = 0;
+$("phieu").value = VI_DU[0];
+
+const dat = (el, html) => { el.innerHTML = html; };
+const thoat = (s) => String(s).replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
+
+function khoa(tat) {
+  ["btRaw", "btHe", "btVd"].forEach((i) => ($(i).disabled = tat));
+}
+
+function dongHo(nhan) {
+  const t0 = Date.now();
+  $("tt").textContent = nhan + " 0,0 giây";
+  return setInterval(() => {
+    $("tt").textContent = `${nhan} ${((Date.now() - t0) / 1000).toFixed(1).replace(".", ",")} giây`;
+  }, 100);
+}
+
+// ---------------------------------------------------- hoi thang AI
+$("btRaw").onclick = async () => {
+  khoa(true); dat($("raw"), "Đang hỏi mô hình…");
+  const h = dongHo("Mô hình đang trả lời:");
+  try {
+    const p = `Đây là kết quả xét nghiệm máu của tôi. Giải thích giúp tôi với:\n\n${$("phieu").value}`;
+    const r = await goiOllama($("url").value, $("model").value, p, false);
+    dat($("raw"), thoat(r.text.trim()));
+    $("tt").textContent = `Mô hình trả lời xong sau ${r.giay.toFixed(1).replace(".", ",")} giây`;
+  } catch (e) {
+    dat($("raw"), `<div class="loi">Không gọi được Ollama: ${thoat(e.message || e)}<br>
+      Kiểm tra Ollama đã chạy chưa, và đã đặt <code>OLLAMA_ORIGINS</code> chưa.</div>`);
+    $("tt").textContent = "";
+  } finally { clearInterval(h); khoa(false); }
+};
+
+// ---------------------------------------------------- chay he thong
+$("btHe").onclick = async () => {
+  khoa(true); dat($("he"), "Đang chạy…"); dat($("baocao"), ""); dat($("docphieu"), "");
+  const h = dongHo("Hệ thống đang chạy:");
+  const nhatKy = [];
+  try {
+    const r = await chayPipeline($("phieu").value, $("url").value, $("model").value,
+      Math.max(1, +$("solan").value || 2), (b, d) => nhatKy.push([b, d]));
+    if (r.loi) { dat($("he"), `<div class="loi">${thoat(r.loi)}</div>`); return; }
+    veBangTang12(r);
+    const dong = r.out.items.map((it) => {
+      const k = r.kq.ket.find((x) => x.code === it.code);
+      const lop = k.muc === "kham_som" ? "ks" : k.muc === "theo_doi" ? "td" : "bt";
+      return `<div style="margin:7px 0"><b class="${lop}">${thoat(k.ten)}</b> — ${thoat(it.explanation)}</div>`;
+    }).join("");
+    const mucChung = TEN_MUC[r.kq.nhanPhieu];
+    dat($("he"), dong + `<div class="${r.kq.nhanPhieu === "kham_som" ? "loi" : r.kq.nhanPhieu === "theo_doi" ? "canh" : "ok"}"
+         style="margin-top:12px"><b>${thoat(r.out.closing)}</b></div>`);
+    veBaoCao(r, nhatKy, mucChung);
+  } catch (e) {
+    dat($("he"), `<div class="loi">Lỗi: ${thoat(e.message || e)}</div>`);
+  } finally { clearInterval(h); khoa(false); }
+};
+
+$("btVd").onclick = () => { viTri = (viTri + 1) % VI_DU.length; $("phieu").value = VI_DU[viTri]; };
+
+// ---------------------------------------------------- hien thi
+function veBangTang12(r) {
+  const hang = r.kq.ket.map((k) => {
+    const lop = k.muc === "kham_som" ? "ks" : k.muc === "theo_doi" ? "td" : "bt";
+    return `<tr><td>${thoat(k.ten)} <span class="nho">(${k.code})</span></td>
+      <td>${thoat(k.goc)}</td><td class="nho">${k.thap}–${k.cao} ${k.dv}</td>
+      <td class="${lop}">${TEN_MUC[k.muc]}</td></tr>`;
+  }).join("");
+  const tuChoi = r.t1.tuChoi.length
+    ? `<div class="canh"><b>Tầng 1 từ chối ${r.t1.tuChoi.length} dòng, không đoán bừa:</b><br>` +
+      r.t1.tuChoi.map((x) => `· ${thoat(x.dong)} — ${thoat(x.ly_do)}`).join("<br>") + "</div>"
+    : "";
+  dat($("docphieu"), `<details open><summary>Tầng 1 và 2 đã xếp mức trước khi gọi AI</summary>
+    <table><tr><th>Chỉ số</th><th>Giá trị</th><th>Khoảng bình thường</th><th>Mức</th></tr>${hang}</table>
+    ${tuChoi}</details>`);
+}
+
+function veBaoCao(r, nhatKy, mucChung) {
+  const lanLoi = nhatKy.filter(([b]) => b === "tang4").map(([, d]) => d).filter((d) => d.kt && !d.kt.dat);
+  let html = "<details open><summary>Tầng 4 đã kiểm tra những gì</summary>";
+  if (lanLoi.length) {
+    html += lanLoi.map((d) => `<div class="loi"><b>Lần sinh thứ ${d.lan} bị loại:</b><br>` +
+      d.kt.loi.map((l) => `· ${thoat(l.loai)} — ${thoat(l.chi_tiet)}`).join("<br>") + "</div>").join("");
+  }
+  html += r.dungBanMau
+    ? `<div class="canh"><b>Sinh lại ${r.lan} lần vẫn chưa đạt, hệ thống dùng bản mẫu cố định.</b><br>
+       Người bệnh vẫn không bao giờ đọc phải câu chưa qua kiểm chứng. Trong thực nghiệm, 36% số phiếu rơi vào trường hợp này.</div>`
+    : `<div class="ok"><b>Qua đủ sáu phép kiểm tra ở lần sinh thứ ${r.lan}.</b><br>
+       Đúng chiều cao thấp · không nói ngược · không từ cấm · không bịa chỉ số · không bỏ sót · câu kết không trấn an sai.</div>`;
+  html += `<div class="nho" style="margin-top:8px">Mức chung do luật quyết định: <b>${mucChung}</b>.
+     Thời gian gọi mô hình: ${r.giay.toFixed(1).replace(".", ",")} giây.</div></details>`;
+  dat($("baocao"), html);
+}
+</script>
+</body>
+</html>

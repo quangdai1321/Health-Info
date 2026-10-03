@@ -1,0 +1,3 @@
+Here are the same results, as a chart.
+Every error class falls, from baseline, to constrained, to full.
+The full pipeline is zero in all six classes.

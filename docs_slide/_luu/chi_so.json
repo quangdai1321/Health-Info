@@ -1,0 +1,421 @@
+[
+ {
+  "code": "PLT",
+  "ten": "Số lượng tiểu cầu",
+  "alias": [
+   "PLT",
+   "Tiểu cầu",
+   "SLTC",
+   "Platelet",
+   "Plt"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0,
+   "10^9/L": 1.0
+  },
+  "thap": 150.0,
+  "cao": 450.0,
+  "hs": 0.4,
+  "congdung": "giúp máu đông lại khi bị thương"
+ },
+ {
+  "code": "PDW",
+  "ten": "Độ phân bố kích thước tiểu cầu",
+  "alias": [
+   "PDW"
+  ],
+  "dv": "fL",
+  "quydoi": {
+   "fL": 1.0
+  },
+  "thap": 10.0,
+  "cao": 18.0,
+  "hs": 0.4,
+  "congdung": "cho biết các tiểu cầu có kích thước đồng đều hay không"
+ },
+ {
+  "code": "WBC",
+  "ten": "Số lượng bạch cầu",
+  "alias": [
+   "WBC",
+   "Bạch cầu",
+   "SLBC",
+   "Leukocyte",
+   "Wbc"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0,
+   "10^9/L": 1.0
+  },
+  "thap": 3.4,
+  "cao": 9.4,
+  "hs": 0.4,
+  "congdung": "tế bào chống lại vi khuẩn và nhiễm trùng"
+ },
+ {
+  "code": "NEUT_PCT",
+  "ten": "Tỷ lệ bạch cầu trung tính",
+  "alias": [
+   "NEUT%",
+   "Neutrophil %",
+   "BC trung tính %",
+   "Bạch cầu trung tính %",
+   "Tỷ lệ BC trung tính",
+   "% Neu",
+   "Neu%"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 40.9,
+  "cao": 73.7,
+  "hs": 0.3,
+  "congdung": "loại bạch cầu phản ứng sớm nhất khi có nhiễm trùng"
+ },
+ {
+  "code": "LYMPH_PCT",
+  "ten": "Tỷ lệ bạch cầu Lymphocyte",
+  "alias": [
+   "LYMPH%",
+   "Lymphocyte %",
+   "Bạch cầu Lymphocyte %",
+   "Tỷ lệ BC lympho",
+   "% Lym",
+   "Lym%"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 17.2,
+  "cao": 46.1,
+  "hs": 0.3,
+  "congdung": "loại bạch cầu ghi nhớ và chống lại virus"
+ },
+ {
+  "code": "MONO_PCT",
+  "ten": "Tỷ lệ bạch cầu Monocyte",
+  "alias": [
+   "MONO%",
+   "Monocyte %",
+   "Bạch cầu Monocyte %",
+   "Tỷ lệ BC mono",
+   "% Mono",
+   "Mono%"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 3.7,
+  "cao": 10.9,
+  "hs": 0.3,
+  "congdung": "loại bạch cầu dọn dẹp tế bào chết và vi khuẩn"
+ },
+ {
+  "code": "EOS_PCT",
+  "ten": "Tỷ lệ bạch cầu ưa axit",
+  "alias": [
+   "EO%",
+   "Eosinophil %",
+   "BC ua axit %",
+   "Bạch cầu ưa axit %",
+   "Tỷ lệ BC ưa axit",
+   "% Eos",
+   "Eos%"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 0.0,
+  "cao": 8.6,
+  "hs": 0.4,
+  "congdung": "loại bạch cầu liên quan đến dị ứng và ký sinh trùng"
+ },
+ {
+  "code": "BASO_PCT",
+  "ten": "Tỷ lệ bạch cầu ưa bazơ",
+  "alias": [
+   "BASO%",
+   "Basophil %",
+   "BC ua bazo %",
+   "Bạch cầu ưa bazơ %",
+   "Tỷ lệ BC ưa bazơ",
+   "% Bas",
+   "% Baso",
+   "Bas%"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 0.0,
+  "cao": 1.3,
+  "hs": 0.4,
+  "congdung": "loại bạch cầu tham gia phản ứng dị ứng"
+ },
+ {
+  "code": "NEUT_ABS",
+  "ten": "Số lượng bạch cầu trung tính",
+  "alias": [
+   "NEUT#",
+   "Neutrophil abs",
+   "SL bạch cầu trung tính",
+   "BC trung tính",
+   "# Neu",
+   "Neu#"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0
+  },
+  "thap": 1.3,
+  "cao": 6.2,
+  "hs": 0.4,
+  "congdung": "số lượng tuyệt đối của bạch cầu chống nhiễm trùng"
+ },
+ {
+  "code": "LYMPH_ABS",
+  "ten": "Số lượng bạch cầu Lymphocyte",
+  "alias": [
+   "LYMPH#",
+   "Lymphocyte abs",
+   "SL bạch cầu Lymphocyte",
+   "BC lympho",
+   "# Lym",
+   "Lym#"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0
+  },
+  "thap": 1.0,
+  "cao": 3.0,
+  "hs": 0.4,
+  "congdung": "số lượng tuyệt đối của bạch cầu chống virus"
+ },
+ {
+  "code": "MONO_ABS",
+  "ten": "Số lượng bạch cầu Monocyte",
+  "alias": [
+   "MONO#",
+   "Monocyte abs",
+   "SL bạch cầu Monocyte",
+   "BC mono",
+   "# Mono",
+   "Mono#"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0
+  },
+  "thap": 0.2,
+  "cao": 0.8,
+  "hs": 0.4,
+  "congdung": "số lượng tuyệt đối của bạch cầu dọn dẹp"
+ },
+ {
+  "code": "EOS_ABS",
+  "ten": "Số lượng bạch cầu ưa axit",
+  "alias": [
+   "EO#",
+   "Eosinophil abs",
+   "SL bạch cầu ưa axit",
+   "BC ưa axit",
+   "# Eos",
+   "Eos#"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0
+  },
+  "thap": 0.0,
+  "cao": 0.6,
+  "hs": 0.5,
+  "congdung": "số lượng tuyệt đối của bạch cầu dị ứng"
+ },
+ {
+  "code": "BASO_ABS",
+  "ten": "Số lượng bạch cầu ưa bazơ",
+  "alias": [
+   "BASO#",
+   "Basophil abs",
+   "SL bạch cầu ưa bazơ",
+   "BC ưa bazơ",
+   "# Baso",
+   "# Bas",
+   "Baso#"
+  ],
+  "dv": "G/L",
+  "quydoi": {
+   "G/L": 1.0,
+   "K/uL": 1.0
+  },
+  "thap": 0.0,
+  "cao": 0.1,
+  "hs": 0.5,
+  "congdung": "số lượng tuyệt đối của bạch cầu dị ứng"
+ },
+ {
+  "code": "RBC",
+  "ten": "Số lượng hồng cầu",
+  "alias": [
+   "RBC",
+   "Hồng cầu",
+   "SLHC",
+   "Erythrocyte",
+   "Rbc"
+  ],
+  "dv": "T/L",
+  "quydoi": {
+   "T/L": 1.0,
+   "M/uL": 1.0,
+   "10^12/L": 1.0
+  },
+  "thap": 4.37,
+  "cao": 5.69,
+  "hs": 0.2,
+  "congdung": "tế bào mang oxy đi khắp cơ thể"
+ },
+ {
+  "code": "HGB",
+  "ten": "Lượng huyết sắc tố",
+  "alias": [
+   "HGB",
+   "Hemoglobin",
+   "Hb",
+   "Huyết sắc tố"
+  ],
+  "dv": "g/L",
+  "quydoi": {
+   "g/L": 1.0,
+   "g/dL": 10.0
+  },
+  "thap": 130.0,
+  "cao": 175.0,
+  "hs": 0.2,
+  "congdung": "chất trong hồng cầu giúp giữ và vận chuyển oxy"
+ },
+ {
+  "code": "HCT",
+  "ten": "Dung tích hồng cầu",
+  "alias": [
+   "HCT",
+   "Hematocrit",
+   "Dung tich hong cau",
+   "Hct"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0,
+   "L/L": 100.0
+  },
+  "thap": 38.8,
+  "cao": 50.0,
+  "hs": 0.2,
+  "congdung": "tỷ lệ phần trăm thể tích máu do hồng cầu chiếm giữ"
+ },
+ {
+  "code": "MCV",
+  "ten": "Thể tích trung bình hồng cầu",
+  "alias": [
+   "MCV"
+  ],
+  "dv": "fL",
+  "quydoi": {
+   "fL": 1.0
+  },
+  "thap": 80.0,
+  "cao": 100.0,
+  "hs": 0.2,
+  "congdung": "kích thước trung bình của một hồng cầu"
+ },
+ {
+  "code": "MCH",
+  "ten": "Lượng huyết sắc tố trung bình hồng cầu",
+  "alias": [
+   "MCH"
+  ],
+  "dv": "pg",
+  "quydoi": {
+   "pg": 1.0
+  },
+  "thap": 27.0,
+  "cao": 34.0,
+  "hs": 0.2,
+  "congdung": "lượng chất mang oxy trung bình trong mỗi hồng cầu"
+ },
+ {
+  "code": "MCHC",
+  "ten": "Nồng độ huyết sắc tố trung bình",
+  "alias": [
+   "MCHC"
+  ],
+  "dv": "g/L",
+  "quydoi": {
+   "g/L": 1.0,
+   "g/dL": 10.0
+  },
+  "thap": 320.0,
+  "cao": 360.0,
+  "hs": 0.15,
+  "congdung": "mức độ đậm đặc của chất mang oxy trong hồng cầu"
+ },
+ {
+  "code": "RDW",
+  "ten": "Độ phân bố kích thước hồng cầu",
+  "alias": [
+   "RDW",
+   "RDW-CV"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 11.5,
+  "cao": 14.5,
+  "hs": 0.3,
+  "congdung": "cho biết các hồng cầu có đồng đều kích thước hay không"
+ },
+ {
+  "code": "MPV",
+  "ten": "Thể tích trung bình tiểu cầu",
+  "alias": [
+   "MPV"
+  ],
+  "dv": "fL",
+  "quydoi": {
+   "fL": 1.0
+  },
+  "thap": 6.5,
+  "cao": 12.0,
+  "hs": 0.3,
+  "congdung": "kích thước trung bình của một tiểu cầu"
+ },
+ {
+  "code": "PCT",
+  "ten": "Thể tích khối tiểu cầu",
+  "alias": [
+   "PCT",
+   "Plateletcrit"
+  ],
+  "dv": "%",
+  "quydoi": {
+   "%": 1.0
+  },
+  "thap": 0.108,
+  "cao": 0.282,
+  "hs": 0.4,
+  "congdung": "tỷ lệ thể tích máu do tiểu cầu chiếm giữ"
+ }
+]

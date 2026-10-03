@@ -1,0 +1,14 @@
+Now layers three and four.
+Layer three applies three constraints.
+The input constraint. The model is given the labels, and is never asked to derive them.
+The content constraint. No disease names, no causes, no medications, no dosages.
+The output constraint. The model must return a fixed JSON schema.
+Layer four checks six error classes.
+One. Does the stated direction match the label from layer two?
+Two. Does the prose contradict that label?
+Three. Are forbidden terms present?
+Four. Is any analyte fabricated?
+Five. Is any analyte omitted?
+And six. Does the closing statement falsely reassure?
+Our model is Qwen two point five, with three billion parameters, served locally through Ollama.
+So the data never leaves the institution, and no GPU is required.

@@ -1,0 +1,12 @@
+This is the architecture. Please look at the principle at the top.
+No clinical judgement is delegated to the language model.
+Layer one is normalisation. It maps every name to one canonical code, and converts the unit.
+Layer two is rule-based labelling. It compares the value with the reference interval, and assigns one of three levels.
+Layers one and two have no AI at all.
+Inside the interval, the label is normal. A little outside, monitor. Far outside, seek care.
+The label for the whole panel is the most severe analyte label.
+So the classification is exact by design, and the model cannot change it.
+Layer three is constrained generation. The model receives the labels, and only puts them in plain language.
+Layer four is validation. The computer checks the text against the labels from layer two.
+If the text fails, the model writes it again. After the retry limit, the system uses a fixed template.
+So the patient never sees unverified text.
