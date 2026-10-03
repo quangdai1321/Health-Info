@@ -73,9 +73,16 @@
           <div><label for="model">Mô hình</label><input id="model" value="qwen2.5:3b"></div>
           <div><label for="solan">Số lần sinh lại tối đa</label><input id="solan" type="number" min="1" max="5" value="2"></div>
         </div>
-        <p class="nho">Trang này chỉ gọi mô hình chạy trên máy của bạn, dữ liệu không gửi đi đâu khác.
-          Trước khi mở trang, bật Ollama với biến môi trường cho phép trang gọi vào:
-          <br><code>setx OLLAMA_ORIGINS "*"</code> rồi khởi động lại Ollama, sau đó <code>ollama run qwen2.5:3b</code>.</p>
+        <div class="hangnut">
+          <button class="nut phu" id="btCauNoi">Dùng cầu nối cổng 11435</button>
+          <button class="nut phu" id="btThang">Gọi thẳng cổng 11434</button>
+        </div>
+        <p class="nho">Trang chỉ gọi mô hình chạy trên máy bạn, dữ liệu không gửi đi đâu khác.
+          Trước hết bật Ollama cho phép trang gọi vào: <code>setx OLLAMA_ORIGINS "*"</code>,
+          thoát hẳn Ollama ở khay hệ thống rồi mở lại.
+          <br><b>Nếu trang này chạy trên Vercel</b> thì Chrome chặn trang https gọi vào localhost.
+          Mở thêm một cửa sổ lệnh và chạy <code>python cau_noi.py</code> trong thư mục demo,
+          rồi bấm nút <b>Dùng cầu nối cổng 11435</b> ở trên.</p>
       </details>
       <div id="docphieu"></div>
     </div>
@@ -178,6 +185,8 @@ $("btHe").onclick = async () => {
 };
 
 $("btVd").onclick = () => { viTri = (viTri + 1) % VI_DU.length; $("phieu").value = VI_DU[viTri]; };
+$("btCauNoi").onclick = () => { $("url").value = "http://localhost:11435"; $("tt").textContent = "Đã chuyển sang cầu nối cổng 11435"; };
+$("btThang").onclick = () => { $("url").value = "http://localhost:11434"; $("tt").textContent = "Đã chuyển sang gọi thẳng cổng 11434"; };
 
 // ---------------------------------------------------- hien thi
 function veBangTang12(r) {
