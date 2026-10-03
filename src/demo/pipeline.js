@@ -108,7 +108,32 @@ Mức chung của cả phiếu: ${TEN_MUC[kq.nhanPhieu]}.
 Câu "closing" nhắc lại mức chung đó, không được nói mọi thứ đều bình thường nếu mức chung khác Bình thường.`;
 }
 
+/* Neu goi thang vao Ollama that bai, thu lai qua cau noi o cong ben canh.
+   Chrome chan trang https goi vao localhost, cau noi them header de duoc phep. */
+let DIA_CHI_DUNG = null;
+
+function diaChiThay(url) {
+  if (url.includes(":11434")) return url.replace(":11434", ":11435");
+  if (url.includes(":11435")) return url.replace(":11435", ":11434");
+  return null;
+}
+
 async function goiOllama(url, model, prompt, json = true) {
+  const ds = [DIA_CHI_DUNG || url];
+  const alt = diaChiThay(ds[0]);
+  if (alt) ds.push(alt);
+  let loiCuoi = null;
+  for (const u of ds) {
+    try {
+      const r = await goiMot(u, model, prompt, json);
+      DIA_CHI_DUNG = u;
+      return { ...r, url: u };
+    } catch (e) { loiCuoi = e; }
+  }
+  throw loiCuoi;
+}
+
+async function goiMot(url, model, prompt, json = true) {
   const t0 = performance.now();
   const r = await fetch(`${url.replace(/\/+$/, "")}/api/generate`, {
     method: "POST",

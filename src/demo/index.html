@@ -151,8 +151,10 @@ $("btRaw").onclick = async () => {
   try {
     const p = `Đây là kết quả xét nghiệm máu của tôi. Giải thích giúp tôi với:\n\n${$("phieu").value}`;
     const r = await goiOllama($("url").value, $("model").value, p, false);
+    if (r.url && r.url !== $("url").value) { $("url").value = r.url; }
     dat($("raw"), thoat(r.text.trim()));
-    $("tt").textContent = `Mô hình trả lời xong sau ${r.giay.toFixed(1).replace(".", ",")} giây`;
+    $("tt").textContent = `Mô hình trả lời xong sau ${r.giay.toFixed(1).replace(".", ",")} giây`
+      + (r.url.includes("11435") ? " (qua cầu nối)" : "");
   } catch (e) {
     dat($("raw"), `<div class="loi">Không gọi được Ollama: ${thoat(e.message || e)}<br>
       Kiểm tra Ollama đã chạy chưa, và đã đặt <code>OLLAMA_ORIGINS</code> chưa.</div>`);
