@@ -80,6 +80,25 @@ lỗi đọc ảnh chứ không phải kết quả thật, ví dụ mất dấu 
 hệ thống chưa xử lý ảnh chụp, và phần thực nghiệm chạy trên dữ liệu đã có cấu trúc.
 Đừng trình bày phần quét ảnh như một kết quả nghiên cứu.
 
+## Đọc kết quả thành tiếng
+
+Sau khi chạy xong, có nút **Đọc kết quả cho người bệnh**. Trang gom các câu giải thích và câu kết
+thành một đoạn rồi đọc lên. Đây chính là phần "thêm lớp đọc thành tiếng cho người già và người
+đọc kém" nêu trong hướng phát triển của bài báo.
+
+Hai lựa chọn giọng, đổi trong phần **Cài đặt và cách chạy**:
+
+| Giọng | Cần gì | Dữ liệu |
+|---|---|---|
+| **Trình duyệt** (mặc định) | Không cần gì | Chữ không rời khỏi máy |
+| **Gemini** | Khóa API Gemini của bạn | Chữ được gửi lên máy chủ Google |
+
+**Khi demo trước hội đồng nên dùng giọng trình duyệt**, vì bài báo nói rõ dữ liệu không rời khỏi
+đơn vị. Dùng giọng Gemini thì phải nói trước điều đó với người nghe.
+
+Khóa API lưu trong trình duyệt của bạn. Nếu Gemini lỗi, trang tự chuyển sang giọng trình duyệt.
+Máy không có giọng tiếng Việt thì trang báo luôn, vì khi đó giọng mặc định đọc tiếng Việt rất khó nghe.
+
 ## Cách dùng khi trình bày
 
 1. Bấm **Hỏi thẳng AI**: mô hình nhận nguyên phiếu, không ràng buộc gì. Đây là thứ xảy ra

@@ -79,6 +79,22 @@
           <div><label for="model">Mô hình</label><input id="model" value="qwen2.5:3b"></div>
           <div><label for="solan">Số lần sinh lại tối đa</label><input id="solan" type="number" min="1" max="5" value="2"></div>
         </div>
+        <div class="caidat">
+          <div><label for="giong">Giọng đọc kết quả</label>
+            <select id="giong">
+              <option value="trinhduyet">Giọng của trình duyệt — không gửi chữ đi đâu</option>
+              <option value="gemini">Giọng Gemini — gửi chữ lên máy chủ Google</option>
+            </select></div>
+          <div><label for="khoaGemini">Khóa API Gemini</label><input id="khoaGemini" type="password" placeholder="chỉ cần khi chọn giọng Gemini"></div>
+          <div><label for="giongGemini">Tên giọng Gemini</label>
+            <select id="giongGemini">
+              <option>Kore</option><option>Puck</option><option>Charon</option>
+              <option>Fenrir</option><option>Leda</option><option>Zephyr</option>
+            </select></div>
+        </div>
+        <p class="nho"><b>Lưu ý:</b> chọn giọng Gemini thì câu giải thích được gửi lên máy chủ Google.
+          Khi demo trước hội đồng, nên dùng giọng trình duyệt để giữ đúng điều bài báo nói là dữ liệu
+          không rời khỏi máy. Khóa API lưu trong trình duyệt của bạn, không gửi đi đâu khác ngoài Google.</p>
         <div class="hangnut">
           <button class="nut phu" id="btCauNoi">Dùng cầu nối cổng 11435</button>
           <button class="nut phu" id="btThang">Gọi thẳng cổng 11434</button>
@@ -104,6 +120,11 @@
       <h2><span class="cham" style="background:var(--green)"></span>Qua hệ thống 4 tầng</h2>
       <div class="nho">Luật xếp mức trước, AI chỉ viết lại, rồi máy kiểm tra sáu loại lỗi.</div>
       <div class="kq" id="he">—</div>
+      <div class="hangnut" id="hangDoc" style="display:none">
+        <button class="nut xanh" id="btDoc">Đọc kết quả cho người bệnh</button>
+        <button class="nut phu" id="btDung">Dừng đọc</button>
+        <span class="tt" id="ttDoc"></span>
+      </div>
       <div id="baocao"></div>
     </div>
   </div>
@@ -111,6 +132,7 @@
 
 <script src="_chiso.js"></script>
 <script src="pipeline.js"></script>
+<script src="giong_doc.js"></script>
 <script>
 const $ = (id) => document.getElementById(id);
 const VI_DU = [
@@ -194,6 +216,9 @@ $("btHe").onclick = async () => {
     dat($("he"), dong + `<div class="${r.kq.nhanPhieu === "kham_som" ? "loi" : r.kq.nhanPhieu === "theo_doi" ? "canh" : "ok"}"
          style="margin-top:12px"><b>${thoat(r.out.closing)}</b></div>`);
     veBaoCao(r, nhatKy, mucChung);
+    ketQuaCuoi = r;
+    $("hangDoc").style.display = "flex";
+    $("ttDoc").textContent = "";
   } catch (e) {
     dat($("he"), `<div class="loi">Lỗi: ${thoat(e.message || e)}</div>`);
   } finally { clearInterval(h); khoa(false); }
@@ -271,6 +296,50 @@ document.addEventListener("paste", (e) => {
   const it = [...(e.clipboardData?.items || [])].find((x) => x.type.startsWith("image/"));
   if (it) quetAnh(it.getAsFile());
 });
+// ---------------------------------------------------- doc ket qua thanh tieng
+let ketQuaCuoi = null;
+
+try {
+  const k = localStorage.getItem("khoa_gemini"); if (k) $("khoaGemini").value = k;
+  const g = localStorage.getItem("chon_giong"); if (g) $("giong").value = g;
+} catch (e) {}
+$("khoaGemini").addEventListener("change", () => {
+  try { localStorage.setItem("khoa_gemini", $("khoaGemini").value.trim()); } catch (e) {}
+});
+$("giong").addEventListener("change", () => {
+  try { localStorage.setItem("chon_giong", $("giong").value); } catch (e) {}
+});
+
+$("btDung").onclick = () => { dungDoc(); $("ttDoc").textContent = "Đã dừng."; };
+
+$("btDoc").onclick = async () => {
+  if (!ketQuaCuoi) return;
+  const chu = chuDeDoc(ketQuaCuoi);
+  if ($("giong").value === "gemini") {
+    const khoa = $("khoaGemini").value.trim();
+    if (!khoa) { $("ttDoc").textContent = "Chưa nhập khóa API Gemini, mở phần Cài đặt để nhập."; return; }
+    $("ttDoc").textContent = "Đang tạo giọng đọc bằng Gemini…";
+    try {
+      await docBangGemini(chu, khoa, $("giongGemini").value);
+      $("ttDoc").textContent = `Đang đọc bằng giọng Gemini ${$("giongGemini").value}.`;
+      return;
+    } catch (e) {
+      $("ttDoc").textContent = "Gemini lỗi: " + (e.message || e) + " — chuyển sang giọng trình duyệt.";
+    }
+  }
+  try {
+    const v = docBangTrinhDuyet(chu, (ten, loi) => {
+      if (loi) $("ttDoc").textContent = "Lỗi khi đọc: " + loi;
+      else $("ttDoc").textContent = "Đọc xong.";
+    });
+    $("ttDoc").textContent = v
+      ? `Đang đọc bằng ${v.name}.`
+      : "Máy chưa có giọng tiếng Việt, đang đọc bằng giọng mặc định nên có thể khó nghe.";
+  } catch (e) {
+    $("ttDoc").textContent = "Không đọc được: " + (e.message || e);
+  }
+};
+
 $("btCauNoi").onclick = () => { $("url").value = "http://localhost:11435"; $("tt").textContent = "Đã chuyển sang cầu nối cổng 11435"; };
 $("btThang").onclick = () => { $("url").value = "http://localhost:11434"; $("tt").textContent = "Đã chuyển sang gọi thẳng cổng 11434"; };
 $("btDan").onclick = async () => {
