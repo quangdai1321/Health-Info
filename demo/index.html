@@ -131,6 +131,17 @@
         <span class="tt" id="ttDoc"></span>
       </div>
       <div id="baocao"></div>
+
+      <div id="khungHoi" style="display:none;margin-top:16px;border-top:1px solid var(--line);padding-top:14px">
+        <h2 style="font-size:17px"><span class="cham" style="background:var(--blue)"></span>Hỏi thêm về kết quả</h2>
+        <div class="nho">Máy chỉ trả lời dựa trên bảng ở trên. Hỏi về bệnh hay thuốc thì máy từ chối.</div>
+        <div id="tinNhan" style="margin:10px 0"></div>
+        <div class="hangnut">
+          <input id="cauHoi" placeholder="Ví dụ: tiểu cầu thấp có sao không?" style="flex:1 1 260px">
+          <button class="nut" id="btHoi">Gửi câu hỏi</button>
+        </div>
+        <div class="nho" id="ttHoi" style="margin-top:6px"></div>
+      </div>
     </div>
   </div>
 </main>
@@ -138,6 +149,7 @@
 <script src="_chiso.js"></script>
 <script src="pipeline.js"></script>
 <script src="giong_doc.js"></script>
+<script src="hoi_dap.js"></script>
 <script>
 const $ = (id) => document.getElementById(id);
 const VI_DU = [
@@ -224,6 +236,10 @@ $("btHe").onclick = async () => {
     ketQuaCuoi = r;
     $("hangDoc").style.display = "flex";
     $("ttDoc").textContent = "";
+    lichSuHoi = [];
+    dat($("tinNhan"), "");
+    $("khungHoi").style.display = "block";
+    $("ttHoi").textContent = "";
   } catch (e) {
     dat($("he"), `<div class="loi">Lỗi: ${thoat(e.message || e)}</div>`);
   } finally { clearInterval(h); khoa(false); }
@@ -314,6 +330,50 @@ $("khoaGemini").addEventListener("change", () => {
 $("giong").addEventListener("change", () => {
   try { localStorage.setItem("chon_giong", $("giong").value); } catch (e) {}
 });
+
+// ---------------------------------------------------- hoi dap sau khi co ket qua
+let lichSuHoi = [];
+
+function themTin(ai, chu, ghiChu) {
+  const nguoi = ai === "nguoi";
+  const mau = nguoi ? "#E8EFF9" : "#EAF5EA";
+  const ten = nguoi ? "Người bệnh" : "Hệ thống";
+  $("tinNhan").insertAdjacentHTML("beforeend",
+    `<div style="background:${mau};border-radius:8px;padding:9px 12px;margin:7px 0">
+       <div class="nho" style="margin-bottom:3px"><b>${ten}</b></div>
+       <div>${thoat(chu)}</div>
+       ${ghiChu ? `<div class="nho" style="margin-top:5px">${ghiChu}</div>` : ""}
+     </div>`);
+  $("tinNhan").lastElementChild.scrollIntoView({ block: "nearest" });
+}
+
+async function guiCauHoi() {
+  const h = $("cauHoi").value.trim();
+  if (!h || !ketQuaCuoi) return;
+  $("cauHoi").value = "";
+  themTin("nguoi", h);
+  $("btHoi").disabled = true;
+  $("ttHoi").textContent = "Đang trả lời…";
+  const batLoi = [];
+  try {
+    const r = await traLoiCauHoi(h, ketQuaCuoi.kq, $("url").value, $("model").value,
+      lichSuHoi, Math.max(1, +$("solan").value || 2),
+      (d) => { if (!d.kt.dat) batLoi.push(`lần ${d.lan}: ` + d.kt.loi.map((l) => l.loai).join(", ")); });
+    const ghi = r.dungCauMau
+      ? `<span style="color:var(--red)">Câu máy viết bị loại (${thoat(batLoi.join(" · "))}), nên dùng câu từ chối có sẵn.</span>`
+      : batLoi.length
+        ? `Đã loại ${batLoi.length} lần sinh trước đó (${thoat(batLoi.join(" · "))}), câu này qua đủ phép kiểm tra.`
+        : "Qua đủ phép kiểm tra: không từ cấm, không nói ngược, không trấn an sai, không thêm số lạ.";
+    themTin("may", r.chu, ghi);
+    lichSuHoi.push({ ai: "nguoi", chu: h }, { ai: "may", chu: r.chu });
+    $("ttHoi").textContent = "";
+  } catch (e) {
+    $("ttHoi").textContent = "Lỗi: " + (e.message || e);
+  } finally { $("btHoi").disabled = false; }
+}
+
+$("btHoi").onclick = guiCauHoi;
+$("cauHoi").addEventListener("keydown", (e) => { if (e.key === "Enter") guiCauHoi(); });
 
 $("btDung").onclick = () => { dungDoc(); $("ttDoc").textContent = "Đã dừng."; };
 

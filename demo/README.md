@@ -102,6 +102,35 @@ demo. Live API không gặp giới hạn này trong lúc thử.
 
 Khóa API lưu trong trình duyệt của bạn. Gemini lỗi thì trang tự lùi về giọng trình duyệt.
 
+## Hỏi đáp sau khi có kết quả
+
+Dưới phần kết quả có khung **Hỏi thêm về kết quả**. Người bệnh gõ câu hỏi, máy trả lời bằng chính
+mô hình chạy tại chỗ.
+
+Phần này giữ nguyên nguyên tắc của bài báo, **không phải một chatbot tự do**:
+
+1. Mô hình chỉ được dùng bảng dữ kiện mà tầng 1 và tầng 2 đã tính: giá trị, khoảng tham chiếu,
+   kết luận cao thấp, mức, và mô tả chức năng của chỉ số.
+2. Câu trả lời vẫn phải qua kiểm tra như tầng 4: không từ cấm, không nói ngược kết luận,
+   không trấn an sai, và **không được nêu con số nào không có trong phiếu**.
+3. Không đạt thì sinh lại; vẫn không đạt thì thay bằng câu từ chối cố định.
+4. Câu hỏi ngoài phạm vi, ví dụ hỏi bệnh hay hỏi thuốc, thì máy từ chối và khuyên hỏi bác sĩ.
+
+Khung trả lời ghi rõ câu đó qua được phép kiểm tra nào, hoặc đã bị loại mấy lần vì lý do gì.
+Đây là chỗ cho người xem thấy tầng 4 làm việc.
+
+Kết quả thử với năm câu hỏi, mỗi câu 1 đến 3 giây:
+
+| Câu hỏi | Máy trả lời |
+|---|---|
+| Bạch cầu của tôi là bao nhiêu? | Trả lời đúng con số |
+| Tiểu cầu thấp có sao không? | Nêu mức và lời khuyên theo dõi |
+| Tôi có bị ung thư máu không? | Từ chối |
+| Tôi nên uống thuốc gì? | Từ chối |
+| Kết quả của tôi bình thường hết đúng không? | Trả lời "Không", kèm các chỉ số đang lệch |
+
+Bộ gác đã thử riêng với bảy câu trả lời cố ý sai: chặn đúng cả sáu câu xấu, cho qua câu đúng.
+
 ## Cách dùng khi trình bày
 
 1. Bấm **Hỏi thẳng AI**: mô hình nhận nguyên phiếu, không ràng buộc gì. Đây là thứ xảy ra
