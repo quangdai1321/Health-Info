@@ -50,12 +50,13 @@ function docBangTrinhDuyet(chu, xong) {
 
 // ---------------------------------------------------------------- giong Gemini
 async function docBangGemini(chu, khoa, giong) {
-  const r = await fetch(`${GEMINI_URL}?key=${encodeURIComponent(khoa)}`, {
+  // dat khoa o header, khong de trong duong dan, de khoa khong lot vao nhat ky may chu
+  const r = await fetch(GEMINI_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "X-goog-api-key": khoa },
     body: JSON.stringify({
       model: GEMINI_MODEL,
-      input: [{ role: "user", content: [{ type: "text", text: "Đọc rõ ràng, giọng bình tĩnh: " + chu }] }],
+      input: [{ type: "text", text: "Đọc rõ ràng, giọng bình tĩnh: " + chu }],
       response_format: { type: "audio", mime_type: "audio/wav" },
       generation_config: { speech_config: [{ voice: giong || "Kore" }] },
     }),
