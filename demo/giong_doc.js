@@ -1,16 +1,22 @@
 /* Doc ket qua thanh tieng.
    Hai duong:
    1. Giong trinh duyet (Web Speech API): mien phi, khong gui chu di dau.
-   2. Giong Gemini: hay hon, nhung chu duoc gui len may chu Google va can khoa API. */
+   2. Gemini Live API: giong nguoi Viet that, nhanh, nhung chu duoc gui len may chu Google
+      va can khoa API. Dung WebSocket nen khong vuong CORS. */
 
-const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/interactions";
-const GEMINI_MODEL = "gemini-3.8-flash-tts";
+const WS_GEMINI = "wss://generativelanguage.googleapis.com/ws/" +
+  "google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent";
+const MODEL_LIVE = "models/gemini-3.8-live";
+const DAN_DOC = "Bạn chỉ đọc lại nguyên văn đoạn văn người dùng gửi, bằng tiếng Việt. " +
+  "Không chào hỏi, không bình luận, không tóm tắt, không thêm bớt chữ nào.";
 
-let dangDoc = null;          // doi tuong Audio dang phat, de dung lai
+let dangDoc = null;          // doi tuong Audio dang phat
+let dangNoi = null;          // ket noi WebSocket dang mo
 
 function dungDoc() {
   try { window.speechSynthesis.cancel(); } catch (e) {}
   if (dangDoc) { dangDoc.pause(); dangDoc = null; }
+  if (dangNoi) { try { dangNoi.close(); } catch (e) {} dangNoi = null; }
 }
 
 /* Gom ket qua bon tang thanh doan van de doc */
@@ -48,40 +54,76 @@ function docBangTrinhDuyet(chu, xong) {
   return v;
 }
 
-// ---------------------------------------------------------------- giong Gemini
-async function docBangGemini(chu, khoa, giong) {
-  // dat khoa o header, khong de trong duong dan, de khoa khong lot vao nhat ky may chu
-  const r = await fetch(GEMINI_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", "X-goog-api-key": khoa },
-    body: JSON.stringify({
-      model: GEMINI_MODEL,
-      input: [{ type: "text", text: "Đọc rõ ràng, giọng bình tĩnh: " + chu }],
-      response_format: { type: "audio", mime_type: "audio/wav" },
-      generation_config: { speech_config: [{ voice: giong || "Kore" }] },
-    }),
+// ---------------------------------------------------------------- Gemini Live
+/* Ghep cac manh PCM 16 bit 24 kHz thanh mot file WAV phat duoc */
+function ghepWav(manh, tanSo = 24000) {
+  const tong = manh.reduce((s, x) => s + x.length, 0);
+  const buf = new ArrayBuffer(44 + tong);
+  const dv = new DataView(buf);
+  const chu = (vt, s) => [...s].forEach((c, i) => dv.setUint8(vt + i, c.charCodeAt(0)));
+  chu(0, "RIFF"); dv.setUint32(4, 36 + tong, true); chu(8, "WAVEfmt ");
+  dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true);
+  dv.setUint32(24, tanSo, true); dv.setUint32(28, tanSo * 2, true);
+  dv.setUint16(32, 2, true); dv.setUint16(34, 16, true);
+  chu(36, "data"); dv.setUint32(40, tong, true);
+  const ra = new Uint8Array(buf);
+  let vt = 44;
+  for (const m of manh) { ra.set(m, vt); vt += m.length; }
+  return new Blob([buf], { type: "audio/wav" });
+}
+
+const giaiMaB64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
+
+function docBangGeminiLive(chu, khoa, giong, bao) {
+  return new Promise((xong, hong) => {
+    dungDoc();
+    const ws = new WebSocket(`${WS_GEMINI}?key=${encodeURIComponent(khoa)}`);
+    dangNoi = ws;
+    const manh = [];
+    let loi = null;
+
+    const hetGio = setTimeout(() => { loi = loi || new Error("quá lâu không thấy phản hồi"); ws.close(); }, 60000);
+
+    ws.onopen = () => ws.send(JSON.stringify({
+      setup: {
+        model: MODEL_LIVE,
+        generationConfig: {
+          responseModalities: ["AUDIO"],
+          speechConfig: {
+            voiceConfig: { prebuiltVoiceConfig: { voiceName: giong || "vi-vn-csagent-4" } },
+            languageCode: "vi-VN",
+          },
+        },
+        systemInstruction: { parts: [{ text: DAN_DOC }] },
+      },
+    }));
+
+    ws.onmessage = async (ev) => {
+      let m;
+      try {
+        m = JSON.parse(typeof ev.data === "string" ? ev.data : await ev.data.text());
+      } catch (e) { return; }
+      if (m.setupComplete) {
+        bao && bao("đang tạo giọng đọc…");
+        ws.send(JSON.stringify({
+          clientContent: { turns: [{ role: "user", parts: [{ text: chu }] }], turnComplete: true },
+        }));
+        return;
+      }
+      for (const p of m.serverContent?.modelTurn?.parts || [])
+        if (p.inlineData?.data) manh.push(giaiMaB64(p.inlineData.data));
+      if (m.serverContent?.turnComplete || m.serverContent?.generationComplete) ws.close();
+    };
+
+    ws.onerror = () => { loi = loi || new Error("không kết nối được tới Gemini, kiểm tra khóa API và mạng"); };
+
+    ws.onclose = () => {
+      clearTimeout(hetGio);
+      dangNoi = null;
+      if (!manh.length) return hong(loi || new Error("Gemini không trả về âm thanh"));
+      const au = new Audio(URL.createObjectURL(ghepWav(manh)));
+      dangDoc = au;
+      au.play().then(() => xong({ giay: manh.reduce((s, x) => s + x.length, 0) / 48000 })).catch(hong);
+    };
   });
-  if (!r.ok) {
-    let chiTiet = "";
-    try { chiTiet = (await r.json()).error?.message || ""; } catch (e) {}
-    throw new Error(`Gemini trả về lỗi ${r.status}. ${chiTiet}`);
-  }
-  const d = await r.json();
-
-  // tim phan du lieu am thanh trong cau tra loi, chap nhan vai kieu bo cuc khac nhau
-  let b64 = null;
-  const dao = (x) => {
-    if (b64 || !x || typeof x !== "object") return;
-    if (typeof x.data === "string" && x.data.length > 500) { b64 = x.data; return; }
-    if (x.inlineData && typeof x.inlineData.data === "string") { b64 = x.inlineData.data; return; }
-    Object.values(x).forEach(dao);
-  };
-  dao(d);
-  if (!b64) throw new Error("không tìm thấy dữ liệu âm thanh trong phản hồi của Gemini");
-
-  dungDoc();
-  const au = new Audio("data:audio/wav;base64," + b64);
-  dangDoc = au;
-  await au.play();
-  return au;
 }

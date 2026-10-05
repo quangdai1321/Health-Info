@@ -83,13 +83,18 @@
           <div><label for="giong">Giọng đọc kết quả</label>
             <select id="giong">
               <option value="trinhduyet">Giọng của trình duyệt — không gửi chữ đi đâu</option>
-              <option value="gemini">Giọng Gemini — gửi chữ lên máy chủ Google</option>
+              <option value="gemini">Gemini Live — giọng người Việt, gửi chữ lên Google</option>
             </select></div>
           <div><label for="khoaGemini">Khóa API Gemini</label><input id="khoaGemini" type="password" placeholder="chỉ cần khi chọn giọng Gemini"></div>
           <div><label for="giongGemini">Tên giọng Gemini</label>
             <select id="giongGemini">
-              <option>Kore</option><option>Puck</option><option>Charon</option>
-              <option>Fenrir</option><option>Leda</option><option>Zephyr</option>
+              <option value="vi-vn-csagent-4">Nữ 24 tuổi, thân thiện</option>
+              <option value="vi-vn-assistant-8">Nữ 24 tuổi, trẻ trung</option>
+              <option value="vi-vn-assistant-2">Nữ 37 tuổi, ấm áp</option>
+              <option value="vi-vn-advisor-1">Nữ 33 tuổi, điềm đạm</option>
+              <option value="vi-vn-tutor-5">Nữ 22 tuổi, rõ ràng</option>
+              <option value="vi-vn-advisor-2">Nam 33 tuổi, điềm đạm</option>
+              <option value="vi-vn-tutor-2">Nam 62 tuổi, chậm rãi</option>
             </select></div>
         </div>
         <p class="nho"><b>Lưu ý:</b> chọn giọng Gemini thì câu giải thích được gửi lên máy chủ Google.
@@ -318,10 +323,12 @@ $("btDoc").onclick = async () => {
   if ($("giong").value === "gemini") {
     const khoa = $("khoaGemini").value.trim();
     if (!khoa) { $("ttDoc").textContent = "Chưa nhập khóa API Gemini, mở phần Cài đặt để nhập."; return; }
-    $("ttDoc").textContent = "Đang tạo giọng đọc bằng Gemini…";
+    $("ttDoc").textContent = "Đang kết nối Gemini Live…";
     try {
-      await docBangGemini(chu, khoa, $("giongGemini").value);
-      $("ttDoc").textContent = `Đang đọc bằng giọng Gemini ${$("giongGemini").value}.`;
+      const kq = await docBangGeminiLive(chu, khoa, $("giongGemini").value,
+                                         (tin) => ($("ttDoc").textContent = tin));
+      const ten = $("giongGemini").selectedOptions[0].textContent;
+      $("ttDoc").textContent = `Đang đọc bằng giọng Gemini (${ten}), ${kq.giay.toFixed(1).replace(".", ",")} giây.`;
       return;
     } catch (e) {
       $("ttDoc").textContent = "Gemini lỗi: " + (e.message || e) + " — chuyển sang giọng trình duyệt.";

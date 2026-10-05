@@ -82,22 +82,25 @@ hệ thống chưa xử lý ảnh chụp, và phần thực nghiệm chạy trê
 
 ## Đọc kết quả thành tiếng
 
-Sau khi chạy xong, có nút **Đọc kết quả cho người bệnh**. Trang gom các câu giải thích và câu kết
-thành một đoạn rồi đọc lên. Đây chính là phần "thêm lớp đọc thành tiếng cho người già và người
-đọc kém" nêu trong hướng phát triển của bài báo.
+Sau khi chạy xong, có nút **Đọc kết quả cho người bệnh**. Đây chính là phần "thêm lớp đọc thành
+tiếng cho người già và người đọc kém" nêu trong hướng phát triển của bài báo.
 
-Hai lựa chọn giọng, đổi trong phần **Cài đặt và cách chạy**:
+| Giọng | Cần gì | Dữ liệu | Chất lượng |
+|---|---|---|---|
+| **Trình duyệt** (mặc định) | Không cần gì | Chữ không rời khỏi máy | Tùy máy, nhiều máy không có giọng tiếng Việt |
+| **Gemini Live** | Khóa API Gemini | Chữ gửi lên máy chủ Google | Giọng người Việt thật, 7 giọng để chọn |
 
-| Giọng | Cần gì | Dữ liệu |
-|---|---|---|
-| **Trình duyệt** (mặc định) | Không cần gì | Chữ không rời khỏi máy |
-| **Gemini** | Khóa API Gemini của bạn | Chữ được gửi lên máy chủ Google |
+Phần Gemini dùng **Live API qua WebSocket**, model `gemini-3.8-live`, giọng lấy từ thư viện giọng
+tiếng Việt của Google (`vi-vn-csagent-4`, `vi-vn-assistant-8`, …). Đo thực tế: khoảng **3 giây**
+cho một đoạn 7 giây. WebSocket không vướng CORS nên gọi được cả khi trang nằm trên Vercel.
+
+Không dùng model `gemini-3.8-flash-tts` vì bản miễn phí **chỉ cho 10 lượt mỗi ngày**, không đủ để
+demo. Live API không gặp giới hạn này trong lúc thử.
 
 **Khi demo trước hội đồng nên dùng giọng trình duyệt**, vì bài báo nói rõ dữ liệu không rời khỏi
 đơn vị. Dùng giọng Gemini thì phải nói trước điều đó với người nghe.
 
-Khóa API lưu trong trình duyệt của bạn. Nếu Gemini lỗi, trang tự chuyển sang giọng trình duyệt.
-Máy không có giọng tiếng Việt thì trang báo luôn, vì khi đó giọng mặc định đọc tiếng Việt rất khó nghe.
+Khóa API lưu trong trình duyệt của bạn. Gemini lỗi thì trang tự lùi về giọng trình duyệt.
 
 ## Cách dùng khi trình bày
 
