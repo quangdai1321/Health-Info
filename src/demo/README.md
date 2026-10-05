@@ -143,6 +143,19 @@ Kết quả thử với năm câu hỏi, mỗi câu 1 đến 3 giây:
 
 Bộ gác đã thử riêng với bảy câu trả lời cố ý sai: chặn đúng cả sáu câu xấu, cho qua câu đúng.
 
+## Hỏi bằng giọng nói
+
+Trong khung hỏi đáp có nút **Hỏi bằng giọng nói**. Bấm, nói câu hỏi, trình duyệt chuyển thành chữ,
+rồi câu đó đi qua đúng đường hỏi đáp có ràng buộc ở trên. Trả lời xong máy đọc lên luôn.
+
+**Vì sao không dùng thẳng chế độ hội thoại của Gemini Live.** Chế độ đó để mô hình tự nghe và tự
+trả lời, tức là bỏ qua tầng 2 và tầng 4, đúng cái mà bài báo chứng minh là nguy hiểm: mô hình tự
+phán đoán thì sai chiều ở 91,3% số phiếu và trấn an sai ở 32%. Ở đây Gemini chỉ làm hai việc không
+dính tới y khoa: nghe thành chữ là do trình duyệt làm, còn Gemini chỉ đọc câu đã được kiểm chứng.
+Phần quyết định và kiểm tra vẫn chạy bằng luật và bằng mô hình tại máy.
+
+Nhận giọng nói cần Chrome hoặc Edge và cần mạng. Lần đầu trình duyệt sẽ hỏi quyền dùng micro.
+
 ## Cách dùng khi trình bày
 
 1. Bấm **Hỏi thẳng AI**: mô hình nhận nguyên phiếu, không ràng buộc gì. Đây là thứ xảy ra

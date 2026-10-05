@@ -149,6 +149,7 @@
         <div class="hangnut">
           <input id="cauHoi" placeholder="Ví dụ: tiểu cầu thấp có sao không?" style="flex:1 1 260px">
           <button class="nut" id="btHoi">Gửi câu hỏi</button>
+          <button class="nut phu" id="btMic">Hỏi bằng giọng nói</button>
         </div>
         <div class="nho" id="ttHoi" style="margin-top:6px"></div>
       </div>
@@ -351,6 +352,7 @@ $("giong").addEventListener("change", () => {
 
 // ---------------------------------------------------- hoi dap sau khi co ket qua
 let lichSuHoi = [];
+let traLoiBangGiong = false;      // cau hoi den tu micro thi doc cau tra loi len
 
 function themTin(ai, chu, ghiChu) {
   const nguoi = ai === "nguoi";
@@ -385,12 +387,51 @@ async function guiCauHoi() {
     themTin("may", r.chu, ghi);
     lichSuHoi.push({ ai: "nguoi", chu: h }, { ai: "may", chu: r.chu });
     $("ttHoi").textContent = "";
+    if (traLoiBangGiong) { traLoiBangGiong = false; docChu(r.chu); }
   } catch (e) {
     $("ttHoi").textContent = "Lỗi: " + (e.message || e);
   } finally { $("btHoi").disabled = false; }
 }
 
 $("btHoi").onclick = guiCauHoi;
+
+// ---------------------------------------------------- hoi bang giong noi
+// Tieng noi duoc chuyen thanh chu ngay trong trinh duyet, roi di qua dung
+// duong hoi dap co rang buoc o tren. Khong giao cau tra loi cho mo hinh ngoai.
+const MayNghe = window.SpeechRecognition || window.webkitSpeechRecognition;
+let dangNghe = null;
+
+$("btMic").onclick = () => {
+  if (dangNghe) { dangNghe.stop(); return; }
+  if (!MayNghe) {
+    $("ttHoi").textContent = "Trình duyệt này không nghe được giọng nói. Dùng Chrome hoặc Edge.";
+    return;
+  }
+  const r = new MayNghe();
+  dangNghe = r;
+  r.lang = "vi-VN";
+  r.interimResults = true;
+  r.maxAlternatives = 1;
+  $("btMic").textContent = "Đang nghe, bấm để dừng";
+  $("ttHoi").textContent = "Mời bạn nói câu hỏi…";
+  r.onresult = (e) => {
+    const chu = [...e.results].map((x) => x[0].transcript).join(" ").trim();
+    $("cauHoi").value = chu;
+    if (e.results[e.results.length - 1].isFinal) {
+      $("ttHoi").textContent = "Nghe được: " + chu;
+      r.stop();
+      traLoiBangGiong = true;
+      guiCauHoi();
+    }
+  };
+  r.onerror = (e) => {
+    $("ttHoi").textContent = e.error === "not-allowed"
+      ? "Trình duyệt chưa được phép dùng micro."
+      : "Không nghe được: " + e.error;
+  };
+  r.onend = () => { dangNghe = null; $("btMic").textContent = "Hỏi bằng giọng nói"; };
+  r.start();
+};
 $("cauHoi").addEventListener("keydown", (e) => { if (e.key === "Enter") guiCauHoi(); });
 
 $("btDung").onclick = () => { dungDoc(); $("ttDoc").textContent = "Đã dừng."; };
@@ -403,9 +444,7 @@ $("giongGemini").addEventListener("change", () => {
   try { localStorage.setItem("giong_gemini", $("giongGemini").value); } catch (e) {}
 });
 
-$("btDoc").onclick = async () => {
-  if (!ketQuaCuoi) return;
-  const chu = chuDeDoc(ketQuaCuoi);
+async function docChu(chu) {
   if ($("giong").value === "gemini") {
     const khoa = $("khoaGemini").value.trim();
     if (!khoa) { $("ttDoc").textContent = "Chưa nhập khóa API Gemini, mở phần Cài đặt để nhập."; return; }
@@ -413,6 +452,7 @@ $("btDoc").onclick = async () => {
     try {
       const kq = await docBangGeminiLive(chu, khoa, $("giongGemini").value,
                                          (tin) => ($("ttDoc").textContent = tin));
+      if (kq.boQua) return;                 // nguoi dung da bam doc lan khac
       const ten = $("giongGemini").selectedOptions[0].textContent;
       $("ttDoc").textContent = `Đang đọc bằng giọng Gemini (${ten}), ${kq.giay.toFixed(1).replace(".", ",")} giây.`;
       return;
@@ -431,6 +471,12 @@ $("btDoc").onclick = async () => {
   } catch (e) {
     $("ttDoc").textContent = "Không đọc được: " + (e.message || e);
   }
+}
+
+$("btDoc").onclick = async () => {
+  if (!ketQuaCuoi) return;
+  $("btDoc").disabled = true;
+  try { await docChu(chuDeDoc(ketQuaCuoi)); } finally { $("btDoc").disabled = false; }
 };
 
 $("btCauNoi").onclick = () => { $("url").value = "http://localhost:11435"; $("tt").textContent = "Đã chuyển sang cầu nối cổng 11435"; };

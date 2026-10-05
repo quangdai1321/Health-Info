@@ -12,8 +12,10 @@ const DAN_DOC = "Bạn chỉ đọc lại nguyên văn đoạn văn người dù
 
 let dangDoc = null;          // doi tuong Audio dang phat
 let dangNoi = null;          // ket noi WebSocket dang mo
+let luotDoc = 0;             // bam doc lan thu may, de bo qua ket qua cu
 
 function dungDoc() {
+  luotDoc++;
   try { window.speechSynthesis.cancel(); } catch (e) {}
   if (dangDoc) { dangDoc.pause(); dangDoc = null; }
   if (dangNoi) { try { dangNoi.close(); } catch (e) {} dangNoi = null; }
@@ -81,6 +83,7 @@ const giaiMaB64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 function docBangGeminiLive(chu, khoa, giong, bao) {
   return new Promise((xong, hong) => {
     dungDoc();
+    const luot = luotDoc;                    // dau moc cua lan bam nay
     const ws = new WebSocket(`${WS_GEMINI}?key=${encodeURIComponent(khoa)}`);
     dangNoi = ws;
     const manh = [];
@@ -124,6 +127,8 @@ function docBangGeminiLive(chu, khoa, giong, bao) {
     ws.onclose = () => {
       clearTimeout(hetGio);
       dangNoi = null;
+      // nguoi dung da bam doc lan khac trong luc cho, bo ket qua cu di
+      if (luot !== luotDoc) return xong({ giay: 0, boQua: true });
       if (!manh.length) return hong(loi || new Error("Gemini không trả về âm thanh"));
       const au = new Audio(URL.createObjectURL(ghepWav(manh)));
       au.preservesPitch = true;          // tang toc nhung giu nguyen cao do giong
