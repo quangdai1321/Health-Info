@@ -37,3 +37,7 @@ Tai lieu/Healthinfo IV conference (Latex template).zip
 
 # Cong cu duong ham, tai lai tu github.com/cloudflare/cloudflared
 demo/cloudflared.exe
+
+# Khoa API de o may, khong day len GitHub
+demo/khoa.js
+src/demo/khoa.js

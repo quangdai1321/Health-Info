@@ -85,7 +85,8 @@
               <option value="trinhduyet">Giọng của trình duyệt — không gửi chữ đi đâu</option>
               <option value="gemini">Gemini Live — giọng người Việt, gửi chữ lên Google</option>
             </select></div>
-          <div><label for="khoaGemini">Khóa API Gemini</label><input id="khoaGemini" type="password" placeholder="chỉ cần khi chọn giọng Gemini"></div>
+          <div><label for="khoaGemini">Khóa API Gemini</label><input id="khoaGemini" type="password" placeholder="chỉ cần khi chọn giọng Gemini">
+            <div class="nho" id="ghiChuKhoa"></div></div>
           <div><label for="giongGemini">Tên giọng Gemini</label>
             <select id="giongGemini">
               <option value="vi-vn-csagent-4">Nữ 24 tuổi, thân thiện</option>
@@ -150,6 +151,7 @@
 <script src="pipeline.js"></script>
 <script src="giong_doc.js"></script>
 <script src="hoi_dap.js"></script>
+<script src="khoa.js" onerror="void 0"></script>
 <script>
 const $ = (id) => document.getElementById(id);
 const VI_DU = [
@@ -324,6 +326,11 @@ try {
   const k = localStorage.getItem("khoa_gemini"); if (k) $("khoaGemini").value = k;
   const g = localStorage.getItem("chon_giong"); if (g) $("giong").value = g;
 } catch (e) {}
+// file khoa.js o may co san thi lay luon, khoi phai go
+if (typeof KHOA_GEMINI === "string" && KHOA_GEMINI.trim()) {
+  $("khoaGemini").value = KHOA_GEMINI.trim();
+  $("ghiChuKhoa").textContent = "Đã lấy khóa từ file khoa.js trên máy, không cần nhập.";
+}
 $("khoaGemini").addEventListener("change", () => {
   try { localStorage.setItem("khoa_gemini", $("khoaGemini").value.trim()); } catch (e) {}
 });

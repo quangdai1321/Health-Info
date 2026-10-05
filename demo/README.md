@@ -102,6 +102,14 @@ demo. Live API không gặp giới hạn này trong lúc thử.
 
 Khóa API lưu trong trình duyệt của bạn. Gemini lỗi thì trang tự lùi về giọng trình duyệt.
 
+## Khóa API để ở máy, khỏi nhập lại
+
+Chép `khoa.mau.js` thành `khoa.js` trong thư mục `demo`, dán khóa Gemini vào, rồi mở lại trang.
+Ô "Khóa API Gemini" sẽ tự điền và hiện dòng "Đã lấy khóa từ file khoa.js trên máy".
+
+`khoa.js` đã nằm trong `.gitignore` nên không bao giờ lên GitHub. Bản chạy trên Vercel không có
+file này, nên ở đó vẫn phải dán khóa một lần, sau đó trình duyệt tự nhớ.
+
 ## Hỏi đáp sau khi có kết quả
 
 Dưới phần kết quả có khung **Hỏi thêm về kết quả**. Người bệnh gõ câu hỏi, máy trả lời bằng chính
