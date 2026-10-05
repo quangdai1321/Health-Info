@@ -63,6 +63,105 @@ function tang1(vanBan) {
   return { nhan, tuChoi };
 }
 
+/* Doc van ban OCR tu anh chup phieu, lay ra cac dong "MA gia-tri don-vi".
+   Dong tren phieu that thuong co ca khoang tham chieu o cuoi, vi du
+   "Bach cau (WBC)  11.8  10^9/L  4.0 - 10.0", nen chi lay SO DAU TIEN sau ten. */
+const DS_ALIAS = (() => {
+  const ds = [];
+  for (const a of CHI_SO) {
+    const them = (t) => { const k = chuan(t).replace(/\s*\*\s*/g, ""); if (k.length >= 2) ds.push([k, a.code]); };
+    them(a.code);
+    them(a.ten);
+    a.alias.forEach(them);
+  }
+  return ds.sort((x, y) => y[0].length - x[0].length);     // uu tien ten dai, tranh khop nham
+})();
+
+const DS_DON_VI = (() => {
+  const s = new Set(["%"]);
+  CHI_SO.forEach((a) => Object.keys(a.quydoi).forEach((u) => s.add(u)));
+  return [...s];
+})();
+
+/* May doc anh hay nham: GIL thay cho G/L, TIL thay cho T/L, mui ten dinh vao con so */
+const SUA_DON_VI = {
+  gil: "G/L", g1l: "G/L", "g/l": "G/L", gl: "g/L", gdl: "g/dL", "g/dl": "g/dL",
+  til: "T/L", t1l: "T/L", "t/l": "T/L", ml: "T/L", "10^9/l": "10^9/L", "10*9/l": "10^9/L",
+  "109/l": "10^9/L", "1012/l": "10^12/L", "10^12/l": "10^12/L", fl: "fL", il: "fL",
+  pg: "pg", "k/ul": "K/uL", kul: "K/uL", "%": "%",
+};
+
+/* Bo mui ten, dau ngoac, gach dung ma may doc anh hay chen vao */
+const donRac = (t) => t.replace(/[↑↓|\]\[}{)(*]/g, " ").replace(/\s+/g, " ").trim();
+
+/* Lay so dau tien hop le trong mot chuoi, bo ky tu la bam vao hai dau */
+function laySo(tok) {
+  const m = tok.replace(",", ".").match(/\d+(?:\.\d+)?/);
+  return m ? m[0] : null;
+}
+
+function docAnhSangPhieu(vanBanOCR) {
+  const dong = [], boQua = [], ngo = [];
+  for (const goc of vanBanOCR.split("\n")) {
+    const line = donRac(goc);
+    if (line.length < 3) continue;
+    const phang = chuan(line);
+    const token = line.split(/\s+/);
+
+    // 1. uu tien ma chi so dung o dau dong, vi phieu that in ma truoc
+    let code = null, hetTen = 0;
+    for (let i = 0; i < Math.min(token.length, 4) && !code; i++) {
+      const t = chuan(token[i]).replace(/[^\w%]/g, "");
+      const hit = DS_ALIAS.find(([a]) => a.replace(/[^\w%]/g, "") === t);
+      if (hit) { code = hit[1]; hetTen = line.indexOf(token[i]) + token[i].length; }
+    }
+    // 2. neu khong co ma, tim ten dai nhat xuat hien o dau dong
+    if (!code) {
+      for (const [alias, ma] of DS_ALIAS) {
+        const i = phang.indexOf(alias);
+        if (i >= 0 && i <= 24) { code = ma; hetTen = i + alias.length; break; }
+      }
+    }
+    if (!code) { boQua.push(line); continue; }
+
+    // 3. doc so dau tien sau ten, va don vi ngay sau no
+    const sau = line.slice(Math.min(hetTen, line.length)).split(/\s+/).filter(Boolean);
+    let gt = null, dvTho = "";
+    for (let i = 0; i < sau.length; i++) {
+      if (!/\d/.test(sau[i])) continue;
+      const so = laySo(sau[i]);
+      if (!so) continue;
+      gt = so;
+      dvTho = sau[i].endsWith("%") ? "%" : (sau[i + 1] || "");
+      break;
+    }
+    if (gt === null) { boQua.push(line); continue; }
+
+    // 4. chuan hoa don vi, chap nhan cach viet sai thuong gap cua may doc anh
+    const kl = chuan(dvTho).replace(/[^\w%^/]/g, "");
+    let dv = SUA_DON_VI[kl] || DS_DON_VI.find((u) => chuan(u).replace(/[^\w%^/]/g, "") === kl) || "";
+
+    // 5. cung mot ten co ca dang ty le va dang so luong: chon theo don vi doc duoc
+    const doi = (tu, den) => {
+      if (code.endsWith(tu) && CHI_SO.some((x) => x.code === code.replace(tu, den))) code = code.replace(tu, den);
+    };
+    if (dv === "%") doi("_ABS", "_PCT");
+    else if (dv) doi("_PCT", "_ABS");
+
+    const a = CHI_SO.find((x) => x.code === code);
+    if (!dv && Object.keys(a.quydoi).length === 1) dv = a.dv;
+    if (dv && !Object.keys(a.quydoi).some((u) => chuan(u) === chuan(dv))) dv = "";   // don vi khong hop, de trong cho tang 1 tu choi
+    dong.push(`${code} ${gt}${dv ? " " + dv : ""}`);
+
+    // 6. canh bao khi con so lech qua xa khoang tham chieu: thuong la may doc sai anh,
+    //    vi du mat dau cham thap phan hoac mui ten dinh vao so
+    const v = parseFloat(gt);
+    if (v > a.cao * 5 || (a.thap > 0 && v < a.thap / 5))
+      ngo.push({ code, gt, khoang: `${a.thap}–${a.cao} ${a.dv}`, dong: line });
+  }
+  return { dong, boQua, ngo };
+}
+
 // ---------------------------------------------------------------- TANG 2
 const MUC = { BT: "trong_khoang", TD: "theo_doi", KS: "kham_som" };
 

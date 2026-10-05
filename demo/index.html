@@ -61,6 +61,12 @@
       <label for="phieu">Phiếu xét nghiệm (mỗi dòng một chỉ số: tên, giá trị, đơn vị)</label>
       <textarea id="phieu"></textarea>
       <div class="hangnut">
+        <button class="nut phu" id="btAnh">Quét ảnh phiếu</button>
+        <input type="file" id="fileAnh" accept="image/*" hidden>
+        <span class="nho" id="ttAnh">hoặc kéo ảnh thả vào ô trên, hoặc chụp màn hình rồi Ctrl+V</span>
+      </div>
+      <div id="xemAnh"></div>
+      <div class="hangnut">
         <button class="nut do" id="btRaw">Hỏi thẳng AI</button>
         <button class="nut xanh" id="btHe">Chạy qua hệ thống 4 tầng</button>
         <button class="nut phu" id="btVd">Phiếu ví dụ khác</button>
@@ -194,6 +200,77 @@ $("btHe").onclick = async () => {
 };
 
 $("btVd").onclick = () => { viTri = (viTri + 1) % VI_DU.length; $("phieu").value = VI_DU[viTri]; };
+
+// ---------------------------------------------------- quet anh phieu
+const TESS = "https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js";
+let napTess = null;
+
+function napThuVien() {
+  if (napTess) return napTess;
+  napTess = new Promise((ok, loi) => {
+    const s = document.createElement("script");
+    s.src = TESS;
+    s.onload = ok;
+    s.onerror = () => loi(new Error("không tải được thư viện đọc ảnh, máy cần có mạng"));
+    document.head.appendChild(s);
+  });
+  return napTess;
+}
+
+async function quetAnh(file) {
+  khoa(true);
+  dat($("xemAnh"), "");
+  $("ttAnh").textContent = "Đang tải thư viện đọc ảnh…";
+  try {
+    await napThuVien();
+    const url = URL.createObjectURL(file);
+    dat($("xemAnh"), `<img src="${url}" alt="ảnh phiếu" style="max-width:100%;max-height:230px;
+         border:1px solid var(--line);border-radius:7px;margin-top:10px">`);
+    const r = await Tesseract.recognize(url, "vie+eng", {
+      logger: (m) => {
+        if (m.status === "recognizing text")
+          $("ttAnh").textContent = `Đang đọc chữ trong ảnh… ${Math.round(m.progress * 100)}%`;
+      },
+    });
+    const doc = docAnhSangPhieu(r.data.text);
+    let them = "";
+    if (!doc.dong.length) {
+      $("ttAnh").textContent = "Không tìm thấy chỉ số nào trong ảnh, bạn gõ tay giúp.";
+    } else {
+      $("phieu").value = doc.dong.join("\n");
+      $("ttAnh").textContent = `Đọc được ${doc.dong.length} chỉ số.`;
+      them += `<div class="canh"><b>Máy đọc ảnh có thể sai số.</b> Hãy đối chiếu ô bên trên với
+        phiếu gốc trước khi bấm chạy, nhất là dấu chấm thập phân.</div>`;
+    }
+    if (doc.ngo.length) {
+      them += `<div class="loi"><b>${doc.ngo.length} dòng nhiều khả năng bị đọc sai,
+        vì lệch quá xa khoảng tham chiếu:</b><br>` +
+        doc.ngo.map((n) => `· <b>${n.code} = ${n.gt}</b> (khoảng ${thoat(n.khoang)})`).join("<br>") +
+        `<br>Sửa lại trong ô phiếu cho đúng với ảnh.</div>`;
+    }
+    dat($("xemAnh"), $("xemAnh").innerHTML + them +
+      `<details><summary>Chữ thô mà máy đọc được từ ảnh</summary>
+       <pre class="nho" style="white-space:pre-wrap">${thoat(r.data.text)}</pre></details>`);
+  } catch (e) {
+    $("ttAnh").textContent = "Lỗi khi đọc ảnh: " + (e.message || e);
+  } finally { khoa(false); }
+}
+
+$("btAnh").onclick = () => $("fileAnh").click();
+$("fileAnh").onchange = (e) => { if (e.target.files[0]) quetAnh(e.target.files[0]); };
+["dragenter", "dragover"].forEach((t) =>
+  $("phieu").addEventListener(t, (e) => { e.preventDefault(); $("phieu").style.borderColor = "var(--blue)"; }));
+["dragleave", "drop"].forEach((t) =>
+  $("phieu").addEventListener(t, () => ($("phieu").style.borderColor = "")));
+$("phieu").addEventListener("drop", (e) => {
+  e.preventDefault();
+  const f = [...(e.dataTransfer.files || [])].find((x) => x.type.startsWith("image/"));
+  if (f) quetAnh(f);
+});
+document.addEventListener("paste", (e) => {
+  const it = [...(e.clipboardData?.items || [])].find((x) => x.type.startsWith("image/"));
+  if (it) quetAnh(it.getAsFile());
+});
 $("btCauNoi").onclick = () => { $("url").value = "http://localhost:11435"; $("tt").textContent = "Đã chuyển sang cầu nối cổng 11435"; };
 $("btThang").onclick = () => { $("url").value = "http://localhost:11434"; $("tt").textContent = "Đã chuyển sang gọi thẳng cổng 11434"; };
 $("btDan").onclick = async () => {

@@ -66,6 +66,20 @@ Trang nhớ địa chỉ này, tải lại trang không phải nhập lại.
 trên máy bạn. Địa chỉ là chuỗi ngẫu nhiên và chỉ sống khi cửa sổ còn mở, nhưng
 **xong buổi báo cáo nhớ nhấn Ctrl+C để đóng**.
 
+## Quét ảnh phiếu
+
+Trang có nút **Quét ảnh phiếu**. Ngoài ra kéo thả ảnh vào ô nhập, hoặc chụp màn hình rồi
+Ctrl+V cũng được. Máy đọc chữ bằng Tesseract chạy ngay trong trình duyệt, ảnh không gửi đi đâu.
+Lần quét đầu cần mạng để tải thư viện đọc ảnh và dữ liệu tiếng Việt.
+
+Sau khi quét, trang điền sẵn các dòng đọc được vào ô phiếu để bạn **sửa lại cho khớp ảnh**
+rồi mới bấm chạy. Những dòng lệch quá xa khoảng tham chiếu sẽ bị tô đỏ, vì đó thường là
+lỗi đọc ảnh chứ không phải kết quả thật, ví dụ mất dấu chấm thập phân hoặc mũi tên dính vào số.
+
+**Lưu ý khi trình bày:** phần đọc ảnh chỉ là tiện ích nhập liệu của trang demo. Bài báo nêu rõ
+hệ thống chưa xử lý ảnh chụp, và phần thực nghiệm chạy trên dữ liệu đã có cấu trúc.
+Đừng trình bày phần quét ảnh như một kết quả nghiên cứu.
+
 ## Cách dùng khi trình bày
 
 1. Bấm **Hỏi thẳng AI**: mô hình nhận nguyên phiếu, không ràng buộc gì. Đây là thứ xảy ra
