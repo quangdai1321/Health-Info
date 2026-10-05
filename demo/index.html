@@ -87,8 +87,17 @@
             </select></div>
           <div><label for="khoaGemini">Khóa API Gemini</label><input id="khoaGemini" type="password" placeholder="chỉ cần khi chọn giọng Gemini">
             <div class="nho" id="ghiChuKhoa"></div></div>
+          <div><label for="tocDo">Tốc độ đọc</label>
+            <select id="tocDo">
+              <option value="1">Chậm, 1,0 lần</option>
+              <option value="1.2">Hơi chậm, 1,2 lần</option>
+              <option value="1.35" selected>Như người nói chuyện, 1,35 lần</option>
+              <option value="1.5">Nhanh, 1,5 lần</option>
+            </select></div>
           <div><label for="giongGemini">Tên giọng Gemini</label>
             <select id="giongGemini">
+              <option value="vi-vn-csagent-3">Nữ 39 tuổi, nhẹ nhàng, dễ chịu</option>
+              <option value="vi-vn-assistant-4">Nữ 34 tuổi, ấm áp, giọng trầm</option>
               <option value="vi-vn-csagent-4">Nữ 24 tuổi, thân thiện</option>
               <option value="vi-vn-assistant-8">Nữ 24 tuổi, trẻ trung</option>
               <option value="vi-vn-assistant-2">Nữ 37 tuổi, ấm áp</option>
@@ -325,6 +334,8 @@ let ketQuaCuoi = null;
 try {
   const k = localStorage.getItem("khoa_gemini"); if (k) $("khoaGemini").value = k;
   const g = localStorage.getItem("chon_giong"); if (g) $("giong").value = g;
+  const gg = localStorage.getItem("giong_gemini"); if (gg) $("giongGemini").value = gg;
+  const td = localStorage.getItem("toc_do"); if (td) $("tocDo").value = td;
 } catch (e) {}
 // file khoa.js o may co san thi lay luon, khoi phai go
 if (typeof KHOA_GEMINI === "string" && KHOA_GEMINI.trim()) {
@@ -383,6 +394,14 @@ $("btHoi").onclick = guiCauHoi;
 $("cauHoi").addEventListener("keydown", (e) => { if (e.key === "Enter") guiCauHoi(); });
 
 $("btDung").onclick = () => { dungDoc(); $("ttDoc").textContent = "Đã dừng."; };
+datTocDo($("tocDo").value);
+$("tocDo").addEventListener("change", () => {
+  datTocDo($("tocDo").value);
+  try { localStorage.setItem("toc_do", $("tocDo").value); } catch (e) {}
+});
+$("giongGemini").addEventListener("change", () => {
+  try { localStorage.setItem("giong_gemini", $("giongGemini").value); } catch (e) {}
+});
 
 $("btDoc").onclick = async () => {
   if (!ketQuaCuoi) return;

@@ -97,6 +97,10 @@ cho một đoạn 7 giây. WebSocket không vướng CORS nên gọi được c�
 Không dùng model `gemini-3.8-flash-tts` vì bản miễn phí **chỉ cho 10 lượt mỗi ngày**, không đủ để
 demo. Live API không gặp giới hạn này trong lúc thử.
 
+**Tốc độ đọc.** Các giọng Gemini mặc định nói khoảng 3,1 âm tiết mỗi giây, trong khi người Việt
+nói chuyện bình thường khoảng 4,5. Trang có ô **Tốc độ đọc**, mặc định 1,35 lần, phát nhanh hơn
+mà vẫn giữ nguyên cao độ giọng nên không bị méo tiếng. Chọn giọng trầm và nhẹ thì nên để 1,5.
+
 **Khi demo trước hội đồng nên dùng giọng trình duyệt**, vì bài báo nói rõ dữ liệu không rời khỏi
 đơn vị. Dùng giọng Gemini thì phải nói trước điều đó với người nghe.
 

@@ -41,13 +41,17 @@ function timGiongViet() {
       || null;
 }
 
+/* Toc do doc. 1,0 la toc do goc cua may, cac giong Gemini o muc nay noi cham hon nguoi that. */
+let tocDo = 1.35;
+function datTocDo(v) { tocDo = Math.min(2, Math.max(0.6, Number(v) || 1.35)); }
+
 function docBangTrinhDuyet(chu, xong) {
   if (!window.speechSynthesis) throw new Error("trình duyệt này không có sẵn giọng đọc");
   dungDoc();
   const u = new SpeechSynthesisUtterance(chu);
   const v = timGiongViet();
   if (v) { u.voice = v; u.lang = v.lang; } else { u.lang = "vi-VN"; }
-  u.rate = 0.95;
+  u.rate = Math.min(2, tocDo * 0.95);
   u.onend = () => xong && xong(v ? v.name : "giọng mặc định");
   u.onerror = (e) => xong && xong(null, e.error || "lỗi khi đọc");
   window.speechSynthesis.speak(u);
@@ -122,8 +126,12 @@ function docBangGeminiLive(chu, khoa, giong, bao) {
       dangNoi = null;
       if (!manh.length) return hong(loi || new Error("Gemini không trả về âm thanh"));
       const au = new Audio(URL.createObjectURL(ghepWav(manh)));
+      au.preservesPitch = true;          // tang toc nhung giu nguyen cao do giong
+      au.mozPreservesPitch = true;
+      au.webkitPreservesPitch = true;
+      au.playbackRate = tocDo;
       dangDoc = au;
-      au.play().then(() => xong({ giay: manh.reduce((s, x) => s + x.length, 0) / 48000 })).catch(hong);
+      au.play().then(() => xong({ giay: manh.reduce((s, x) => s + x.length, 0) / 48000 / tocDo })).catch(hong);
     };
   });
 }
