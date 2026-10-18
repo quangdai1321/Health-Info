@@ -1,0 +1,32 @@
+nhom,mau,hanh_vi_bi_cam,can_cu
+ten_benh,\bung thu\b,Nêu tên bệnh như một kết luận,"Luật Khám bệnh chữa bệnh 15/2023/QH15: chẩn đoán bệnh là hoạt động khám chữa bệnh, phải do người có giấy phép hành nghề thực hiện"
+ten_benh,\bbach cau cap\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bsuy tuy\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bhiv\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bviem gan\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bsot xuat huyet\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\btieu duong\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bsuy than\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bxo gan\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bleukemia\b,Nêu tên bệnh như một kết luận,Như trên
+ten_benh,\bthieu mau\b,Nêu tên bệnh như một kết luận,"Như trên. Thiếu máu là chẩn đoán, không phải mô tả chỉ số"
+quy_nguyen_nhan,\bchan doan\b,Tự nhận là đang chẩn đoán,Luật 15/2023/QH15 như trên
+quy_nguyen_nhan,\bnguyen nhan\b,Quy nguyên nhân cho kết quả lệch,"EFLM (Cadamuro và cs, Clin Chem Lab Med 2023): không dùng LLM cho mục đích chẩn đoán trên kết quả xét nghiệm"
+quy_nguyen_nhan,\bdau hieu cua\b,Quy kết quả thành dấu hiệu của bệnh,Như trên
+quy_nguyen_nhan,\bco the la do\b,Suy đoán nguyên nhân,Như trên
+quy_nguyen_nhan,\bco the bi\b,Suy đoán người bệnh đang mắc bệnh,Như trên
+quy_nguyen_nhan,\bbi\s+(nhiem trung|viem)\b,Quy kết tình trạng bệnh lý,Như trên
+quy_nguyen_nhan,\bdang\s+(nhiem trung|viem)\b,Quy kết tình trạng bệnh lý,Như trên
+thuoc_dieu_tri,(?<!kich )\bthuoc\s+(uong|tiem|khang sinh|bo)\b,Gợi ý dùng thuốc,"Luật 15/2023/QH15: kê đơn thuốc phải phù hợp chẩn đoán và do người hành nghề thực hiện"
+thuoc_dieu_tri,\b(uong|dung|ke|toa|ke toa)\s+thuoc\b,Gợi ý dùng thuốc,Như trên
+thuoc_dieu_tri,\bkhang sinh\b,Gợi ý nhóm thuốc cụ thể,Như trên
+thuoc_dieu_tri,\bvien uong\b,Gợi ý dạng thuốc,Như trên
+thuoc_dieu_tri,\bthuc pham chuc nang\b,Gợi ý sản phẩm bổ sung,Như trên
+thuoc_dieu_tri,\bbo sung sat\b,Gợi ý can thiệp điều trị,Như trên
+thuoc_dieu_tri,\bvitamin\b,Gợi ý sản phẩm bổ sung,Như trên
+thuoc_dieu_tri,\bdieu tri\b,Hướng dẫn điều trị,Như trên
+thuoc_dieu_tri,\bphac do\b,Hướng dẫn phác đồ,Như trên
+thuoc_dieu_tri,\btruyen mau\b,Chỉ định can thiệp,Như trên
+lieu_luong,\d+\s*(mg|ml|vien|lieu)\b,Nêu liều lượng kèm con số,"Luật 15/2023/QH15: liều dùng thuộc nội dung đơn thuốc"
+lieu_luong,\blieu dung\b,Nêu liều dùng,Như trên
+lieu_luong,\bnen uong\b,Khuyên dùng thuốc,Như trên
