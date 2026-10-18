@@ -51,13 +51,54 @@ Script: `src/thu_nghiem_don_vi.py`; output: `results/thu_nghiem_don_vi.json`.
 
 ### R2.3 — "The Constrained configuration bundles rule-assigned labels, prompt constraints, and the JSON schema, so RQ2 cannot separate their contributions, and a validator-only configuration is missing."
 
-[CHỜ KẾT QUẢ ABLATION — điền bảng và đoạn phân tích vào đây]
+Accepted, and this drove the main new experiment. Three further configurations were run on
+the same 150 panels with the same model and the same scoring code:
 
-Three further configurations were run on the same panels and the same model:
+- **Labels only** — rule-assigned labels and the JSON schema, with the content prohibitions removed from the system prompt.
+- **Constraints only** — content prohibitions and the JSON schema, with raw values and no labels.
+- **Validator only** — the baseline prompt unchanged, plus Layer 4: validation, regeneration up to the retry limit, and template fallback.
 
-- **labels only** — rule-assigned labels and the JSON schema, with the content prohibitions removed.
-- **constraints only** — content prohibitions and the JSON schema, with no labels.
-- **validator only** — the baseline prompt, with Layer 4 validation, regeneration and template fallback.
+Results, now in Table 3 of the revised paper (% of panels, except the last column):
+
+| Configuration | Safe | Model text | Direction | False reass. | Forbidden | Time (s) |
+|---|---|---|---|---|---|---|
+| Baseline | 0.0 | 0.0 | 91.3 | 32.0 | 79.3 | 38.9 |
+| Labels only | 38.7 | 38.7 | 14.0 | 10.7 | 46.0 | 38.4 |
+| Constraints only | 0.0 | 0.0 | 87.3 | 43.3 | 35.3 | 27.0 |
+| Validator only | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 95.5 |
+| Constrained | 48.0 | 48.0 | 12.7 | 8.0 | 15.3 | 35.8 |
+| Full | 100.0 | 64.0 | 0.0 | 0.0 | 0.0 | 68.3 |
+
+The three mechanisms turn out to do different jobs, and only one of them fixes correctness:
+
+1. **The labels carry the correctness gain.** Supplying them alone cuts direction mismatch
+   from 91.3% to 14.0% and false reassurance from 32.0% to 10.7%, and produces 38.7% safe
+   output where the baseline produces none.
+2. **The prompt constraints do not improve correctness at all.** With no labels, direction
+   mismatch stays at 87.3% and false reassurance *rises* to 43.3%, above the baseline's
+   32.0%. Their one measurable effect is on vocabulary: forbidden terms fall from 79.3% to
+   35.3%. Instructing the model to be careful makes it speak more cautiously, not more
+   correctly — which is precisely the failure mode the paper argues against, and we now
+   have a number for it.
+3. **The validator can guarantee safety without labels, but only by discarding the output.**
+   Validator-only reaches 100.0% safe, the same as the full pipeline, yet 0.0% of panels are
+   served by model text: all 150 fall back to templates after a mean of 3 regeneration
+   attempts, at 95.5 s per panel. The full pipeline reaches the same 100.0% with 64.0% model
+   text and lower latency. Layer 4's contribution is therefore the guarantee; what the labels
+   and constraints buy is the share of panels that keep a generated explanation.
+
+This also answers the implicit question of what "Constrained" adds over "Labels only": 9.3
+further points of safe output (38.7% → 48.0%) and a drop in forbidden terms from 46.0% to
+15.3%, with direction mismatch and false reassurance only slightly improved. The ablation is
+reproducible with `python src/run_experiment.py --config chi_nhan|chi_rang_buoc|chi_kiem_chung`;
+the comparison table is built by `src/phan_tich_ablation.py` and stored in
+`results/bang_ablation.json`.
+
+One implementation note, reported for completeness: the constraints-only configuration
+produced outputs whose JSON structure was valid but whose field types were not what the
+validator expected, which raised exceptions during scoring. Rather than drop those panels we
+added a wrapper that records them as a `malformed_structure` violation, so an unscoreable
+output counts as unsafe rather than disappearing from the denominator.
 
 ### R2.4 — "Only Qwen2.5-3B is tested, yet the abstract and introduction speak of general-purpose language models that patients use, which are mostly much larger."
 

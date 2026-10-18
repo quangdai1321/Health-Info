@@ -9,12 +9,12 @@ và đoạn văn tiếng Anh viết sẵn để dán vào bài.
 |---|---|---|---|
 | 1 | Baseline lẫn lỗi định dạng, 97,3% dùng tên hiển thị nên 0% an toàn có thể là do định dạng | Chấm lại sau khi quy đổi mã | **Xong**, `src/cham_lai_bo_loi_dinh_dang.py` |
 | 2 | Đóng góp về đơn vị đo không có số liệu trong phần Kết quả | Thí nghiệm định lượng | **Xong**, `src/thu_nghiem_don_vi.py` |
-| 3 | RQ2 gộp ba thứ, thiếu cấu hình chỉ kiểm chứng | Chạy 3 cấu hình tách phần | Đang chạy |
-| 4 | Chỉ thử một mô hình 3B nhưng nói về "general-purpose LLM" | Thu hẹp phát biểu trong Abstract và Introduction | Chưa |
-| 5 | Không đo được "patient-friendly" | Thu hẹp phát biểu, nêu rõ là hạn chế | Chưa |
-| 6 | Related work chưa đối thoại với dòng guardrail và data-to-text | Viết lại mục 2 | Bản nháp xong, xem dưới |
-| 7 | "Exact by construction" trong khi ngưỡng tự đặt | Sửa thành "exact relative to the configured thresholds" | Chưa |
-| 8 | Không phân theo giới tính và tuổi, nhất là HGB và HCT | Ghi vào Hạn chế, đánh dấu trong bảng nguồn | **Xong một nửa**, `data/nguon_khoang_tham_chieu.csv` |
+| 3 | RQ2 gộp ba thứ, thiếu cấu hình chỉ kiểm chứng | Chạy 3 cấu hình tách phần | **Xong**, 450/450 phiếu, Bảng 3 |
+| 4 | Chỉ thử một mô hình 3B nhưng nói về "general-purpose LLM" | Thu hẹp phát biểu trong Abstract và Introduction | **Xong**, đã chèn vào bài |
+| 5 | Không đo được "patient-friendly" | Thu hẹp phát biểu, nêu rõ là hạn chế | **Xong**, Abstract và mục 6.2. Tiêu đề giữ nguyên |
+| 6 | Related work chưa đối thoại với dòng guardrail và data-to-text | Viết lại mục 2 | **Xong**, thêm 4 tài liệu [18]–[21] |
+| 7 | "Exact by construction" trong khi ngưỡng tự đặt | Sửa thành "exact relative to the configured thresholds" | **Xong**, mục 3.2 |
+| 8 | Không phân theo giới tính và tuổi, nhất là HGB và HCT | Ghi vào Hạn chế, đánh dấu trong bảng nguồn | **Xong**, mục 6.2 tách câu riêng |
 | 9 | Căn cứ của ngưỡng và từ cấm | Hai bảng nguồn kèm test | **Xong**, `data/tu_cam_nguon.csv` |
 
 ## Đoạn viết sẵn, mục Related Work
@@ -145,10 +145,16 @@ liệu trong danh mục phải được trích ít nhất một lần.
 
 ## Việc còn lại theo thứ tự
 
-1. Chờ ablation xong, dựng bảng mới cho mục 5, viết đoạn phân tích.
-2. Sửa Abstract và Introduction: bỏ cách nói chung chung về "general-purpose LLM",
-   nói rõ kết quả chỉ áp cho một mô hình 3B chạy tại chỗ.
-3. Sửa "exact by construction" và phần "patient-friendly".
-4. Thêm 4 trích dẫn vào `references.bib`, viết lại mục 2.
-5. Cập nhật Hạn chế: giới tính và tuổi, phạm vi CBC, ngưỡng chưa thẩm định.
-6. Soạn file trả lời phản biện, nộp kèm bản cuối.
+Chín ý phản biện đã xử lý xong trong bài. Còn lại là việc nộp:
+
+1. **Tải bản nhận xét đính kèm của Phản biện 1.** Phần Reviewer 1 trong
+   `docs/phan_hoi_phan_bien.md` vẫn là chỗ trống, không nộp được khi chưa đọc file đó.
+2. Xuất `docs/phan_hoi_phan_bien.md` ra PDF để nộp kèm.
+3. Nộp trước 31/10/2026: bản PDF cuối, file nguồn Word, bản trả lời phản biện, mã nguồn
+   và dữ liệu bổ sung.
+
+## Số trang
+
+Bản sửa ra **10 trang PDF**, đúng kịch giới hạn "6–10 trang kể cả tài liệu tham khảo".
+Trang 10 chỉ có 5 tài liệu cuối, nên nếu Phản biện 1 yêu cầu thêm nội dung thì phải cắt
+bớt chỗ khác. Word báo 11 trang vì đếm theo phân trang màn hình, bản PDF mới là bản nộp.
