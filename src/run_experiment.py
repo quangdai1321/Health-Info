@@ -174,6 +174,22 @@ SYSTEM_CHI_NHAN = (
 )
 
 
+def cham_an_toan(out, classified):
+    """Chấm nhưng không để vỡ vòng chạy.
+
+    Ở các cấu hình không ép khuôn JSON chặt, mô hình có lúc trả về "items" là danh
+    sách chuỗi thay vì danh sách đối tượng. Bộ chấm văng AttributeError và cả mẻ
+    dừng giữa chừng. Đây vẫn là một lần hỏng của cấu hình đó, nên ghi nhận thành
+    một loại vi phạm riêng thay vì bỏ qua.
+    """
+    try:
+        return validate(out, classified)
+    except (AttributeError, TypeError, KeyError) as e:
+        return {"passed": False,
+                "violations": [{"type": "malformed_structure",
+                                "detail": f"{type(e).__name__}: {e}"}]}
+
+
 def run_chi_nhan(panel, classified):
     """Chỉ có nhãn từ luật và khuôn JSON. Không có ràng buộc nội dung, không kiểm chứng."""
     text, dt = call_ollama([
