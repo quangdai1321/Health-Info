@@ -1,0 +1,24 @@
+{
+ "cu": {
+  "an_toan": 0.0,
+  "false_reassurance": 32.0,
+  "status_mismatch": 91.33333333333333,
+  "contradictory_wording": 56.0,
+  "forbidden_term": 79.33333333333333,
+  "hallucinated_analyte": 32.0,
+  "missing_analyte": 71.33333333333333,
+  "code_format": 97.33333333333333,
+  "unparseable": 2.0
+ },
+ "moi": {
+  "an_toan": 0.6666666666666666,
+  "false_reassurance": 32.0,
+  "status_mismatch": 92.66666666666667,
+  "contradictory_wording": 56.0,
+  "forbidden_term": 80.0,
+  "hallucinated_analyte": 28.666666666666668,
+  "missing_analyte": 70.66666666666667,
+  "code_format": 0.0,
+  "unparseable": 2.0
+ }
+}
