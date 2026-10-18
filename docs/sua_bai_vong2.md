@@ -121,6 +121,28 @@ Từ "Patient-Friendly" trong tiêu đề là một tuyên bố chưa đo đư�
 Khuyến nghị: chọn 1, vì form camera-ready ghi rõ tên bài phải khớp với bài đã nộp, và
 đã khai báo tên bài ở bước nộp. Thay vào đó xử lý bằng câu giới hạn trong Abstract.
 
+## Đoạn viết sẵn, mục 4.2 — mô tả ba cấu hình tách phần
+
+> The Constrained configuration bundles three mechanisms: rule-assigned labels, the content
+> prohibitions in the prompt, and the fixed JSON schema. To separate them, we ran three
+> further configurations on the same 150 panels with the same model.
+>
+> **Labels only** supplies the rule-assigned labels and the JSON schema, with the content
+> prohibitions removed from the system prompt. **Constraints only** keeps the prohibitions
+> and the schema but gives the model raw values, as in the baseline, with no labels.
+> **Validator only** uses the baseline prompt unchanged and adds Layer 4: validation,
+> regeneration up to the retry limit, and template fallback. Comparing these against the
+> baseline isolates what each mechanism contributes, and the validator-only configuration
+> answers what Layer 4 can guarantee when it has no labels to check against.
+
+## Ghi chú kỹ thuật về đánh số trích dẫn
+
+Bài đang dùng 17 tài liệu, đánh số theo thứ tự xuất hiện. Thêm 4 tài liệu mới vào mục 2
+sẽ đẩy số của các tài liệu sau đó, nên phải đánh số lại toàn bộ cả trong thân bài lẫn
+trong danh mục. Sẽ làm bằng script một lượt khi chèn cả mục 2 và mục 5, để tránh sửa tay
+dễ sót. Kiểm tra sau khi chèn: mọi số trong thân bài phải có trong danh mục, và mọi tài
+liệu trong danh mục phải được trích ít nhất một lần.
+
 ## Việc còn lại theo thứ tự
 
 1. Chờ ablation xong, dựng bảng mới cho mục 5, viết đoạn phân tích.
