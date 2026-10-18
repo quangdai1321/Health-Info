@@ -69,6 +69,58 @@ và đoạn văn tiếng Anh viết sẵn để dán vào bài.
 > No error ran in the opposite direction. The failure is confined to the deterministic layer
 > and is invisible to Layer 4, because every later stage faithfully reproduces the label.
 
+## Câu cần sửa trong bài, bản trước và sau
+
+### Ý 4 và 5 — Abstract (đoạn 7)
+
+**Trước:** "Vietnamese patients increasingly ask general-purpose language models to explain
+laboratory reports..." và "The contribution is an auditable architecture and a separately
+reported false-reassurance metric, not evidence of clinical benefit."
+
+**Sau:** thêm hai câu giới hạn phạm vi, đặt ngay trước câu cuối:
+
+> All results come from a single 3-billion-parameter model served locally, so they bound
+> what a small on-premises model does, not what the larger hosted services patients
+> typically use would do. Readability and patient comprehension were not measured; the
+> evaluation establishes consistency with the assigned labels only.
+
+### Ý 7 — câu "exact by construction" (đoạn 27)
+
+**Trước:** "The panel label is the most severe analyte label, so classification is exact by
+construction and cannot be altered by the model."
+
+**Sau:**
+
+> The panel label is the most severe analyte label. Classification is therefore exact with
+> respect to the configured intervals and severity factors, and cannot be altered by the
+> model; it is not a claim that those thresholds are clinically validated. The reference
+> intervals are those printed by one Vietnamese laboratory for adults, and the severity
+> factors are ours. Both are listed per analyte, with their provenance, in the supplementary
+> table `nguon_khoang_tham_chieu.csv`.
+
+### Ý 8 — Hạn chế (đoạn 50)
+
+**Trước:** "...one-sided intervals, qualitative results, and sex- or age-specific intervals
+are not handled..."
+
+**Sau:** tách thành câu riêng để không bị đọc lướt:
+
+> Sex- and age-specific intervals are not handled. This matters most for haemoglobin,
+> haematocrit and red cell count, where adult reference intervals differ between men and
+> women, so a woman's result may be labelled abnormal against a male-derived interval.
+
+### Ý 5 — tiêu đề bài
+
+Từ "Patient-Friendly" trong tiêu đề là một tuyên bố chưa đo được. Hai lựa chọn:
+
+1. **Giữ tiêu đề**, và nói rõ trong Abstract rằng chưa đo độ dễ hiểu. Ưu điểm: tiêu đề đã
+   in trong chương trình hội nghị và trong thư chấp nhận, đổi thì lệch hồ sơ.
+2. **Đổi thành "Patient-Facing"**, đúng hơn về mặt khoa học vì chỉ mô tả đối tượng đọc,
+   không hứa hẹn dễ hiểu.
+
+Khuyến nghị: chọn 1, vì form camera-ready ghi rõ tên bài phải khớp với bài đã nộp, và
+đã khai báo tên bài ở bước nộp. Thay vào đó xử lý bằng câu giới hạn trong Abstract.
+
 ## Việc còn lại theo thứ tự
 
 1. Chờ ablation xong, dựng bảng mới cho mục 5, viết đoạn phân tích.
