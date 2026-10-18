@@ -143,18 +143,48 @@ trong danh mục. Sẽ làm bằng script một lượt khi chèn cả mục 2 v
 dễ sót. Kiểm tra sau khi chèn: mọi số trong thân bài phải có trong danh mục, và mọi tài
 liệu trong danh mục phải được trích ít nhất một lần.
 
+## Phản biện 1 — bản 13 trang, 12 vấn đề, Major Revision, 5,8/10
+
+| # | Ý | Việc đã làm | Tình trạng |
+|---|---|---|---|
+| R1.1 | "safe output" tự tham chiếu | Đổi tên thước đo, thêm cấu hình chỉ mẫu cố định | **Xong** |
+| R1.2 | Nhãn monitor/seek care là heuristic | Nói rõ là nhóm độ lệch, không phải chỉ định phân luồng | **Xong** |
+| R1.3 | Bộ sinh dữ liệu không tái lập được | Phụ lục A: seed, phân bố, bảng chỉ số, đơn vị, bí danh | **Xong** |
+| R1.4 | Baseline quá yếu, cần 5 đối chứng | Bảy cấu hình, thêm chỉ-mẫu và full-không-sinh-lại | **Xong 4/5**, thiếu mô hình lớn hơn |
+| R1.5 | Chưa đo độ hiểu của bệnh nhân | **Đổi tên bài** theo đúng đề xuất của phản biện | **Xong** |
+| R1.6 | Thiếu KTC, chạy lặp, tham số giải mã | KTC Wilson, McNemar, tham số đầy đủ | **Xong một phần**, chưa chạy lặp |
+| R1.7 | Validator chưa đặc tả để audit | Phụ lục B, sinh thẳng từ mã | **Xong** |
+| R1.8 | Phạm vi rộng hơn thực nghiệm | Tên bài và Abstract thu về CBC | **Xong** |
+| R1.9 | Runtime chưa đủ để bàn triển khai | p50/p95/p99, lý do phải sinh lại | **Xong một phần**, chưa đo RAM |
+| R1.10 | Thiếu phân tích lỗi định tính | Đoạn ví dụ thật trong mục 5 + Phụ lục C | **Xong** |
+| R1.11 | Related work chưa định vị đủ | Viết lại đoạn đóng góp theo ba khoảng trống | **Xong** |
+| R1.12 | Câu chữ quá tuyệt đối | Bỏ hết "guarantee", "no unsafe output" | **Xong** |
+
+### Hai điều bất lợi phải báo cáo trung thực
+
+1. **Mẫu cố định đạt 100% qua kiểm chứng**, không khác pipeline đủ tầng (McNemar p = 1,000).
+   Thước đo hiện tại không phân biệt được hai thứ. Đã viết thẳng vào mục 5 và 6.2.
+2. **Ràng buộc nội dung không cải thiện có ý nghĩa** so với chỉ có nhãn (p = 0,082). Đoạn
+   phân tích đã sửa lại cho đúng.
+
+Ngoài ra, khi soạn phụ lục B phát hiện bộ kiểm chứng có một kiểu **báo nhầm hệ thống**:
+câu trích dẫn khoảng tham chiếu mà không có từ so sánh bị đọc thành lời khẳng định trạng
+thái, ước tính khoảng 24% số câu bị lớp này từ chối. Giữ nguyên, không chỉnh validator sau
+khi đã thấy kết quả, và ghi rõ ở mục 6.2 và phụ lục B.5.
+
 ## Việc còn lại theo thứ tự
 
-Chín ý phản biện đã xử lý xong trong bài. Còn lại là việc nộp:
+Cả hai bản phản biện đã xử lý xong trong bài. Còn lại là việc nộp và hai việc tùy chọn:
 
-1. **Tải bản nhận xét đính kèm của Phản biện 1.** Phần Reviewer 1 trong
-   `docs/phan_hoi_phan_bien.md` vẫn là chỗ trống, không nộp được khi chưa đọc file đó.
-2. Xuất `docs/phan_hoi_phan_bien.md` ra PDF để nộp kèm.
-3. Nộp trước 31/10/2026: bản PDF cuối, file nguồn Word, bản trả lời phản biện, mã nguồn
-   và dữ liệu bổ sung.
+1. Xuất `docs/phan_hoi_phan_bien.md` và `docs/phu_luc_bo_sung.md` ra PDF để nộp kèm.
+2. Báo ban tổ chức là tên bài đổi theo yêu cầu của Phản biện 1, vì form camera-ready
+   yêu cầu tên bài khớp với bài đã nộp.
+3. Nộp trước 31/10/2026: bản PDF cuối, file nguồn Word, bản trả lời phản biện, phụ lục,
+   mã nguồn và dữ liệu.
+4. *Tùy chọn, còn 13 ngày:* chạy thêm một mô hình lớn hơn (R1.4 ý 5, R2.4) và chạy lặp
+   5 lần mỗi cấu hình (R1.6). Cả hai đều chạy được trên máy hiện tại nhưng mất nhiều giờ.
 
 ## Số trang
 
-Bản sửa ra **10 trang PDF**, đúng kịch giới hạn "6–10 trang kể cả tài liệu tham khảo".
-Trang 10 chỉ có 5 tài liệu cuối, nên nếu Phản biện 1 yêu cầu thêm nội dung thì phải cắt
-bớt chỗ khác. Word báo 11 trang vì đếm theo phân trang màn hình, bản PDF mới là bản nộp.
+Bản cuối ra **11 trang PDF**, hơn giới hạn gốc 1 trang. Tác giả đã đồng ý thêm 1 trang.
+Word báo 14 trang vì đếm theo phân trang màn hình; bản PDF mới là bản nộp.

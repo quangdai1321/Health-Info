@@ -1,7 +1,9 @@
 # Response to Reviewers — HI26-0013
 
-**Paper:** A Rule-Constrained Large Language Model Pipeline for Patient-Friendly
-Interpretation of Vietnamese Blood Test Results
+**Paper:** A Rule-Constrained Large Language Model Pipeline for Rule-Consistent
+Explanation of Vietnamese Complete Blood Count Results
+**Previous title:** ...for Patient-Friendly Interpretation of Vietnamese Blood Test Results
+(changed at Reviewer 1's request, point 5)
 **Authors:** Vo Hoang Khang, Truong Quang Dai
 
 We thank both reviewers for comments that were specific enough to act on. Every change
@@ -149,10 +151,202 @@ table marks haemoglobin, haematocrit and red cell count as sex-dependent.
 
 ## Reviewer 1
 
-[CHỜ ĐỌC FILE ĐÍNH KÈM — chưa tải được bản nhận xét chi tiết]
+We thank Reviewer 1 for a review detailed enough to act on point by point. Two of the twelve
+points changed our reading of our own results, and we report both outcomes even where they
+weaken the original claims. The title has been changed to the one the reviewer proposed.
 
-We thank Reviewer 1 for the assessment that the design is sound and that the paper does not
-overstate clinical benefit. Detailed points from the attached review are addressed below.
+### R1.1 (Critical) — "Safe output is defined entirely by an internal validator, so the 100% figure is self-referential."
+
+Accepted without reservation, and this is the single largest change to the paper.
+
+The metric is renamed throughout. "Safe output" is now **validator-pass rate**, defined in
+Section 4.2 with the reason attached: the validator is both the filter and the measure, so a
+high rate shows that nothing was returned that violates the implemented checks, not that the
+output is clinically appropriate or comprehensible.
+
+We then tested how little the metric distinguishes. A **template-only** configuration was
+added, which prints the Layer 2 labels through the fixed template and never calls a model. It
+passes on all 150 panels in 0.38 s for the whole benchmark, against 68.3 s per panel for the
+full pipeline. McNemar's test on the paired panels cannot separate the two (p = 1.000), and
+the same holds for validator-only. The paper now states this in Section 5 and in Section 6.2
+rather than leaving it to be inferred: a pass rate defined by consistency with the rules is
+maximised by output the rules wrote, and what the pipeline adds over the template is the
+64.0% of panels that keep generated prose, whose readability we did not measure.
+
+We did not arrange blind expert rating before the camera-ready deadline, and we do not claim
+to have. Section 6.2 lists independent expert review and a patient comprehension study as the
+first items of future work, and the conclusion no longer describes the result as safety.
+
+### R1.2 (Critical) — "Monitor and seek care carry triage implications but rest on heuristic severity factors."
+
+Accepted. Section 3.2 now states that the names denote deviation categories computed from the
+configured intervals, not triage advice, and that mapping a deviation category to
+patient-facing wording would require validation against a laboratory's critical-value policy
+and clinician review before deployment. The same qualification appears in Section 6.2.
+
+We also made the thresholds auditable rather than only disclaimed. `data/nguon_khoang_tham_chieu.csv`
+records, for each of the 22 analytes, the reference interval, its source, the severity factor,
+whether the interval is sex-dependent, and its validation status, which is "not checked
+against literature" for every row. A unit test keeps the file in step with the running code.
+Appendix A.3 reproduces the table.
+
+### R1.3 (High) — "The synthetic generator is not described well enough to reproduce or to check for bias."
+
+Accepted. Section 4.1 now gives the generator parameters and the distributions, and
+**Appendix A** supplies the rest: the generator is `src/generate_data.py` with
+`n_per_group=50`, `seed=42`, `borderline_rate=0.15`, so the benchmark regenerates exactly.
+Appendix A reports the panel-label split (50/50/50), analytes per panel (10–18, mean 14.1,
+2,118 readings), abnormal analytes per panel (0–4, mean 1.5), the high/low split (124/102),
+the 46 panels with a borderline value, the per-analyte abnormality counts, the reference
+interval and severity factor per analyte, the unit conversion factors, and the alias table.
+`data/synthetic_panels.json` is supplied as generated.
+
+We also state what the reviewer suspected. Appendix A notes that no reading lacks a unit and
+no panel lacks an analyte name, because the generator emits structured panels only; Section
+6.2 carries this as a limitation rather than a footnote.
+
+### R1.4 (High) — "The baseline is weak; at least five stronger baselines and ablations are needed."
+
+Accepted. The paper now compares **seven** configurations on the same 150 panels, covering
+four of the five the reviewer listed:
+
+| Configuration | Validator pass | Model text | Direction | False reass. | Forbidden | Time (s) |
+|---|---|---|---|---|---|---|
+| Baseline (raw LLM) | 0.0 | 0.0 | 91.3 | 32.0 | 79.3 | 38.9 |
+| Template only (rules, no model) | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.003 |
+| Labels only | 38.7 | 38.7 | 14.0 | 10.7 | 46.0 | 38.4 |
+| Constraints only (schema, no labels) | 0.0 | 0.0 | 87.3 | 43.3 | 35.3 | 27.0 |
+| Validator only | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 95.5 |
+| Constrained (labels + constraints) | 48.0 | 48.0 | 12.7 | 8.0 | 15.3 | 35.8 |
+| Full, no retry | 100.0 | 46.0 | 0.0 | 0.0 | 0.0 | 35.2 |
+| Full | 100.0 | 64.0 | 0.0 | 0.0 | 0.0 | 68.3 |
+
+This separates what was previously bundled:
+
+- **Labels carry the correctness gain.** Alone they cut direction mismatch from 91.3% to 14.0% and false reassurance from 32.0% to 10.7%.
+- **Prompt constraints do not improve correctness.** Without labels, direction mismatch stays at 87.3% and false reassurance *rises* to 43.3%, above the baseline. Their measurable effect is on vocabulary (forbidden terms 79.3% → 35.3%). Added on top of labels they raise the pass rate from 38.7% to 48.0%, which does not reach significance on 150 panels (McNemar, p = 0.082).
+- **The validator supplies the pass, not the quality.** Validator-only reaches 100.0% with 0.0% model text: all 150 panels fall back to templates after a mean of 3 attempts.
+- **Regeneration buys model text, not safety.** Full without retry reaches the same 100.0% with 46.0% model text at 35.2 s; retry raises that to 64.0% at 68.3 s.
+
+The fifth item, a larger or alternative model, we have not run. The paper does not
+extrapolate past the one 3B model, and Section 6.2 lists larger models as future work.
+
+### R1.5 (High) — "Patient comprehension is not evaluated, so the patient-friendly claim is unsupported; otherwise change the title."
+
+Accepted, and we took the reviewer's second option because we could not run a comprehension
+study before the deadline and did not want to keep a claim we had not measured. The title is
+now:
+
+> **A Rule-Constrained Large Language Model Pipeline for Rule-Consistent Explanation of Vietnamese Complete Blood Count Results**
+
+This follows the reviewer's own wording and narrows the scope twice over: *rule-consistent
+explanation* instead of *patient-friendly interpretation*, and *complete blood count* instead
+of *blood test*, which also answers R1.8. The abstract, introduction and conclusion were
+rewritten to match, and Section 6.2 states that readability, comprehension, perceived anxiety
+and actionability were not measured.
+
+### R1.6 (High) — "No confidence intervals, no repeated runs, no decoding parameters."
+
+Partly addressed, and we say plainly which part.
+
+Every proportion in Sections 4 and 5 now carries a **95% Wilson confidence interval**, chosen
+over Wald because several rates are 0% or 100%, where Wald gives a zero-width interval.
+Configurations are compared with **McNemar's test**, which is the paired test the design
+calls for, since all configurations see the same 150 panels. Two of those comparisons changed
+what we could claim: constraints over labels is not significant (p = 0.082), and
+template-only against full is indistinguishable (p = 1.000).
+
+Decoding parameters are now stated in Section 4.2: Ollama, qwen2.5:3b at Q4_K_M quantisation,
+temperature 0.2, 2,048-token limit, JSON output mode, no fixed seed.
+
+We did **not** run five repeated decoding runs. Section 6.2 states the consequence: the
+intervals carry the sampling uncertainty of 150 panels but not the decoding variability of
+repeated runs. Scripts: `src/thong_ke_tin_cay.py`, output `results/thong_ke_tin_cay.json`.
+
+### R1.7 (High) — "The validator is not specified well enough to audit."
+
+Accepted. **Appendix B** now specifies it in full: the algorithm in pseudo-code, the
+normalisation applied before matching (accent stripping and reference-phrase masking, with
+the comparator rule that governs the masking), the complete pattern tables for status words,
+false reassurance and forbidden terms, and a section on what the checks cannot see. The
+appendix is generated from the running code by `src/dung_phu_luc.py`, so it cannot drift from
+the implementation.
+
+On precision and recall we report what we have rather than an estimate we cannot support.
+Appendix B.5 documents a **systematic false positive we found while preparing this response**:
+the contradictory-wording check masks interval-naming phrases only when a comparator precedes
+them, so a sentence that quotes the interval as a fact is read as a status claim. A pattern
+scan identifies 50 of the 206 flagged sentences in the baseline log (24.3%) as candidates for
+this mistake. We left the behaviour unchanged, because retuning the validator after seeing
+the results would invalidate comparisons already scored with it, and we state the direction of
+the bias: it inflates the fallback rate and understates the model, and does not inflate the
+pass rate. Section 6.2 now carries this. A proper precision and recall estimate needs
+human-annotated statements and is listed as future work.
+
+### R1.8 (High) — "Scope is wider than the experiments: real reports are not structured CBC panels."
+
+Accepted. The title now says complete blood count, the abstract and Section 6.2 state that
+only structured CBC panels are supported, and the introduction no longer generalises from one
+local model to hosted assistants. Parsing, OCR, missing reference intervals, multi-panel
+reports and age- or sex-specific intervals are named as untested.
+
+### R1.9 (Medium) — "Runtime analysis is insufficient for deployment."
+
+Addressed from the existing logs. Section 5 now reports, for the full pipeline, 68.3 s per
+panel with SD 33.7 and p50/p95/p99 of 66.4/121.5/134.1 s, against a baseline mean of 38.9 s
+(p95 63.6), and Section 6.1 quotes the 95th percentile rather than the mean alone. Per-panel
+attempts are 1.97 on average.
+
+We also answer where the cost goes. Re-scoring the outputs Layer 4 rejected shows that of the
+54 panels ending in a template, 66.7% had omitted an analyte, 38.9% contained a forbidden
+term, 29.6% misstated a direction and 18.5% falsely reassured. Omission, not vocabulary, is
+what regeneration is mostly fighting.
+
+Peak memory, token counts and concurrency behaviour are not reported; we did not instrument
+them during the runs and did not want to quote figures from a later, differently loaded
+machine.
+
+### R1.10 (Medium) — "No qualitative error analysis."
+
+Accepted. Section 5 now carries a paragraph of real instances, and **Appendix C** tabulates
+one worked example per error class with the panel, the rule label, the analyte, the generated
+text and the reason Layer 4 rejected it. Every example is taken from the stored run logs; none
+is constructed. The false-reassurance example is the one the reviewer would expect: on a
+monitor panel, the baseline closing statement opens *"Tất cả các chỉ số đều nằm trong khoảng
+bình thường"* and then names two abnormal analytes.
+
+### R1.11 (Medium) — "Related work does not position the contribution precisely enough."
+
+Accepted. Section 2 now engages the guardrail and data-to-text literature directly, citing
+NeMo Guardrails for programmable rails, Gatt and Krahmer for the separation of content
+selection from realisation, Wiseman et al. for neural generators misstating facts present in
+their input, and Thomson and Reiter for accuracy evaluation in data-to-text, and states
+plainly that the architecture contributes nothing new. The contribution paragraph is rewritten
+around the three gaps the reviewer identified: clinical judgement externalised from the model,
+semantic validation distinguished from structural validation, and false reassurance measured
+separately.
+
+### R1.12 (Medium) — "Absolute claims should be softened."
+
+Accepted. "Produced no unsafe output" is now "left no output that violated the implemented
+checks"; "the pipeline never returns unverified text" is "no unvalidated model text is
+returned"; "the guarantee supplied by Layer 4" is "what Layer 4 enforces". The word guarantee
+no longer appears in the paper. The conclusion now states that the result should be read as
+rule consistency under the implemented checks and not as clinical safety.
+
+### Priority checklist
+
+| # | Reviewer 1's item | Status |
+|---|---|---|
+| 1 | Rename safe output | Done — validator-pass rate throughout |
+| 2 | Publish generator, analytes, units, intervals, factors, seed | Done — Section 4.1 and Appendix A |
+| 3 | Template-only / rules-only baseline | Done — new configuration, and it ties with Full |
+| 4 | Ablate labels, schema, constraints, retry, fallback | Done — seven configurations, Table 3 |
+| 5 | Confidence intervals, repeated runs, decoding parameters | Partly — CIs, McNemar and parameters added; repeated runs not done, stated as a limitation |
+| 6 | Validator pseudo-code and pattern tables | Done — Appendix B, generated from the code |
+| 7 | Error-analysis table with examples | Done — Section 5 and Appendix C |
+| 8 | Reduce claims from clinical safety to rule consistency | Done — title, abstract, Section 5, Section 6, conclusion |
+| 9 | Human comprehension or clinician review, else retitle | Retitled, as the reviewer proposed; the study is named as future work |
 
 ---
 
@@ -168,4 +362,15 @@ overstate clinical benefit. Detailed points from the attached review are address
 | Related work engages guardrail and data-to-text literature | Section 2 |
 | "Exact by construction" qualified | Section 3.2 |
 | Sex- and age-specific intervals as a separate limitation | Section 6 |
+| Title narrowed to rule-consistent explanation of CBC | Title, Abstract, Section 1, Section 7 |
+| Metric renamed to validator-pass rate, with the reason | Section 4.2 and throughout |
+| Template-only and no-retry configurations | Section 4.1, Section 5, Table 3 |
+| Wilson confidence intervals and McNemar tests | Sections 4.2, 5 |
+| Decoding parameters and quantisation | Section 4.2 |
+| Latency percentiles and regeneration failure reasons | Section 5, Section 6.1 |
+| Qualitative error instances | Section 5, Appendix C |
+| Benchmark distributions, seed and rule tables | Section 4.1, Appendix A |
+| Validator algorithm and pattern tables | Appendix B |
+| Validator false-positive mode disclosed | Section 6.2, Appendix B.5 |
+| Absolute wording removed | Sections 3.2, 5, 6, 7 |
 | Provenance tables for intervals and forbidden terms | Supplementary archive |

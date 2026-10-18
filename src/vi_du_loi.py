@@ -25,20 +25,39 @@ def doc(ten):
     return [json.loads(l) for l in open(f, encoding="utf-8")] if f.exists() else []
 
 
+# Với mâu thuẫn diễn đạt, ca đầu tiên trong nhật ký (SYN-0149, PLT) là ca bộ kiểm
+# chứng BÁO NHẦM: câu "mức Plt bình thường nằm trong khoảng 150-400" đang mô tả
+# khoảng tham chiếu chứ không khẳng định chỉ số nằm trong khoảng. Nó được bàn riêng
+# ở phụ lục B.4. Ví dụ minh họa cho lớp lỗi này phải là một ca đúng, nên chỉ định
+# thẳng ca HCT, nơi mô hình viết 56,3% "nằm trong khoảng bình thường từ 40-50%".
+CHON_TAY = {"contradictory_wording": ("HCT", "trong_khoang")}
+
+
 def tim(ds, lop):
     """Phiếu đầu tiên mắc đúng lớp lỗi này, kèm vi phạm cụ thể."""
+    ma_can, khop_can = CHON_TAY.get(lop, (None, None))
     for x in ds:
         for v in x["validation"].get("violations", []):
-            if v.get("type") == lop:
-                return x, v
+            if v.get("type") != lop:
+                continue
+            if ma_can and (v.get("code") != ma_can or v.get("found_as") != khop_can):
+                continue
+            return x, v
     return None, None
 
 
 def cau_cua(out, ma):
-    if not isinstance(out, dict):
+    """Tim muc noi ve chi so ma. Mo hinh hay dien ten hien thi thay vi ma chuan,
+    nen phai resolve qua bang bi danh dung nhu tang 4 lam, khong so chuoi tho."""
+    if not isinstance(out, dict) or not ma:
         return None
+    from prompt_builder import _get_table
+    bang = _get_table()
     for it in out.get("items", []):
-        if isinstance(it, dict) and it.get("code") == ma:
+        if not isinstance(it, dict):
+            continue
+        c = it.get("code")
+        if c == ma or bang.resolve(c or "") == ma:
             return it
     return None
 

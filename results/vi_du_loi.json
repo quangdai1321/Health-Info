@@ -24,23 +24,23 @@
    "expected": "trong_khoang",
    "got": "thap"
   },
-  "status_mo_hinh": null,
-  "cau_mo_hinh": null,
+  "status_mo_hinh": "thap",
+  "cau_mo_hinh": "Kết quả Basophil % là 1.0%, thấp hơn mức bình thường. Đây có thể là dấu hiệu của một số tình trạng sức khỏe như bệnh tự miễn hoặc bệnh lý khác.",
   "ket": "Đây chỉ là một số kết quả. Kết quả toàn diện và chẩn đoán chính xác cần được đưa ra bởi bác sĩ dựa trên tất cả các kết quả xét nghiệm và các triệu chứng của bạn."
  },
  "contradictory_wording": {
   "cau_hinh": "baseline",
   "panel_id": "SYN-0149",
   "nhan_phieu": "kham_som",
-  "ma": "PLT",
+  "ma": "HCT",
   "vi_pham": {
    "type": "contradictory_wording",
-   "code": "PLT",
-   "state": "thap",
+   "code": "HCT",
+   "state": "cao",
    "found_as": "trong_khoang"
   },
-  "status_mo_hinh": null,
-  "cau_mo_hinh": null,
+  "status_mo_hinh": "trong_khoang",
+  "cau_mo_hinh": "Kết quả Dung tích hồng cầu là 56.3%, nằm trong khoảng bình thường từ 40-50%. Đây là một kết quả tốt.",
   "ket": "Đây chỉ là một số kết quả. Kết quả toàn diện và chẩn đoán chính xác cần được đưa ra bởi bác sĩ dựa trên tất cả các kết quả xét nghiệm và các triệu chứng của bạn."
  },
  "forbidden_term": {
@@ -53,8 +53,8 @@
    "code": "BASO_PCT",
    "pattern": "\\bdau hieu cua\\b"
   },
-  "status_mo_hinh": null,
-  "cau_mo_hinh": null,
+  "status_mo_hinh": "thap",
+  "cau_mo_hinh": "Kết quả Basophil % là 1.0%, thấp hơn mức bình thường. Đây có thể là dấu hiệu của một số tình trạng sức khỏe như bệnh tự miễn hoặc bệnh lý khác.",
   "ket": "Đây chỉ là một số kết quả. Kết quả toàn diện và chẩn đoán chính xác cần được đưa ra bởi bác sĩ dựa trên tất cả các kết quả xét nghiệm và các triệu chứng của bạn."
  },
  "hallucinated_analyte": {
