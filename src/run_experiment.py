@@ -38,7 +38,14 @@ MAX_RETRY = 2          # số lần sinh lại ở cấu hình full
 
 # ------------------------------------------------------------------ gọi model
 
-def call_ollama(messages, model=MODEL, timeout=300, num_predict=2048):
+# Mô hình đang chạy. Các hàm run_* không nhận tham số model, nên nếu chỉ truyền
+# --model cho hàm run() thì tên file kết quả đổi mà mô hình được gọi vẫn là mặc
+# định — tức là chạy nhầm mô hình trong im lặng. Đặt ở đây để một chỗ duy nhất
+# quyết định, và main() gán lại theo --model.
+MODEL_DANG_CHAY = MODEL
+
+
+def call_ollama(messages, model=None, timeout=300, num_predict=2048):
     """
     Gọi Ollama qua HTTP. Trả về (text, thời gian giây).
 
@@ -47,7 +54,7 @@ def call_ollama(messages, model=MODEL, timeout=300, num_predict=2048):
     thành JSON không hợp lệ và bị tính nhầm thành lỗi của mô hình.
     """
     payload = {
-        "model": model,
+        "model": model or MODEL_DANG_CHAY,
         "messages": messages,
         "stream": False,
         "format": "json",          # ép đầu ra là JSON hợp lệ
@@ -259,9 +266,12 @@ def to_classifier_input(results):
     }
 
 
-def run(config_name, panels, limit=None, model=MODEL):
+def run(config_name, panels, limit=None, model=MODEL, lan=None):
+    """lan: số thứ tự lần chạy lặp. Có lan thì ghi ra file riêng, để chạy lại
+    cùng cấu hình không bị cơ chế bỏ-qua-phiếu-đã-xong nuốt mất."""
     RESULTS.mkdir(exist_ok=True)
-    out_path = RESULTS / f"{config_name}_{model.replace(':', '-')}.jsonl"
+    hau_to = f"_lan{lan}" if lan else ""
+    out_path = RESULTS / f"{config_name}_{model.replace(':', '-')}{hau_to}.jsonl"
 
     done = set()
     if out_path.exists():
@@ -317,14 +327,20 @@ def main():
     ap.add_argument("--config", choices=list(CONFIGS) + ["all"], default="all")
     ap.add_argument("--limit", type=int, default=None, help="số phiếu, để thử nhanh")
     ap.add_argument("--model", default=MODEL)
+    ap.add_argument("--lan", type=int, default=None,
+                    help="số thứ tự lần chạy lặp, ghi ra file riêng")
     args = ap.parse_args()
+
+    global MODEL_DANG_CHAY
+    MODEL_DANG_CHAY = args.model
 
     panels = json.loads(PANELS.read_text(encoding="utf-8"))
     names = list(CONFIGS) if args.config == "all" else [args.config]
 
     for name in names:
-        print(f"\n=== {name} ({args.model}) ===")
-        run(name, panels, args.limit, args.model)
+        lan = f", lần {args.lan}" if args.lan else ""
+        print(f"\n=== {name} ({args.model}{lan}) ===")
+        run(name, panels, args.limit, args.model, args.lan)
 
 
 if __name__ == "__main__":
