@@ -45,13 +45,18 @@ MAX_RETRY = 2          # số lần sinh lại ở cấu hình full
 MODEL_DANG_CHAY = MODEL
 
 
-def call_ollama(messages, model=None, timeout=300, num_predict=2048):
+def call_ollama(messages, model=None, timeout=1800, num_predict=2048):
     """
     Gọi Ollama qua HTTP. Trả về (text, thời gian giây).
 
     num_predict phải đủ lớn: một phiếu 18 chỉ số cần ~50 token mỗi chỉ số
     cộng cấu trúc JSON, vượt xa mức 800 ban đầu. Đầu ra bị cắt cụt sẽ
     thành JSON không hợp lệ và bị tính nhầm thành lỗi của mô hình.
+
+    timeout trước đây là 300 giây, đủ cho qwen2.5:3b (trung bình 38 giây) nhưng
+    không đủ cho 7b trên cùng máy này (trung bình 215 giây, phiếu nặng vượt 300).
+    Đây là trần chờ phản hồi, không phải tham số sinh, nên nới ra không làm lệch
+    kết quả đã có của 3b.
     """
     payload = {
         "model": model or MODEL_DANG_CHAY,
@@ -289,15 +294,31 @@ def run(config_name, panels, limit=None, model=MODEL, lan=None):
         todo = todo[:limit]
 
     t_start = time.time()
+    hong_lien_tiep = 0
     with open(out_path, "a", encoding="utf-8") as f:
         for i, panel in enumerate(todo, 1):
             classified = clf.classify_panel(to_classifier_input(panel["results"]))
-            try:
-                res = CONFIGS[config_name](panel, classified)
-            except (urllib.error.URLError, TimeoutError) as e:
-                print(f"\n  LỖI KẾT NỐI ở {panel['panel_id']}: {e}")
-                print("  Kiểm tra Ollama có đang chạy không, rồi chạy lại script.")
-                break
+            # Một lần lỗi kết nối trước đây làm break cả chặng, và vòng chạy coi
+            # như đã xong: chặng dừng ở phiếu thứ 4 mà vẫn in "xong". Giờ thử lại
+            # phiếu đó, và chỉ bỏ cuộc khi ba phiếu liên tiếp đều hỏng, tức là
+            # Ollama thật sự chết chứ không phải một phiếu nặng.
+            res = None
+            for lan_thu in (1, 2, 3):
+                try:
+                    res = CONFIGS[config_name](panel, classified)
+                    hong_lien_tiep = 0
+                    break
+                except (urllib.error.URLError, TimeoutError, OSError) as e:
+                    print(f"\n  lỗi kết nối ở {panel['panel_id']} (lần {lan_thu}): {e}")
+                    time.sleep(10)
+            if res is None:
+                hong_lien_tiep += 1
+                print(f"  bỏ qua {panel['panel_id']} sau 3 lần thử "
+                      f"({hong_lien_tiep} phiếu hỏng liên tiếp)")
+                if hong_lien_tiep >= 3:
+                    print("  DỪNG: ba phiếu liên tiếp hỏng, kiểm tra Ollama rồi chạy lại.")
+                    break
+                continue
 
             rec = {
                 "panel_id": panel["panel_id"],

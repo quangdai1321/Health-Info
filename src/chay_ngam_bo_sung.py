@@ -64,13 +64,24 @@ def main():
         print(f"\n[{i}/{len(VIEC)}] {nhan} — còn {len(PANELS) - da} phiếu "
               f"({time.strftime('%H:%M')})", flush=True)
         rx.MODEL_DANG_CHAY = model
-        try:
-            rx.run(config, PANELS, None, model, lan)
-        except Exception as e:                       # noqa: BLE001
-            # Một việc hỏng thì ghi lại và đi tiếp, đừng để cả đêm chạy công cốc.
-            print(f"  HỎNG ở {nhan}: {type(e).__name__}: {e}", flush=True)
-            continue
-        print(f"  xong lúc {time.strftime('%H:%M')}, "
+
+        # rx.run() có thể dừng sớm khi Ollama trục trặc. Lần chạy đầu đã dừng ở
+        # phiếu thứ 4 mà vẫn in "xong", nên ở đây phải đếm lại số phiếu thật và
+        # gọi tiếp cho tới khi đủ, thay vì tin vào việc hàm đã trả về.
+        for vong in range(1, 6):
+            try:
+                rx.run(config, PANELS, None, model, lan)
+            except Exception as e:                   # noqa: BLE001
+                print(f"  HỎNG ở {nhan}: {type(e).__name__}: {e}", flush=True)
+            co = xong_chua(model, config, lan)
+            if co >= len(PANELS):
+                break
+            print(f"  mới {co}/{len(PANELS)} phiếu, chạy tiếp (vòng {vong})", flush=True)
+            time.sleep(30)
+
+        co = xong_chua(model, config, lan)
+        trang_thai = "xong" if co >= len(PANELS) else f"CHƯA ĐỦ, mới {co}/{len(PANELS)}"
+        print(f"  {trang_thai} lúc {time.strftime('%H:%M')}, "
               f"tổng đã chạy {(time.time()-t0)/3600:.1f} giờ", flush=True)
 
     print(f"\nHẾT. Tổng {(time.time()-t0)/3600:.1f} giờ.", flush=True)
