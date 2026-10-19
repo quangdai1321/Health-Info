@@ -6,8 +6,13 @@ Phản biện 1 ý 6: mỗi cấu hình chỉ chạy một lần nên không có
 
 Thứ tự ưu tiên, vì cả hai cùng đòi CPU nên phải chạy lần lượt:
 
-  1. qwen2.5:7b trên ba cấu hình baseline, constrained, full.
-     Đây là việc đáp được hai phản biện cùng lúc nên chạy trước.
+  1. qwen2.5:7b trên baseline và full.
+     Đây là việc đáp được hai phản biện cùng lúc nên chạy trước. Đo thật trên
+     máy này là 215 giây một phiếu, gấp 5,5 lần mô hình 3B, nên bỏ cấu hình
+     constrained trên 7B để cắt khoảng 8 tiếng: baseline cho biết tỷ lệ lỗi đầu
+     bài có đúng với mô hình lớn hơn không, full cho biết mô hình lớn hơn có
+     giảm được 36% rơi về bản mẫu không. Constrained chỉ là điểm giữa của hai
+     cái đó, tốn 8 tiếng để biết thêm rất ít.
   2. constrained trên 3B, chạy thêm 4 lần nữa cho đủ 5 lần.
      Chọn constrained vì tỷ lệ qua kiểm chứng của nó là 48%, tức là có chỗ để
      dao động. Cấu hình full luôn ra 100% theo thiết kế nên lặp lại chỉ đo được
@@ -32,7 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PANELS = json.loads((ROOT / "data" / "synthetic_panels.json").read_text(encoding="utf-8"))
 
 VIEC = (
-    [("qwen2.5:7b", c, None) for c in ("baseline", "constrained", "full")]
+    [("qwen2.5:7b", c, None) for c in ("baseline", "full")]
     + [("qwen2.5:3b", "constrained", lan) for lan in (2, 3, 4, 5)]
 )
 
