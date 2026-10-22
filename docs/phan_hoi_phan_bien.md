@@ -1,10 +1,9 @@
 # Response to Reviewers — HI26-0013
 
-**Paper:** A Rule-Constrained Large Language Model Pipeline for Rule-Consistent
-Explanation of Vietnamese Complete Blood Count Results
-**Previous title:** ...for Patient-Friendly Interpretation of Vietnamese Blood Test Results
-(changed at Reviewer 1's request, point 5)
-**Authors:** Vo Hoang Khang, Truong Quang Dai
+- **Paper:** A Rule-Constrained Large Language Model Pipeline for Rule-Consistent Explanation of Vietnamese Complete Blood Count Results
+- **Previous title:** ...for Patient-Friendly Interpretation of Vietnamese Blood Test Results (changed at Reviewer 1's request, point 5)
+- **Authors:** Vo Hoang Khang, Truong Quang Dai
+- **Date:** 22 October 2026
 
 We thank both reviewers for comments that were specific enough to act on. Every change
 below is in the revised manuscript, and the two re-analyses we report are reproducible
