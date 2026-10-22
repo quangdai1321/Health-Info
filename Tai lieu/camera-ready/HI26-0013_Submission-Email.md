@@ -60,7 +60,7 @@ the revision follows that. The main additions are:
   contributions of rule-assigned labels, prompt constraints, the validator and
   the regeneration loop. One of them is a template-only configuration that uses
   no language model at all.
-- A second model, Qwen2.5-7B, on the same panels.
+- A second model, Qwen2.5-7B, on all three main configurations.
 - Five repeated runs of one configuration, to separate decoding variability
   from the differences between configurations.
 - Wilson confidence intervals on every proportion and McNemar tests for paired
@@ -68,13 +68,21 @@ the revision follows that. The main additions are:
 - A full specification of the validator, and provenance tables for every
   reference interval and forbidden term.
 
-Three of these results weakened claims we had made, and we report them as such:
-a deterministic template reaches the same validator-pass rate as the full
-pipeline, the prompt constraints do not improve that rate significantly over
-rule-assigned labels alone, and the larger model raises false reassurance under
-unconstrained generation rather than lowering it. The metric is renamed from
-"safe output" to "validator-pass rate" throughout, to avoid suggesting that it
-measures clinical safety.
+The 7B comparison turned out to be the most informative addition, because model
+size moves safety in opposite directions depending on whether the rules are
+present. Without them, the larger model is worse on the error that matters
+most: it asserts that everything is normal on 46.7% of panels against 32.0% for
+the 3B model. Given the same rule-assigned labels and prompt constraints, it is
+much better: the validator-pass rate rises from 48.0% to 89.3% and false
+reassurance falls to 1.3%. Capability alone does not make a patient-facing
+explainer safer; it makes it a more fluent source of false reassurance.
+
+Two other results weakened claims we had made, and we report them as such: a
+deterministic template reaches the same validator-pass rate as the full
+pipeline, and the prompt constraints do not improve that rate significantly
+over rule-assigned labels alone. The metric is renamed from "safe output" to
+"validator-pass rate" throughout, to avoid suggesting that it measures clinical
+safety.
 
 We also correct an error of our own. The submitted version described the test
 machine as having no GPU. It has an NVIDIA GTX 1050 Ti, and we verified by

@@ -50,12 +50,22 @@ khi đã thấy kết quả thì mọi so sánh giữa các cấu hình mất hi
 đã ghi rõ trong bài: nó làm tăng tỷ lệ rơi về mẫu, tức là thiệt cho mô hình,
 chứ không thổi phồng tỷ lệ qua.
 
-**4. Mô hình lớn hơn không an toàn hơn.** `qwen2.5:7b` trên cùng 150 phiếu:
-baseline vẫn 0% qua kiểm chứng, và trấn an sai *tăng* từ 32,0% lên **46,7%**,
-bịa chỉ số tăng từ 32,0% lên 41,3%. Nó chỉ giỏi hơn ở chỗ ít sai chiều và ít bỏ
-sót. Trong pipeline đủ tầng thì ngược lại: cũng 100% qua kiểm chứng nhưng văn mô
-hình lên **96,0%** so với 64,0%, tức là giảm tỷ lệ rơi về mẫu từ 36% xuống 4%.
-Mô hình to hơn mua được ít phải vứt bỏ hơn, không mua được an toàn hơn.
+**4. Mô hình to hơn đổi chiều tùy có luật hay không.** `qwen2.5:7b` trên cùng
+150 phiếu, cả ba cấu hình chính:
+
+- **Không có luật, nó nguy hiểm hơn.** Baseline vẫn 0% qua kiểm chứng, trấn an
+  sai *tăng* 32,0% → **46,7%**, bịa chỉ số 32,0% → 41,3%. Nó giỏi hơn ở sai
+  chiều và bỏ sót đơn giản vì viết tốt hơn, và chính sự trôi chảy đó làm câu
+  trấn an sai của nó thuyết phục hơn.
+- **Có luật, nó tốt hơn hẳn.** Constrained: qua kiểm chứng 48,0% → **89,3%**,
+  trấn an sai 8,0% → **1,3%**, từ cấm và bịa chỉ số về **0,0%**. Ghép cặp theo
+  phiếu: 70 phiếu chỉ 7B đạt, 8 phiếu chỉ 3B đạt (McNemar p < 0,001).
+- **Trong pipeline đủ tầng hai bên gặp nhau** ở 100%, chỉ khác giá phải trả:
+  tỷ lệ rơi về mẫu 36% với 3B so với 4% với 7B.
+
+Đây là bằng chứng mạnh nhất cho chính kiến trúc: năng lực mô hình một mình
+không làm hệ thống an toàn hơn, nó chỉ làm cái lỗi nguy hiểm nhất trôi chảy
+hơn. Năng lực cộng với nhãn gán từ bên ngoài thì mới ăn thua.
 
 **5. Cùng một cấu hình chạy 5 lần cho kết quả khác nhau theo từng phiếu.** Tỷ lệ
 qua kiểm chứng của `constrained` là 50,3% ± 2,4 (48,0–53,3), tổng thể khá ổn
@@ -162,14 +172,18 @@ giới hạn 2.048 token, chế độ JSON, **không đặt seed cố định**.
 Thời gian mỗi phiếu ở cấu hình `full`: trung bình 68,3 s, p50 66,4 s, p95
 121,5 s, p99 134,1 s.
 
-So sánh với mô hình lớn hơn (**đã chạy**, baseline và full):
+So sánh với mô hình lớn hơn (**đã chạy**, cả ba cấu hình chính):
 
 ```bash
 ollama pull qwen2.5:7b
-python src/run_experiment.py --config baseline --model qwen2.5:7b
-python src/run_experiment.py --config full --model qwen2.5:7b
+for c in baseline constrained full; do
+  python src/run_experiment.py --config $c --model qwen2.5:7b
+done
 python src/phan_tich_7b_va_lap.py
 ```
+
+7B nặng 5,2 GB nên không vừa 4 GB VRAM, chạy khoảng một nửa trên card:
+155–170 giây mỗi phiếu, so với 33–38 giây của 3B.
 
 Chạy lặp để đo biến thiên giải mã (**đã chạy 5 lần cho `constrained`**):
 
@@ -177,7 +191,8 @@ Chạy lặp để đo biến thiên giải mã (**đã chạy 5 lần cho `cons
 for i in 2 3 4 5; do python src/run_experiment.py --config constrained --lan $i; done
 ```
 
-Cả hai mẻ trên chạy bằng `src/chay_ngam_bo_sung.py`, mất 18,5 giờ.
+Hai mẻ đầu chạy bằng `src/chay_ngam_bo_sung.py`, mất 18,5 giờ; `constrained`
+trên 7B chạy riêng sau đó, thêm 7 giờ.
 
 ## Bảy cấu hình
 

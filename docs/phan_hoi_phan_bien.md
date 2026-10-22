@@ -108,27 +108,46 @@ Accepted twice over: we narrowed the claims *and* ran a larger model.
 The abstract now states that the results bound what locally served open models do, and the
 introduction no longer uses one tested model as evidence about general-purpose assistants.
 
-We then ran **Qwen2.5-7B** on the same 150 panels, scored by the same code, for the baseline
-and the full pipeline. The result supports the paper's argument rather than weakening it:
+We then ran **Qwen2.5-7B** on the same 150 panels, scored by the same code, for all three
+main configurations. The result is the most informative addition in this revision, because
+size moves safety in **opposite directions** depending on whether the rules are present.
 
 | | 3B | 7B |
 |---|---|---|
-| Baseline, validator pass | 0.0% | 0.0% |
-| Baseline, false reassurance | 32.0% | **46.7%** (95% CI 38.9–54.6) |
-| Baseline, fabricated analytes | 32.0% | **41.3%** |
-| Baseline, direction mismatch | 91.3% | 76.0% |
-| Baseline, forbidden terms | 79.3% | 61.3% |
-| Baseline, omitted analytes | 71.3% | 57.3% |
-| Full, validator pass | 100.0% | 100.0% |
-| Full, model text | 64.0% | **96.0%** (91.5–98.2) |
-| Full, attempts per panel | 1.97 | 1.16 |
-| Full, seconds per panel | 68.3 | 161.5 |
+| **Baseline** (no rules) — validator pass | 0.0% | 0.0% |
+| Baseline — false reassurance | 32.0% | **46.7%** (95% CI 38.9–54.6) |
+| Baseline — fabricated analytes | 32.0% | **41.3%** |
+| Baseline — direction mismatch | 91.3% | 76.0% |
+| Baseline — omitted analytes | 71.3% | 57.3% |
+| **Constrained** (labels + prohibitions) — validator pass | 48.0% | **89.3%** (83.4–93.3) |
+| Constrained — false reassurance | 8.0% | **1.3%** (0.4–4.7) |
+| Constrained — direction mismatch | 12.7% | **2.7%** |
+| Constrained — forbidden terms | 15.3% | **0.0%** |
+| Constrained — fabricated analytes | 10.0% | **0.0%** |
+| **Full** — validator pass | 100.0% | 100.0% |
+| Full — model text | 64.0% | **96.0%** (91.5–98.2) |
+| Full — attempts per panel | 1.97 | 1.16 |
+| Full — seconds per panel | 68.3 | 161.5 |
 
-A model more than twice the size is **not safer under unconstrained generation**: it
-misstates directions and omits analytes less often, but it asserts that everything is normal
-*more* often, and fabricates more. What it buys is inside the pipeline, where it cuts the
-template share from 36.0% to 4.0%. Size therefore reduces what the guard rails have to throw
-away; it does not remove the need for them.
+Read the first block and the second block together:
+
+- **Without the rule layer, the larger model is more dangerous.** It asserts that everything
+  is normal on 46.7% of panels against 32.0%, and fabricates more. It is better at the
+  mechanical errors — directions and omissions — because it is simply a better writer, and
+  that fluency is exactly what makes its false reassurance more convincing.
+- **With the rule layer, the larger model is markedly better.** The pass rate nearly doubles,
+  false reassurance falls to 1.3%, and forbidden terms and fabrications reach zero. On paired
+  panels the difference is unambiguous: 70 panels pass only under 7B, 8 only under 3B
+  (McNemar, p < 0.001).
+- **Inside the full pipeline the two converge**, because Layer 4 enforces the same guarantee
+  either way; what differs is the price, 36.0% of panels falling back to templates for 3B
+  against 4.0% for 7B.
+
+We think this is the strongest evidence in the paper for the architecture itself. Capability
+alone does not make a patient-facing explainer safer; it makes it a more fluent source of the
+one error we care about most. Capability combined with externally assigned labels does make it
+better. The paper now states this in Section 5 and in the conclusion, and the abstract carries
+the one-line version: capability is a liability without the rule layer and an asset with it.
 
 ### R2.5 — "Patient-friendliness is not measured: no readability score, comprehension test, or human rating, and 36% of panels receive templates that are no better than the report."
 
@@ -248,9 +267,10 @@ This separates what was previously bundled:
 - **The validator supplies the pass, not the quality.** Validator-only reaches 100.0% with 0.0% model text: all 150 panels fall back to templates after a mean of 3 attempts.
 - **Regeneration buys model text, not safety.** Full without retry reaches the same 100.0% with 46.0% model text at 35.2 s; retry raises that to 64.0% at 68.3 s.
 
-The fifth item, a larger model, has now been run as well: Qwen2.5-7B on the baseline and the
-full pipeline, reported under R2.4 above and in Section 5. It raises unconstrained false
-reassurance from 32.0% to 46.7% while cutting the template share from 36.0% to 4.0%.
+The fifth item, a larger model, has now been run as well: Qwen2.5-7B on baseline, constrained
+and full, reported under R2.4 above and in Section 5. It raises unconstrained false reassurance
+from 32.0% to 46.7%, but given the same rules it lifts the pass rate from 48.0% to 89.3% and
+cuts the template share from 36.0% to 4.0%.
 
 ### R1.5 (High) — "Patient comprehension is not evaluated, so the patient-friendly claim is unsupported; otherwise change the title."
 
@@ -393,7 +413,7 @@ rule consistency under the implemented checks and not as clinical safety.
 | 1 | Rename safe output | Done — validator-pass rate throughout |
 | 2 | Publish generator, analytes, units, intervals, factors, seed | Done — Section 4.1 and Appendix A |
 | 3 | Template-only / rules-only baseline | Done — new configuration, and it ties with Full |
-| 4 | Ablate labels, schema, constraints, retry, fallback | Done — seven configurations plus a 7B run, Table 3 |
+| 4 | Ablate labels, schema, constraints, retry, fallback | Done — seven configurations, plus all three main configurations on a 7B model |
 | 5 | Confidence intervals, repeated runs, decoding parameters | Done — CIs, McNemar, parameters, and five repeated runs of the constrained configuration |
 | 6 | Validator pseudo-code and pattern tables | Done — Appendix B, generated from the code |
 | 7 | Error-analysis table with examples | Done — Section 5 and Appendix C |

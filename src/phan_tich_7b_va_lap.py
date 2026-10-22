@@ -59,7 +59,7 @@ def khoi_7b(ra):
     print("MÔ HÌNH 7B SO VỚI 3B — cùng 150 phiếu, cùng mã chấm")
     print("=" * 94)
     bang = {}
-    for cau_hinh in ("baseline", "full"):
+    for cau_hinh in ("baseline", "constrained", "full"):
         a, b = doc(f"{cau_hinh}_qwen2.5-3b"), doc(f"{cau_hinh}_qwen2.5-7b")
         if not (a and b):
             continue

@@ -68,7 +68,7 @@ def main():
     for ten in ("baseline", "chi_mau", "chi_nhan", "chi_rang_buoc", "chi_kiem_chung",
                 "constrained", "full"):
         kho[f"{ten}_3b"] = dung_kho(doc(f"{ten}_qwen2.5-3b"))
-    for ten in ("baseline", "full"):
+    for ten in ("baseline", "constrained", "full"):
         kho[f"{ten}_7b"] = dung_kho(doc(f"{ten}_qwen2.5-7b"))
 
     # mọi giá trị hợp lệ, làm tròn một chữ số, để tra ngược

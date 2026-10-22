@@ -57,6 +57,7 @@ FILE = [
     "results/phan_tich_7b_va_lap.json",
     # mô hình 7B và năm lần chạy lặp
     "results/baseline_qwen2.5-7b.jsonl",
+    "results/constrained_qwen2.5-7b.jsonl",
     "results/full_qwen2.5-7b.jsonl",
     "results/constrained_qwen2.5-3b_lan2.jsonl",
     "results/constrained_qwen2.5-3b_lan3.jsonl",
