@@ -41,6 +41,8 @@ FILE = [
     "src/thong_ke_tin_cay.py",
     "src/vi_du_loi.py",
     "src/dung_phu_luc.py",
+    "src/phan_tich_7b_va_lap.py",
+    "src/chay_ngam_bo_sung.py",
     # test giữ tài liệu khớp với mã
     "tests/test_classifier.py",
     "tests/test_nguon_khoang_tham_chieu.py",
@@ -52,6 +54,14 @@ FILE = [
     "results/thu_nghiem_don_vi.json",
     "results/thong_ke_tin_cay.json",
     "results/vi_du_loi.json",
+    "results/phan_tich_7b_va_lap.json",
+    # mô hình 7B và năm lần chạy lặp
+    "results/baseline_qwen2.5-7b.jsonl",
+    "results/full_qwen2.5-7b.jsonl",
+    "results/constrained_qwen2.5-3b_lan2.jsonl",
+    "results/constrained_qwen2.5-3b_lan3.jsonl",
+    "results/constrained_qwen2.5-3b_lan4.jsonl",
+    "results/constrained_qwen2.5-3b_lan5.jsonl",
     # phụ lục bài dẫn chiếu
     "docs/phu_luc_bo_sung.md",
 ] + [f"results/{c}_qwen2.5-3b.jsonl" for c in CAU_HINH]

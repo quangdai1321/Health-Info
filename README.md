@@ -50,6 +50,20 @@ khi đã thấy kết quả thì mọi so sánh giữa các cấu hình mất hi
 đã ghi rõ trong bài: nó làm tăng tỷ lệ rơi về mẫu, tức là thiệt cho mô hình,
 chứ không thổi phồng tỷ lệ qua.
 
+**4. Mô hình lớn hơn không an toàn hơn.** `qwen2.5:7b` trên cùng 150 phiếu:
+baseline vẫn 0% qua kiểm chứng, và trấn an sai *tăng* từ 32,0% lên **46,7%**,
+bịa chỉ số tăng từ 32,0% lên 41,3%. Nó chỉ giỏi hơn ở chỗ ít sai chiều và ít bỏ
+sót. Trong pipeline đủ tầng thì ngược lại: cũng 100% qua kiểm chứng nhưng văn mô
+hình lên **96,0%** so với 64,0%, tức là giảm tỷ lệ rơi về mẫu từ 36% xuống 4%.
+Mô hình to hơn mua được ít phải vứt bỏ hơn, không mua được an toàn hơn.
+
+**5. Cùng một cấu hình chạy 5 lần cho kết quả khác nhau theo từng phiếu.** Tỷ lệ
+qua kiểm chứng của `constrained` là 50,3% ± 2,4 (48,0–53,3), tổng thể khá ổn
+định. Nhưng theo phiếu thì chỉ **31/150 phiếu luôn đạt, 37 luôn trượt, còn 82
+phiếu (54,7%) lúc đạt lúc trượt**. Con số tổng tái lập được, lời giải thích cho
+một bệnh nhân cụ thể thì không. Đây là lý do phải kiểm chứng từng đầu ra chứ
+không phải chọn cấu hình nào chấm điểm cao.
+
 ## Cấu trúc
 
 ```
@@ -71,6 +85,8 @@ Health-Info/
 │   ├── cham_lai_bo_loi_dinh_dang.py    # chấm lại baseline sau khi quy đổi mã
 │   ├── thu_nghiem_don_vi.py            # thí nghiệm đơn vị đo, tất định
 │   ├── vi_du_loi.py                    # rút ví dụ thật mỗi lớp lỗi
+│   ├── phan_tich_7b_va_lap.py          # so sánh 7B với 3B, và 5 lần chạy lặp
+│   ├── chay_ngam_bo_sung.py            # điều phối chạy 7B và chạy lặp
 │   ├── dung_phu_luc.py                 # sinh Phụ lục A/B/C từ mã đang chạy
 │   └── dong_goi_nop_kem.py             # dựng file zip nộp kèm
 ├── tests/                              # 46 test, TẤT CẢ PHẢI QUA
@@ -133,19 +149,35 @@ python src/dung_phu_luc.py                        # sinh lại phụ lục
 Ba script phân tích này **không gọi mô hình**, chỉ đọc lại `results/`, nên chạy
 bao nhiêu lần cũng cho ra số y hệt.
 
-**Cấu hình đo trong bài:** Intel Core i5-9400F, 24 GB RAM, **CPU only, không
-GPU**. Mô hình `qwen2.5:3b` qua Ollama, lượng tử hóa Q4_K_M, temperature 0,2,
+**Cấu hình đo trong bài:** Intel Core i5-9400F, 24 GB RAM, **NVIDIA GTX 1050 Ti
+4 GB**. Mô hình `qwen2.5:3b` qua Ollama, lượng tử hóa Q4_K_M, temperature 0,2,
 giới hạn 2.048 token, chế độ JSON, **không đặt seed cố định**.
+
+> **Đính chính:** bản nộp lần đầu ghi "CPU only, không GPU". Sai. Đo lại bằng
+> `ollama ps` và `nvidia-smi`: `qwen2.5:3b` chiếm khoảng 3 GB VRAM và được đẩy
+> **100% sang card**, GPU chạy 100%. Mọi con số thời gian của 3B trong bài đều
+> là số có GPU. `qwen2.5:7b` nặng 5,2 GB nên không vừa 4 GB, chạy khoảng một nửa
+> trên card, vì thế chậm gấp 2,4 lần chứ không phải tỷ lệ với số tham số.
 
 Thời gian mỗi phiếu ở cấu hình `full`: trung bình 68,3 s, p50 66,4 s, p95
 121,5 s, p99 134,1 s.
 
-So sánh với mô hình lớn hơn (**chưa chạy**, đã ghi là future work trong bài):
+So sánh với mô hình lớn hơn (**đã chạy**, baseline và full):
 
 ```bash
 ollama pull qwen2.5:7b
-python src/run_experiment.py --model qwen2.5:7b
+python src/run_experiment.py --config baseline --model qwen2.5:7b
+python src/run_experiment.py --config full --model qwen2.5:7b
+python src/phan_tich_7b_va_lap.py
 ```
+
+Chạy lặp để đo biến thiên giải mã (**đã chạy 5 lần cho `constrained`**):
+
+```bash
+for i in 2 3 4 5; do python src/run_experiment.py --config constrained --lan $i; done
+```
+
+Cả hai mẻ trên chạy bằng `src/chay_ngam_bo_sung.py`, mất 18,5 giờ.
 
 ## Bảy cấu hình
 
@@ -244,5 +276,5 @@ nguồn và tình trạng của từng khoảng, nhưng cột tình trạng hi�
 chiếu y văn" ở cả 22 dòng. Cần đối chiếu tài liệu huyết học chuẩn, và thay cột
 `severe_factor` bằng danh mục giá trị nguy hiểm của phòng xét nghiệm.
 
-**3. Chạy thêm mô hình lớn hơn và chạy lặp.** Cả hai đã ghi là future work
-trong mục 6.2. Chạy được trên máy hiện tại, chỉ tốn thời gian.
+**3. Chạy lặp cho các cấu hình còn lại.** Mới lặp `constrained` 5 lần. Các cấu
+hình khác vẫn chỉ chạy một lần, đã ghi là hạn chế trong mục 6.2.

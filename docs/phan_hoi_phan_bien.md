@@ -104,11 +104,32 @@ output counts as unsafe rather than disappearing from the denominator.
 
 ### R2.4 — "Only Qwen2.5-3B is tested, yet the abstract and introduction speak of general-purpose language models that patients use, which are mostly much larger."
 
-Accepted. We narrowed the claims rather than extrapolating. The abstract now states that
-the results bound what a small on-premises model does, not what larger hosted services
-would do, and the introduction no longer uses the single tested model as evidence about
-general-purpose assistants. The motivating observation about patients pasting reports into
-chatbots is retained as motivation, not as a measured result.
+Accepted twice over: we narrowed the claims *and* ran a larger model.
+
+The abstract now states that the results bound what locally served open models do, and the
+introduction no longer uses one tested model as evidence about general-purpose assistants.
+
+We then ran **Qwen2.5-7B** on the same 150 panels, scored by the same code, for the baseline
+and the full pipeline. The result supports the paper's argument rather than weakening it:
+
+| | 3B | 7B |
+|---|---|---|
+| Baseline, validator pass | 0.0% | 0.0% |
+| Baseline, false reassurance | 32.0% | **46.7%** (95% CI 38.9–54.6) |
+| Baseline, fabricated analytes | 32.0% | **41.3%** |
+| Baseline, direction mismatch | 91.3% | 76.0% |
+| Baseline, forbidden terms | 79.3% | 61.3% |
+| Baseline, omitted analytes | 71.3% | 57.3% |
+| Full, validator pass | 100.0% | 100.0% |
+| Full, model text | 64.0% | **96.0%** (91.5–98.2) |
+| Full, attempts per panel | 1.97 | 1.16 |
+| Full, seconds per panel | 68.3 | 161.5 |
+
+A model more than twice the size is **not safer under unconstrained generation**: it
+misstates directions and omits analytes less often, but it asserts that everything is normal
+*more* often, and fabricates more. What it buys is inside the pipeline, where it cuts the
+template share from 36.0% to 4.0%. Size therefore reduces what the guard rails have to throw
+away; it does not remove the need for them.
 
 ### R2.5 — "Patient-friendliness is not measured: no readability score, comprehension test, or human rating, and 36% of panels receive templates that are no better than the report."
 
@@ -228,8 +249,9 @@ This separates what was previously bundled:
 - **The validator supplies the pass, not the quality.** Validator-only reaches 100.0% with 0.0% model text: all 150 panels fall back to templates after a mean of 3 attempts.
 - **Regeneration buys model text, not safety.** Full without retry reaches the same 100.0% with 46.0% model text at 35.2 s; retry raises that to 64.0% at 68.3 s.
 
-The fifth item, a larger or alternative model, we have not run. The paper does not
-extrapolate past the one 3B model, and Section 6.2 lists larger models as future work.
+The fifth item, a larger model, has now been run as well: Qwen2.5-7B on the baseline and the
+full pipeline, reported under R2.4 above and in Section 5. It raises unconstrained false
+reassurance from 32.0% to 46.7% while cutting the template share from 36.0% to 4.0%.
 
 ### R1.5 (High) — "Patient comprehension is not evaluated, so the patient-friendly claim is unsupported; otherwise change the title."
 
@@ -247,21 +269,41 @@ and actionability were not measured.
 
 ### R1.6 (High) — "No confidence intervals, no repeated runs, no decoding parameters."
 
-Partly addressed, and we say plainly which part.
+Addressed on all three counts.
 
 Every proportion in Sections 4 and 5 now carries a **95% Wilson confidence interval**, chosen
 over Wald because several rates are 0% or 100%, where Wald gives a zero-width interval.
-Configurations are compared with **McNemar's test**, which is the paired test the design
-calls for, since all configurations see the same 150 panels. Two of those comparisons changed
-what we could claim: constraints over labels is not significant (p = 0.082), and
-template-only against full is indistinguishable (p = 1.000).
+Configurations are compared with **McNemar's test**, the paired test this design calls for,
+since all configurations see the same 150 panels. Two of those comparisons changed what we
+could claim: constraints over labels is not significant (p = 0.082), and template-only against
+full is indistinguishable (p = 1.000).
 
-Decoding parameters are now stated in Section 4.2: Ollama, qwen2.5:3b at Q4_K_M quantisation,
-temperature 0.2, 2,048-token limit, JSON output mode, no fixed seed.
+Decoding parameters are now in Section 4.2: Ollama, Q4_K_M quantisation, temperature 0.2,
+2,048-token limit, JSON output mode, no fixed seed.
 
-We did **not** run five repeated decoding runs. Section 6.2 states the consequence: the
-intervals carry the sampling uncertainty of 150 panels but not the decoding variability of
-repeated runs. Scripts: `src/thong_ke_tin_cay.py`, output `results/thong_ke_tin_cay.json`.
+**Repeated runs** were carried out for the constrained configuration, five times on the same
+panels. We chose that configuration because its pass rate is neither 0% nor 100% and therefore
+has room to vary; repeating a configuration pinned at 100% by construction would measure
+little on the same hours of compute.
+
+| | mean | SD | range |
+|---|---|---|---|
+| Validator pass | 50.3% | 2.4 | 48.0–53.3 |
+| False reassurance | 10.1% | 1.6 | 8.0–12.0 |
+| Direction mismatch | 11.9% | 0.6 | 11.3–12.7 |
+| Forbidden terms | 16.4% | 2.5 | 13.3–19.3 |
+| Omitted analytes | 23.6% | 3.1 | 20.7–28.7 |
+| Seconds per panel | 33.9 | 1.1 | 33.2–35.8 |
+
+The single run reported in Table 2 (48.0%) sits at the low end of ordinary variation, and no
+per-class rate moves by more than about three points. The more interesting result is at the
+panel level: across the five runs only **31 of 150 panels pass every time and 37 fail every
+time, while 82 (54.7%) pass in some runs and fail in others**. Aggregate rates on 150 panels
+are reproducible to within a few points, but an individual explanation is not reproducible at
+all. We read this as an argument for checking every output rather than for trusting a
+configuration that scored well once, and Section 5 now says so.
+
+Scripts: `src/thong_ke_tin_cay.py` and `src/phan_tich_7b_va_lap.py`.
 
 ### R1.7 (High) — "The validator is not specified well enough to audit."
 
@@ -292,7 +334,18 @@ reports and age- or sex-specific intervals are named as untested.
 
 ### R1.9 (Medium) — "Runtime analysis is insufficient for deployment."
 
-Addressed from the existing logs. Section 5 now reports, for the full pipeline, 68.3 s per
+Addressed from the existing logs, and in the course of doing so we found and corrected an
+error of our own. The submitted version described the test machine as "an Intel Core i5-9400F
+with 24 GB RAM and no GPU", and Section 6.1 argued that the pipeline "avoids GPU cost for
+provincial hospitals". That was wrong. The machine has an **NVIDIA GTX 1050 Ti with 4 GB**, and
+we verified by re-measurement that Qwen2.5-3B at Q4_K_M occupies about 3 GB and is offloaded to
+the card **in full**, at 100% GPU utilisation. Every 3B timing in the paper was obtained with
+GPU acceleration. Section 4.2 now states the actual hardware and the offload split, and Section
+6.1 now argues from a consumer graphics card released in 2016 rather than from no card at all.
+The 7B model does not fit in 4 GB and runs roughly half on the card, which is why it is 2.4
+times slower rather than 2.3 times as its parameter count would suggest.
+
+Section 5 now reports, for the full pipeline, 68.3 s per
 panel with SD 33.7 and p50/p95/p99 of 66.4/121.5/134.1 s, against a baseline mean of 38.9 s
 (p95 63.6), and Section 6.1 quotes the 95th percentile rather than the mean alone. Per-panel
 attempts are 1.97 on average.
@@ -341,8 +394,8 @@ rule consistency under the implemented checks and not as clinical safety.
 | 1 | Rename safe output | Done — validator-pass rate throughout |
 | 2 | Publish generator, analytes, units, intervals, factors, seed | Done — Section 4.1 and Appendix A |
 | 3 | Template-only / rules-only baseline | Done — new configuration, and it ties with Full |
-| 4 | Ablate labels, schema, constraints, retry, fallback | Done — seven configurations, Table 3 |
-| 5 | Confidence intervals, repeated runs, decoding parameters | Partly — CIs, McNemar and parameters added; repeated runs not done, stated as a limitation |
+| 4 | Ablate labels, schema, constraints, retry, fallback | Done — seven configurations plus a 7B run, Table 3 |
+| 5 | Confidence intervals, repeated runs, decoding parameters | Done — CIs, McNemar, parameters, and five repeated runs of the constrained configuration |
 | 6 | Validator pseudo-code and pattern tables | Done — Appendix B, generated from the code |
 | 7 | Error-analysis table with examples | Done — Section 5 and Appendix C |
 | 8 | Reduce claims from clinical safety to rule consistency | Done — title, abstract, Section 5, Section 6, conclusion |
