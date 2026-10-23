@@ -34,7 +34,18 @@ Truong Quang Dai — Vietnam-Korea Institute of Technology, HUTECH University; F
 > ^3 FPT Telecom, Ho Chi Minh City, Vietnam
 > \* Corresponding author: Vo Hoang Khang (vh.khang@hutech.edu.vn)
 
-Nếu form không cho dòng dài, rút gọn thành `Vo Hoang Khang — HUTECH University` và
+**Ba lỗi hay mắc, đã gặp một lần khi xem preview:**
+
+1. Đơn vị thứ hai của thầy Khang phải là `Faculty of Information Technology, HUTECH
+   University`, không phải `HUTECH University` trống không — ghi vậy là trùng nửa sau
+   của đơn vị thứ nhất.
+2. Truong Quang Dai có **ba** đơn vị, không phải hai. Thiếu Vietnam-Korea Institute of
+   Technology và Faculty of IT là lệch với bài.
+3. Form đánh số tách rời cho từng tác giả (1 và 2), còn bài dùng 1,2 và 1,2,3 vì hai
+   tác giả **dùng chung** hai đơn vị đầu. Đây là giới hạn của form, không sửa được;
+   đã nêu trong ô Ghi chú để ban tổ chức xếp lại khi dàn trang.
+
+Nếu ô không nhận dòng dài, rút gọn thành `Vo Hoang Khang — HUTECH University` và
 `Truong Quang Dai — HUTECH University; FPT Telecom`, rồi ghi đầy đủ vào ô Ghi chú.
 
 ---
@@ -67,6 +78,12 @@ The reviewer asked us either to add a patient comprehension study or to narrow t
 title; we took the second option, using the reviewer's own wording. The title field
 above has been updated to match the file. If the committee would prefer the original
 title in the proceedings, we are happy to revert it.
+
+Affiliations. Both authors share the first two affiliations. In the paper the author
+block reads "Vo Hoang Khang^1,2 and Truong Quang Dai^1,2,3", with 1 = Vietnam-Korea
+Institute of Technology, HUTECH University; 2 = Faculty of Information Technology,
+HUTECH University; 3 = FPT Telecom. The form appears to assign a separate number per
+author, so please merge the shared affiliations when typesetting.
 
 Source file. The form has no upload field for supplementary material, and the paper
 refers to Appendices A, B and C. The source upload is therefore a .zip containing the
