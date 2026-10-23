@@ -43,7 +43,7 @@ def main():
     RA.mkdir(exist_ok=True)
     # Dọn bản cũ để khỏi nộp nhầm, nhưng giữ lại thư nộp vì nó soạn tay.
     for cu in RA.iterdir():
-        if cu.is_file() and cu.name != "HI26-0013_Submission-Email.md":
+        if cu.is_file() and cu.name not in ("HI26-0013_Submission-Email.md", "HI26-0013_Dien-Form.md", "HI26-0013_Source-and-Supplementary.zip"):
             cu.unlink()
 
     print(f"{RA}\n")
