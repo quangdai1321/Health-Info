@@ -66,34 +66,29 @@ và gửi phần còn lại qua email.
 
 ---
 
-## Ô "Ghi chú cho Ban Tổ chức"
+## Ô "Ghi chú cho Ban Tổ chức" / "Notes to the organizers"
 
-Dán nguyên đoạn này:
+Không bắt buộc, nhưng nên điền: đổi tên bài và nộp file nguồn dạng zip là hai việc
+bất thường, không nói trước dễ bị hỏi lại.
 
 ```
-Title change. Following Reviewer 1's point 5, the title has been changed from
-"...for Patient-Friendly Interpretation of Vietnamese Blood Test Results" to
-"...for Rule-Consistent Explanation of Vietnamese Complete Blood Count Results".
-The reviewer asked us either to add a patient comprehension study or to narrow the
-title; we took the second option, using the reviewer's own wording. The title field
-above has been updated to match the file. If the committee would prefer the original
-title in the proceedings, we are happy to revert it.
+Title changed at Reviewer 1's request (point 5). The reviewer asked us either to add a
+patient comprehension study or to narrow the title; we used his own wording. Happy to
+revert if the committee prefers the original.
 
-Affiliations. Both authors share the first two affiliations. In the paper the author
-block reads "Vo Hoang Khang^1,2 and Truong Quang Dai^1,2,3", with 1 = Vietnam-Korea
-Institute of Technology, HUTECH University; 2 = Faculty of Information Technology,
-HUTECH University; 3 = FPT Telecom. The form appears to assign a separate number per
-author, so please merge the shared affiliations when typesetting.
+Both authors share affiliations 1 and 2. In the paper: Vo Hoang Khang^1,2 and Truong
+Quang Dai^1,2,3, where 1 = Vietnam-Korea Institute of Technology, 2 = Faculty of
+Information Technology (both HUTECH University), 3 = FPT Telecom.
 
-Source file. The form has no upload field for supplementary material, and the paper
-refers to Appendices A, B and C. The source upload is therefore a .zip containing the
-editable Word source, the supplementary appendices, and the code and data, with a
-README.txt at the root listing the contents.
+The source upload is a .zip because the form has no supplementary field and the paper
+cites Appendices A-C. It holds the Word source, the appendices, and the code and data,
+with a README.txt at the root.
 
-Length. The paper is 11 pages, one page over the 10-page guideline, because of the
-additional experiments both reviewers requested. We can shorten it if required; the
-material we would remove first is the qualitative error analysis in Section 5.
+The paper is 11 pages, one over the guideline, owing to the experiments both reviewers
+requested. We can shorten it if required.
 ```
+
+Cần ngắn nữa thì bỏ đoạn **Affiliations** — ban tổ chức nhìn file PDF cũng thấy.
 
 ---
 
